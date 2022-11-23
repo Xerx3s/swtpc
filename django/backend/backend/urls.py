@@ -16,65 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import rest_framework
-from django.contrib.auth.models import User
-from db_connection.models import testtable, flocculation_data
-from rest_framework import routers, serializers, viewsets
-
-# Serializers define the API representation.
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ['url', 'username', 'email', 'is_staff']
-
-# ViewSets define the view behavior.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-class testSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = testtable
-        fields = ['Name', 'Address', 'Date']
-
-class testViewSet(viewsets.ModelViewSet):
-    queryset = testtable.objects.all()
-    serializer_class = testSerializer
-
-class flocdataSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = flocculation_data
-        fields = [
-            "surface_water",
-            "initial_pH",
-            "initial_EC",
-            "initial_turbidity",
-            "flocculant",
-            "floc_dose",
-            "concentration",
-            "saline_Molarity",
-            "cactus_share",
-            "floc_vol",
-            "saline_concentration",
-            "final_pH",
-            "final_EC",
-            "final_turbidity",
-            "cal_final_EC",
-            "delta_EC",
-            "stirring_speed_coagulation_phase",
-            "duration_coagulation_phase",
-            "stirring_speed_flocculation_phase",
-            "duration_flocculation_phase",
-            "duration_sedimentation_phase"]
-
-class flocdataViewSet(viewsets.ModelViewSet):
-    queryset = flocculation_data.objects.all()
-    serializer_class = flocdataSerializer
+from rest_framework import routers
+from db_connection.views import flocdataViewSet, UserViewSet, GroupViewSet
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'tests', testViewSet)
 router.register(r'flocdata', flocdataViewSet)
+router.register(r'users', UserViewSet)
+router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

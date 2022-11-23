@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from db_connection.models import flocculation_data
 from django.contrib.auth.models import User, Group
-from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

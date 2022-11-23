@@ -1,19 +1,12 @@
-import pandas as pd
-
 # paths
-imp_path = r"sustainable-drinking-water-treatment-plant\flocculation_analysis\data\analysis.txt"
-exp_path = r"sustainable-drinking-water-treatment-plant\flocculation_analysis\data\actualvpredicted.txt"
-db_path = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-            r'DBQ=sustainable-drinking-water-treatment-plant\flocculation_analysis\data\220630_flocculation.accdb;')
-
-pipe_savepath = r"sustainable-drinking-water-treatment-plant\flocculation_analysis\data\flocculation_analysis_pipeline"
+pipe_savepath = r"\opt\django\backend\floc_analyzer\data\flocculation_analysis_pipeline"
 pipe_loadpath = pipe_savepath
 
 # random state train_test_split
-rand_state = 11
+rand_state = 42
 
 # test dataset size
-test_dataset_size = 0.05
+test_dataset_size = 0.2
 
 # evaluation number of algorithm optimizer
 alg_num = 10

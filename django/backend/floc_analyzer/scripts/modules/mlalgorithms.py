@@ -1,4 +1,3 @@
-from configparser import MAX_INTERPOLATION_DEPTH
 import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
@@ -13,7 +12,7 @@ from sklearn.metrics import mean_squared_error as MSE
 from sklearn.metrics import mean_absolute_error as MAE
 from sklearn.metrics import mean_absolute_percentage_error as MAPE
 from joblib import dump, load
-import flocculation_analysis.modules.config as config
+import floc_analyzer.scripts.modules.config as config
 
 # pipelines
 def createpipeDTR():

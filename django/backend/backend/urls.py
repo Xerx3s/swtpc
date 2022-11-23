@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 import rest_framework
 from django.contrib.auth.models import User
-from testingdbcon.models import testtable, flocculation_data
+from db_connection.models import testtable, flocculation_data
 from rest_framework import routers, serializers, viewsets
 
 # Serializers define the API representation.

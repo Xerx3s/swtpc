@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TestingdbconConfig(AppConfig):
+class db_connectionConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'testingdbcon'
+    name = 'db_connection'

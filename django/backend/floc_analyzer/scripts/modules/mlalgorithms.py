@@ -39,21 +39,20 @@ def createpipeXGB():
     scaler=StandardScaler()
     selector=VarianceThreshold(threshold=(0.8*(1-0.8)))
     #estimator=xgb.XGBRegressor(n_estimators=100, max_depth=5, eta=0.9, subsample=0.7, colsample_bytree=0.5, scale_pos_weight=5)
-    #estimator=xgb.XGBRegressor()
-    estimator=xgb.XGBRegressor(eta=0.1, gamma=0, max_depth=10, min_child_weight=1, subsample=0.6,
-                                colsample_bytree=0.7, tree_method="exact", num_parallel_tree=1)
+    estimator=xgb.XGBRegressor()
+    #estimator=xgb.XGBRegressor(eta=0.1, gamma=0, max_depth=10, min_child_weight=1, subsample=0.6,
+    #                            colsample_bytree=0.7, tree_method="exact", num_parallel_tree=1)
     pipe = make_pipeline(imputer, scaler, selector, estimator)
     return pipe
 
-# assess pipeline
 def assess_pipeline(pipe: Pipeline, X_train, X_test, y_train, y_test):
     # actual vs predicted data
     pred_test = pipe.predict(X_test.values)
     df_pred_test = pd.DataFrame.from_dict(pred_test)
-    df_pred_test.rename(columns={0: "performance", 1: "fpH", 2: "fEC"}, errors= "raise", inplace=True)
+    df_pred_test.rename(columns={0: "fEC"}, errors= "raise", inplace=True)
     actualvpredicted = pd.concat([y_test.round(decimals=2).reset_index(), df_pred_test.round(decimals=2)], axis=1)
     actualvpredicted.set_index("index", inplace=True)
-    actualvpredicted.to_csv(config.exp_path, sep=";", decimal=",")
+    actualvpredicted.to_csv(r"flocculation_analysis\single_target\data\actualvpredicted_fEC.txt", sep=";", decimal=",")
 
     # scores
     rows = len(actualvpredicted.index)

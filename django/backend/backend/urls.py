@@ -18,6 +18,7 @@ from django.urls import path, include
 import rest_framework
 from rest_framework import routers
 from db_connection.views import flocdataViewSet, UserViewSet, GroupViewSet
+from floc_analyzer.views import MyView
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -29,4 +30,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('myview/', MyView.as_view()),
 ]

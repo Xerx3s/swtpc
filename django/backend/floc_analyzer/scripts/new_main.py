@@ -1,27 +1,40 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from floc_analyzer.scripts.modules.connectdb import dbflocdatatodf
+from floc_analyzer.scripts.modules.connectdb import connectdb
 from floc_analyzer.scripts.modules.mlalgorithms import createpipeXGB as createpipeline
 from floc_analyzer.scripts.modules.mlalgorithms import assess_pipeline, save_pipeline, load_pipeline
 import floc_analyzer.scripts.modules.config as config
 
-def trainorloadpipe(load: bool, printass: bool):
-    # import dataset from db.
-    dataset = dbflocdatatodf()
+class preparedataset:
+    def __init__(self, pred_type: str, sw: str, floc: str):
+        self.pred_type = pred_type
+        try:
+            if self.pred_type == "ec":
+                self.dataset = connectdb().flocdataEC()
+                self.target = ["final_EC"]
+            elif self.pred_type == "ph":
+                self.dataset = connectdb().flocdatapH()
+                self.target = ["final_pH"]
+            elif self.pred_type == "tur":
+                self.dataset = connectdb().flocdataTur()
+                self.dataset = self.dataset.query('surface_water == @sw & flocculant == @floc')
+                self.dataset.drop(columns=["surface_water", "flocculant"], inplace=True)
+                print(self.dataset)
+                self.target = ["final_turbidity"]
+        except:
+            print("wrong prediction type")
 
-    # filter dataset before usage. (drop columns for prediction of fpH and fEC)
+    def traintestset(self):
+        y = self.dataset[self.target]
+        self.dataset.drop(columns=self.target, inplace=True)
+        X_train, X_test, y_train, y_test = train_test_split(self.dataset, y,
+                                                            test_size=config.test_dataset_size,
+                                                            random_state=config.rand_state)
+        return X_train, X_test, y_train, y_test
 
-    # prepare dataset. isolate then drop target column.
-    dataset.drop(columns=["cal_fEC", "d_EC"], inplace=True)
-    target = ["fEC"]
-    y = dataset[target]
-    dataset.drop(columns=target, inplace=True)
-
-    # split dataset into training and validation datasets
-    X_train, X_test, y_train, y_test = train_test_split(dataset, y,
-                                                        test_size=config.test_dataset_size,
-                                                        random_state=config.rand_state)
+def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bool):
+    X_train, X_test, y_train, y_test = preparedataset(pred_type=pred_type, sw=sw, floc=floc).traintestset()
     
     if load:
         pipe = load_pipeline(config.pipe_loadpath)
@@ -38,11 +51,11 @@ def trainorloadpipe(load: bool, printass: bool):
         print(scores)
         print(evaluation)
 
-    return pipe, X_train, X_test, y_train, y_test
+    #return pipe, X_train, X_test, y_train, y_test
+    return pipe
 
-def predictfromvalues(inputvalues: list, loadpipe: bool = True, printass: bool = False):
-    pipe, _, _, _, _ = trainorloadpipe(loadpipe, printass)
-    result = pipe.predict([inputvalues])
-    result[0][0] = (1 - result[0][0]) * inputvalues[2]
-    rounded = np.around(result[0], 2)
-    return rounded
+def outputprediction(inputvalues: list, pred_type: str, sw: str = None, floc: str = None, loadpipe: bool = True, printass: bool = False):
+    #pipe, _, _, _, _ = trainorloadpipe(pred_type, loadpipe, printass)
+    pipe = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+    return int(pipe.predict([inputvalues]))
+    

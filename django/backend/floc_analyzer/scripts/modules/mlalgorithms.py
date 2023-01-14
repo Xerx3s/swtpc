@@ -48,7 +48,7 @@ def assess_pipeline(pipe: Pipeline, X_train, X_test, y_train, y_test):
     # actual vs predicted data
     pred_test = pipe.predict(X_test.values)
     df_pred_test = pd.DataFrame.from_dict(pred_test)
-    df_pred_test.rename(columns={0: "fEC"}, errors= "raise", inplace=True)
+    df_pred_test.rename(columns={0: "prediction"}, errors= "raise", inplace=True)
     actualvpredicted = pd.concat([y_test.round(decimals=2).reset_index(), df_pred_test.round(decimals=2)], axis=1)
     actualvpredicted.set_index("index", inplace=True)
     actualvpredicted.to_csv(r"flocculation_analysis\single_target\data\actualvpredicted_fEC.txt", sep=";", decimal=",")

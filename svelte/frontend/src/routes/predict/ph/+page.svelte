@@ -1,15 +1,15 @@
 <script lang="ts">
     let data = {
-        "initial_EC": 400,
+        "initial_pH": 8.5,
         "floc_concentration": 20,
         "floc_saline_Molarity": 0.3,
         "floc_dose": 200,
         "print_assessment": false,
         "load_pipe": false}
-    let pred_fEC = 0
+    let pred_fpH = 0
 
     async function doPost() {
-        let url = "http://localhost:3001/ec/"
+        let url = "http://localhost:3001/ph/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -20,8 +20,8 @@
             body: JSON.stringify(data)
         })
         let res2 = await res.json()
-        
-        pred_fEC = res2["final_EC"]
+    
+        pred_fpH = res2["final_pH"]
         }
 </script>
 
@@ -40,9 +40,9 @@
         </div>
     </div>
     <div class="container-fluid">
-        <label for="initial_EC">
-            <strong>Electrical conductivity</strong> (in µS/cm)
-            <input type="number" id="initial_EC" name="initial_EC" bind:value={data.initial_EC} required>
+        <label for="initial_pH">
+            <strong>pH value</strong>
+            <input type="number" id="initial_pH" name="initial_pH" bind:value={data.initial_pH} step="0.1" required>
         </label>
         <label for="floc_concenctration">
             <strong>Flocculant base solution concentration</strong> (in g/l)
@@ -59,9 +59,9 @@
 
         <button type="submit" on:click={doPost}>Senden</button>
 
-        <label for="pred_fEC">
-            <strong>predicted final EC</strong> (in µS/cm)
-            <input type="number" id="pred_fEC" name="pred_fEC" bind:value={pred_fEC}>
+        <label for="pred_fpH">
+            <strong>predicted final pH</strong>
+            <input type="number" id="pred_fpH" name="pred_fpH" placeholder="0" bind:value={pred_fpH}>
         </label>
     </div>
 </form>

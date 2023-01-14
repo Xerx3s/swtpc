@@ -4,6 +4,19 @@ from rest_framework import permissions
 from rest_framework.response import Response
 from floc_analyzer.scripts.new_main import outputprediction
 from floc_analyzer.serializers import predictECSerializer, predictpHSerializer, predictTurSerializer
+from floc_analyzer.models import get_floc, get_sw
+
+@permission_classes((permissions.AllowAny,))
+class list_surface_waters(APIView):
+    def get(self, request, *args, **kwargs):
+        data = get_sw()
+        return Response(data=data)
+
+@permission_classes((permissions.AllowAny,))
+class list_flocculants(APIView):
+    def get(self, request, *args, **kwargs):
+        data = get_floc()
+        return Response(data=data)
 
 @permission_classes((permissions.AllowAny,))
 class predictEcView(APIView):
@@ -16,7 +29,11 @@ class predictEcView(APIView):
             int(request.data.get('floc_dose'))]
         input_list.append(input_list[3]/input_list[1]),
         input_list.append(input_list[4]*input_list[2])
-        result=outputprediction(input_list, "ec", loadpipe=False)
+        result=outputprediction(
+            input_list,
+            pred_type="ec",
+            loadpipe=request.data.get('load_pipe'),
+            printass=request.data.get('print_assessment'))
         data = {
             "initial_EC": input_list[0],
             "floc_concentration": input_list[1],
@@ -36,7 +53,11 @@ class predictPhView(APIView):
             float(request.data.get('floc_concentration')),
             float(request.data.get('floc_saline_Molarity')),
             int(request.data.get('floc_dose'))]
-        result=outputprediction(input_list, "ph", loadpipe=False)
+        result=outputprediction(
+            input_list,
+            pred_type="ph",
+            loadpipe=request.data.get('load_pipe'),
+            printass=request.data.get('print_assessment'))
         data = {
             "initial_pH": input_list[0],
             "floc_concentration": input_list[1],
@@ -50,11 +71,9 @@ class predictTurView(APIView):
     serializer_class = predictTurSerializer
     def post(self, request, *args, **kwargs):
         input_list = [
-            #request.data.get("surface_water"),
             float(request.data.get("initial_pH")),
             int(request.data.get("initial_EC")),
             int(request.data.get("initial_turbidity")),
-            #request.data.get("flocculant"),
             float(request.data.get("floc_saline_Molarity")),
             int(request.data.get("floc_dose")),
             int(request.data.get("floc_cactus_share")),
@@ -66,10 +85,10 @@ class predictTurView(APIView):
         result=outputprediction(
             inputvalues=input_list,
             pred_type="tur",
-            sw=request.data.get("surface_water"),
-            floc=request.data.get("flocculant"), loadpipe=False)
+            floc=request.data.get("flocculant"),
+            loadpipe=request.data.get('load_pipe'),
+            printass=request.data.get('print_assessment'))
         data = {
-            "surface_water": request.data.get("surface_water"),
             "initial_pH": input_list[0],
             "initial_EC": input_list[1],
             "initial_turbidity": input_list[2],

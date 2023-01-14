@@ -5,43 +5,41 @@ def get_sw():
     df = connectdb().flocdatatodf()
     sw_list = df["surface_water"].unique().tolist()
     sw = []
-    i = 0
     for entry in sw_list:
         sw.append((entry, entry))
-        i += 1
-    print(sw)
     return sw
 
 def get_floc():
     df = connectdb().flocdatatodf()
     floc_list = df["flocculant"].unique().tolist()
     floc = []
-    i = 0
     for entry in floc_list:
         floc.append((entry, entry))
-        i += 1
-    print(floc)
     return floc
 
 class predictECData(models.Model):
+    print_assessment = models.BooleanField(blank=False, default=False)
+    load_pipe = models.BooleanField(blank=False, default=False)
     initial_EC = models.IntegerField(blank=False, default="400")
     floc_concentration = models.FloatField(blank=False, default="20")
     floc_saline_Molarity = models.FloatField(blank=False, default="0.3")
     floc_dose = models.IntegerField(blank=False, default="200")
 
 class predictpHData(models.Model):
+    print_assessment = models.BooleanField(blank=False, default=False)
+    load_pipe = models.BooleanField(blank=False, default=False)
     initial_pH = models.FloatField(blank=False, default="8.5")
     floc_concentration = models.FloatField(blank=False, default="20")
     floc_saline_Molarity = models.FloatField(blank=False, default="0.3")
     floc_dose = models.IntegerField(blank=False, default="200")
 
 class predictTurData(models.Model):
-    #surface_water = models.CharField(max_length=50, blank=False, default="") # in dropdown ändern!
+    print_assessment = models.BooleanField(blank=False, default=False)
+    load_pipe = models.BooleanField(blank=False, default=False)
     surface_water = models.CharField(max_length=50, blank=False, choices=get_sw())
     initial_pH = models.FloatField(blank=False, default="8.5")
     initial_EC = models.IntegerField(blank=False, default="400")
     initial_turbidity = models.IntegerField(blank=False, default="135")
-    #flocculant = models.CharField(max_length=50, blank=False, default="") # in dropdown ändern!
     flocculant = models.CharField(max_length=50, blank=False, choices=get_floc())
     floc_saline_Molarity = models.FloatField(blank=False, default="0.3")
     floc_dose = models.IntegerField(blank=False, default="200")

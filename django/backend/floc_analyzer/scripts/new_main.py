@@ -18,9 +18,8 @@ class preparedataset:
                 self.target = ["final_pH"]
             elif self.pred_type == "tur":
                 self.dataset = connectdb().flocdataTur()
-                self.dataset = self.dataset.query('surface_water == @sw & flocculant == @floc')
+                #self.dataset = self.dataset.query('surface_water == @sw & flocculant == @floc')
                 self.dataset.drop(columns=["surface_water", "flocculant"], inplace=True)
-                print(self.dataset)
                 self.target = ["final_turbidity"]
         except:
             print("wrong prediction type")
@@ -45,11 +44,19 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
         print("new pipe trained.")
     
     if printass:
-        assess_pipeline(pipe, X_train, X_test, y_train, y_test)
         actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)
+        print("\nPrediction Test with test dataset")
+        print("actual vs. predicted output:")
         print(actualvpredicted)
-        print(scores)
-        print(evaluation)
+        print('\nnumber of rows: %d' %(scores["rows"]))
+        print("Trainings-Score: %.4f" %(scores["train_score"]))
+        print("Test-Score: %.4f" %(scores["test_score"]))
+        print("Used input features: ", (scores["used_features"]))
+        print('\nEvaluation report:')
+        print ("RMSE: %.2f" %(evaluation["rmse"]))
+        print ("MAE: %.2f" %(evaluation["mae"]))
+        print ("MAPE: %.2f" %(evaluation["mape"]))
+        print('Accuracy: %.2f'%((100-evaluation["mape"])))
 
     #return pipe, X_train, X_test, y_train, y_test
     return pipe
@@ -57,5 +64,7 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
 def outputprediction(inputvalues: list, pred_type: str, sw: str = None, floc: str = None, loadpipe: bool = True, printass: bool = False):
     #pipe, _, _, _, _ = trainorloadpipe(pred_type, loadpipe, printass)
     pipe = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
-    return int(pipe.predict([inputvalues]))
+    prediction = round(float(pipe.predict([inputvalues])),1)
+    #print("prediction: " + prediction)
+    return prediction
     

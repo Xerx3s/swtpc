@@ -18,7 +18,7 @@ from django.urls import path, include
 import rest_framework
 from rest_framework import routers
 from db_connection.views import flocdataViewSet, UserViewSet, GroupViewSet
-from floc_analyzer.views import predictEcView, predictPhView, predictTurView
+from floc_analyzer.views import predictEcView, predictPhView, predictTurView, list_flocculants, list_surface_waters
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -33,4 +33,6 @@ urlpatterns = [
     path('ec/', predictEcView.as_view()),
     path('ph/', predictPhView.as_view()),
     path('tur/', predictTurView.as_view()),
+    path('sw/', list_surface_waters.as_view()),
+    path('floc/', list_flocculants.as_view())
 ]

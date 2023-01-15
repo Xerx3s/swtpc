@@ -12,13 +12,16 @@
         "ecoli": 0
     }
 
+    let result_string: string = ""
+
     function selectmethods() {
+        result_string = ""
+
         return null
     }
 </script>
 
 <div>
-    Input Parameters
     <div class="grid">
         <article>
             <header>Indicator Parameters</header>
@@ -70,5 +73,11 @@
             </label>
         </article>
     </div>
+
     <button on:click={selectmethods}>Analyze</button>
+    
+    <article>
+        <header>Result</header>
+        <p>result</p>
+    </article>
 </div>

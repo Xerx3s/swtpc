@@ -15,11 +15,7 @@
     This online tool focuses exclusively on low-tech methods in order to provide as many people as possible with access to clean water by the simplest means.</p>
 
 <div class="grid">
-    {#if advanced}
-        <a href="/analysis/advanced" role="button">Start Analysis</a>
-    {:else}
-        <a href="/analysis/simple" role="button">Start Analysis</a>
-    {/if}
+    <a href="/analysis" role="button">Start Analysis</a>
 </div>
 <br />
 <div class="grid">

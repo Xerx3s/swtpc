@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { selected_methods } from "/opt/svelte/frontend/src/stores/stores";
+    import Card from "@smui/card"
+    import Slider from "@smui/slider"
+    import Button from "@smui/button"
 
     let data = {
         "turbidity": 0,
@@ -85,38 +88,49 @@
 </script>
 
 <div>
-    <div class="grid">
-        <article>
-            <header>Turbidity</header>
-            <input type="range" min="0" max="3" bind:value={data.turbidity}>
-            {#if data.turbidity === 0}
-                none
-            {:else if data.turbidity === 1}
-                low
-            {:else if data.turbidity === 2}
-                medium
-            {:else if data.turbidity === 3}
-                high
-            {/if}
-        </article>
-        <article>
-            <header>Taste or Smell</header>
-            <label><input type="checkbox" bind:checked={data.organic_material}> Earthy or Musty</label>
-            <label><input type="checkbox" bind:checked={data.heavy_metals}> Metallic</label>
-            
-        </article>
-        <article>
-            <header>Anomalies</header>
-            <label><input type="checkbox" bind:checked={data.nitrate}> Strong Algae Formation</label>
-            <label><input type="checkbox" bind:checked={data.coliformes}> Cases of Diarrhea or Stomach Pain</label>
-            <label><input type="checkbox" bind:checked={data.arsenic}> Excessive Hornification of Skin</label>
-        </article>
+    <div class="card-display">
+        <div class="card-container">
+            <Card padded>
+                Turbidity
+                <Slider bind:value={data.turbidity} min={0} max={3} step={1} discrete />
+                {#if data.turbidity === 0}
+                    none
+                {:else if data.turbidity === 1}
+                    low
+                {:else if data.turbidity === 2}
+                    medium
+                {:else if data.turbidity === 3}
+                    high
+                {/if}
+            </Card>
+        </div>
+        <br />
+        <div class="card-container">
+            <Card padded>
+                <header>Taste or Smell</header>
+                <label><input type="checkbox" bind:checked={data.organic_material}> Earthy or Musty</label>
+                <label><input type="checkbox" bind:checked={data.heavy_metals}> Metallic</label>
+            </Card>
+        </div>
+        <br />
+        <div class="card-container">
+            <Card padded>
+                <header>Anomalies</header>
+                <label><input type="checkbox" bind:checked={data.nitrate}> Strong Algae Formation</label>
+                <label><input type="checkbox" bind:checked={data.coliformes}> Cases of Diarrhea or Stomach Pain</label>
+                <label><input type="checkbox" bind:checked={data.arsenic}> Excessive Hornification of Skin</label>
+            </Card>
+            </div>
     </div>
-    <button on:click={selectmethods}>Analyze</button>
+    <Button on:click={selectmethods}>Analyze</Button>
     {#if results != ""}
-        <article>
-            <header>Results</header>
-            {@html results}
-        </article>
+        <div class="card-display">
+            <div class="card-container">
+                <Card padded>
+                    <header>Results</header>
+                    {@html results}
+                </Card>
+            </div>
+        </div>
     {/if}
 </div>

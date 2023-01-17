@@ -1,21 +1,21 @@
 <script lang="ts">
 	import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
 
+    import Button from "@smui/button"
+
     let advanced: boolean;
     advanced_view.subscribe(value => {
 		advanced = value;
     })
 </script>
 
-<hgroup>
-    <h1>Welcome</h1>
-    <h2>This is the online tool for automated conceptual design of sustainable drinking water treatment plants from low-tech.<h2>
-</hgroup>
+<h1>Welcome</h1>
+<p>This is the online tool for automated conceptual design of sustainable drinking water treatment plants from low-tech.</p>
 <p>Based on simple input parameters, different treatment methods can be selected and combined to produce the cleanest drinking water possible.
     This online tool focuses exclusively on low-tech methods in order to provide as many people as possible with access to clean water by the simplest means.</p>
 
 <div class="grid">
-    <a href="/analysis" role="button">Start Analysis</a>
+    <Button href="/analysis">Start Analysis</Button>
 </div>
 <br />
 <div class="grid">

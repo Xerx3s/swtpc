@@ -1,5 +1,8 @@
 <script lang="ts">
-    import "@picocss/pico"
+    import TopAppBar, { Row, Section, Title } from "@smui/top-app-bar"
+    import IconButton from "@smui/icon-button"
+    import Checkbox from "@smui/checkbox"
+    //import "@picocss/pico"
 	import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
 
     let advanced = false
@@ -16,23 +19,22 @@
 </script>
 
 <header>
-    <nav class="container-fluid">
-        <ul>
-            <li><a href="/"><strong>SWTPC</strong></a></li>
-        </ul>
-        <ul>
-            <li>
-                <label for="switch">
+    <TopAppBar variant="static" dense>
+        <Row>
+            <Section>
+                <IconButton class="material-icons">menu</IconButton>
+                <Title>SWTPC</Title>
+            </Section>
+            <Section align="end" toolbar>
                     {#if advanced}
-                        Advanced Mode
+                        Advanced View
                     {:else}
-                        Simple Mode
+                        Simple View
                     {/if}
-                    <input type="checkbox" id="switch" name="switch" role="switch" bind:checked={advanced} on:change={set_advanced_view}>
-                </label>
-            </li>
-        </ul>
-    </nav>
+                    <Checkbox bind:checked={advanced} on:change={set_advanced_view}/>
+            </Section>
+        </Row>
+    </TopAppBar>
 </header>
 
 <main class="container">

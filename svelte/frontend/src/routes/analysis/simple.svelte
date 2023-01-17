@@ -2,7 +2,8 @@
 	import { selected_methods } from "/opt/svelte/frontend/src/stores/stores";
     import Card from "@smui/card"
     import Slider from "@smui/slider"
-    import Button from "@smui/button"
+    import Button, { Group } from "@smui/button"
+    import Paper, { Title, Subtitle, Content } from "@smui/paper"
 
     let data = {
         "turbidity": 0,
@@ -88,10 +89,10 @@
 </script>
 
 <div>
-    <div class="card-display">
-        <div class="card-container">
-            <Card padded>
-                Turbidity
+    <div class="paper-container" style="margin-bottom:1em">
+        <Paper>
+            <Title>Turbidity</Title>
+            <Content>
                 <Slider bind:value={data.turbidity} min={0} max={3} step={1} discrete />
                 {#if data.turbidity === 0}
                     none
@@ -102,27 +103,32 @@
                 {:else if data.turbidity === 3}
                     high
                 {/if}
-            </Card>
-        </div>
-        <br />
-        <div class="card-container">
-            <Card padded>
-                <header>Taste or Smell</header>
+            </Content>
+        </Paper>
+    </div>
+    <div class="paper-container" style="margin-bottom:1em">
+        <Paper>
+            <Title>Taste or Smell</Title>
+            <Content>
                 <label><input type="checkbox" bind:checked={data.organic_material}> Earthy or Musty</label>
                 <label><input type="checkbox" bind:checked={data.heavy_metals}> Metallic</label>
-            </Card>
-        </div>
-        <br />
-        <div class="card-container">
-            <Card padded>
-                <header>Anomalies</header>
+            </Content>
+        </Paper>
+    </div>
+    <div class="paper-container" style="margin-bottom:1em">
+        <Paper>
+            <Title>Anomalies</Title>
+            <Content>
                 <label><input type="checkbox" bind:checked={data.nitrate}> Strong Algae Formation</label>
                 <label><input type="checkbox" bind:checked={data.coliformes}> Cases of Diarrhea or Stomach Pain</label>
                 <label><input type="checkbox" bind:checked={data.arsenic}> Excessive Hornification of Skin</label>
-            </Card>
-            </div>
+            </Content>
+        </Paper>
     </div>
-    <Button on:click={selectmethods}>Analyze</Button>
+            
+    <Group style="display: flex; justify-content: strech;">
+        <Button variant="unelevated" style="width: 50%; margin: auto;" on:click={selectmethods}>Analyze</Button>
+    </Group>
     {#if results != ""}
         <div class="card-display">
             <div class="card-container">

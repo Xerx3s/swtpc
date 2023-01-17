@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
 
-    import Button from "@smui/button"
+    import Button, { Group } from "@smui/button"
+    import Paper, { Title, Subtitle, Content } from "@smui/paper"
 
     let advanced: boolean;
     advanced_view.subscribe(value => {
@@ -14,28 +15,36 @@
 <p>Based on simple input parameters, different treatment methods can be selected and combined to produce the cleanest drinking water possible.
     This online tool focuses exclusively on low-tech methods in order to provide as many people as possible with access to clean water by the simplest means.</p>
 
-<div class="grid">
-    <Button href="/analysis">Start Analysis</Button>
-</div>
-<br />
-<div class="grid">
-    <div class="container-fluid">
-        <b>Currently supported treatment methods:</b>
-        <ul>
-            <li>Flocculation</li>
-            <li>Biosand Filtration</li>
-            <li>SODIS</li>
-            <li>(Flouride Termination)</li>
-        </ul>
+<Group style="display: flex; justify-content: strech;">
+    <Button variant="unelevated" style="width: 50%; margin: auto;" href="/analysis">Start Analysis</Button>
+</Group>
+
+<div style="display:flex;">
+    <div class="paper-container" style="width:50%; padding:1em">
+        <Paper>
+            <Title>Currently supported treatment methods</Title>
+            <Content>
+                <ul>
+                    <li>Flocculation</li>
+                    <li>Biosand Filtration</li>
+                    <li>SODIS</li>
+                    <li>(Flouride Termination)</li>
+                </ul>
+            </Content>
+        </Paper>
     </div>
-    <div class="container-fluid">
-        <b>Additional treatment methods:</b>
-        <ul>
-            <li>boiling</li>
-            <li>Chlorination</li>
-            <li>membrane filtration</li>
-            <li>ceramic pot filtration</li>
-        </ul>
+    <div class="paper-container" style="width:50%; padding:1em">
+        <Paper>
+            <Title>Additional treatment methods</Title>
+            <Content>
+                <ul>
+                    <li>Boiling</li>
+                    <li>Chlorination</li>
+                    <li>Membrane Filtration</li>
+                    <li>Ceramic Pot Filtration</li>
+                </ul>
+            </Content>
+        </Paper>
     </div>
 </div>
 

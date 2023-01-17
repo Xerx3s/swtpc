@@ -4,8 +4,9 @@
     import Checkbox from "@smui/checkbox"
     import Drawer, { AppContent, Scrim, Header, Subtitle, Content } from "@smui/drawer"
     import List, { Item, Text } from '@smui/list';
-	import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
+	  import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
     import Button, { Label } from "@smui/button"
+    import Switch from "@smui/switch"
 
     let advanced = false;
 
@@ -45,7 +46,7 @@
                   {:else}
                       Simple View
                   {/if}
-                  <Checkbox bind:checked={advanced} on:change={set_advanced_view}/>
+                  <Switch bind:checked={advanced} on:SMUISwitch:change={set_advanced_view}/>
           </Section>
       </Row>
   </TopAppBar>

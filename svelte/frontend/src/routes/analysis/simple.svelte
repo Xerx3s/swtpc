@@ -1,16 +1,17 @@
 <script lang="ts">
 	import { selected_methods } from "/opt/svelte/frontend/src/stores/stores";
-    import Card from "@smui/card"
     import Slider from "@smui/slider"
     import Button, { Group } from "@smui/button"
     import Paper, { Title, Subtitle, Content } from "@smui/paper"
+    import List, {Item, Meta, Label } from "@smui/list"
+    import Checkbox from "@smui/checkbox"
 
     let data = {
         "turbidity": 0,
         "organic_material": false,
         "heavy_metals": false,
         "nitrate": false,
-        "coliformes": false,
+        "coliforms": false,
         "arsenic": false
         //Methode, um Flouride zu identifizieren?
     }
@@ -52,8 +53,8 @@
         if (data.nitrate) {
             problems_list.push(`<a href="/">Nitrate</a>`)
         }
-        if (data.coliformes) {
-            problems_list.push(`<a href="/">Coliformes</a>`)
+        if (data.coliforms) {
+            problems_list.push(`<a href="/">Coliform Bacteria</a>`)
         }
         if (data.arsenic) {
             problems_list.push(`<a href="/">Arsenic</a>`)
@@ -76,7 +77,7 @@
                 methods_list.push(`<a href="/">modified Biosand Filtration</a>`)
             }
         }
-        if (data.coliformes) {
+        if (data.coliforms) {
             methods.sodis = true
             methods_list.push(`<a href="/">SODIS</a>`)
         }
@@ -88,55 +89,79 @@
 
 </script>
 
-<div>
-    <div class="paper-container" style="margin-bottom:1em">
-        <Paper>
-            <Title>Turbidity</Title>
-            <Content>
-                <Slider bind:value={data.turbidity} min={0} max={3} step={1} discrete />
-                {#if data.turbidity === 0}
-                    none
-                {:else if data.turbidity === 1}
-                    low
-                {:else if data.turbidity === 2}
-                    medium
-                {:else if data.turbidity === 3}
-                    high
-                {/if}
-            </Content>
-        </Paper>
-    </div>
-    <div class="paper-container" style="margin-bottom:1em">
-        <Paper>
-            <Title>Taste or Smell</Title>
-            <Content>
-                <label><input type="checkbox" bind:checked={data.organic_material}> Earthy or Musty</label>
-                <label><input type="checkbox" bind:checked={data.heavy_metals}> Metallic</label>
-            </Content>
-        </Paper>
-    </div>
-    <div class="paper-container" style="margin-bottom:1em">
-        <Paper>
-            <Title>Anomalies</Title>
-            <Content>
-                <label><input type="checkbox" bind:checked={data.nitrate}> Strong Algae Formation</label>
-                <label><input type="checkbox" bind:checked={data.coliformes}> Cases of Diarrhea or Stomach Pain</label>
-                <label><input type="checkbox" bind:checked={data.arsenic}> Excessive Hornification of Skin</label>
-            </Content>
-        </Paper>
-    </div>
-            
-    <Group style="display: flex; justify-content: strech;">
-        <Button variant="unelevated" style="width: 50%; margin: auto;" on:click={selectmethods}>Analyze</Button>
-    </Group>
-    {#if results != ""}
-        <div class="card-display">
-            <div class="card-container">
-                <Card padded>
-                    <header>Results</header>
-                    {@html results}
-                </Card>
-            </div>
-        </div>
-    {/if}
+<div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <Paper style="margin:1em; flex-grow:1">
+        <Title>Turbidity</Title>
+        <Content>
+            <Slider bind:value={data.turbidity} min={0} max={3} step={1} discrete style="min-width:10em"/>
+            <center>
+            {#if data.turbidity === 0}
+                none
+            {:else if data.turbidity === 1}
+                low
+            {:else if data.turbidity === 2}
+                medium
+            {:else if data.turbidity === 3}
+                high
+            {/if}
+            </center>
+        </Content>
+    </Paper>
+    <Paper style="margin:1em; flex-grow:1">
+        <Title>Taste or Smell</Title>
+        <Content>
+            <List checkList>
+                <Item>
+                    <Label>Earthy or Musty</Label>
+                    <Meta>
+                        <Checkbox bind:checked={data.organic_material} />
+                    </Meta>
+                </Item>
+                <Item>
+                    <Label>Metallic</Label>
+                    <Meta>
+                        <Checkbox bind:checked={data.heavy_metals} />
+                    </Meta>
+                </Item>
+            </List>
+        </Content>
+    </Paper>
+    <Paper style="margin:1em; flex-grow:1">
+        <Title>Anomalies</Title>
+        <Content>
+            <List checkList>
+                <Item>
+                    <Label>Strong Algae Formation</Label>
+                    <Meta>
+                        <Checkbox bind:checked={data.nitrate} />
+                    </Meta>
+                </Item>
+                <Item>
+                    <Label>Cases of Diarrhea or Stomach Pain</Label>
+                    <Meta>
+                        <Checkbox bind:checked={data.coliforms} />
+                    </Meta>
+                </Item>
+                <Item>
+                    <Label>Excessive Hornification of Skin</Label>
+                    <Meta>
+                        <Checkbox bind:checked={data.arsenic} />
+                    </Meta>
+                </Item>
+            </List>
+        </Content>
+    </Paper>
 </div>
+<Group style="display: flex; justify-content: strech; margin-bottom:1em">
+    <Button variant="unelevated" style="width: 50%; margin: auto;" on:click={selectmethods}>Analyze</Button>
+</Group>
+{#if results != ""}
+    <div style="display:flex; margin-bottom:1em">
+        <Paper style="flex-grow:1;">
+            <Title>Results</Title>
+            <Content>
+                {@html results}
+            </Content>
+        </Paper>
+    </div>
+{/if}

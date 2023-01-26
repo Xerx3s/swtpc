@@ -1,6 +1,6 @@
 import numpy as np
 
-from floc_analyzer.scripts.main import outputprediction, trainorloadpipe
+from floc_analyzer.scripts.main import trainorloadpipe, outputprediction, inputoptimization
 from floc_analyzer.scripts.modules.pso import create_objective_function, minimize
 
 class TestPrediction:
@@ -33,30 +33,36 @@ class TestPrediction:
 class TestOptimizer:
     def test_optimizer_EC(self):
         pred_type = "ec"
-        
         pipe, bounds = trainorloadpipe(pred_type=pred_type, sw="model suspension", floc="Moringa", load=False, printass=False)
-
-        objective_function = create_objective_function(pipe=pipe)
-        output, best_param = minimize(objective_function=objective_function, pred_type=pred_type, bounds=bounds)
-
+        output, best_param = minimize(pipe=pipe, pred_type=pred_type, bounds=bounds)
         assert 200 < output < 800
         
     def test_optimizer_pH(self):
         pred_type = "ph"
-
         pipe, bounds = trainorloadpipe(pred_type=pred_type, sw="model suspension", floc="Moringa", load=False, printass=False)
-
-        objective_function = create_objective_function(pipe=pipe)
-        output, best_param = minimize(objective_function=objective_function, pred_type=pred_type, bounds=bounds)
-
+        output, best_param = minimize(pipe=pipe, pred_type=pred_type, bounds=bounds)
         assert 6 < output < 9
 
     def test_optimizer_tur(self):
         pred_type = "tur"
-
         pipe, bounds = trainorloadpipe(pred_type=pred_type, sw="model suspension", floc="Moringa", load=False, printass=False)
-        
-        objective_function = create_objective_function(pipe=pipe)
-        output, best_param = minimize(objective_function=objective_function, pred_type=pred_type, bounds=bounds)
+        output, best_param = minimize(pipe=pipe, pred_type=pred_type, bounds=bounds)
+        assert 0 <= output < 100
 
-        assert 0 < output < 100
+    def test_inputoptimization_ec(self):
+        pred_type = "ec"
+        pipe, bounds = trainorloadpipe(pred_type=pred_type, sw="model suspension", floc="Moringa", load=False, printass=False)
+        output, best_param = inputoptimization(pred_type=pred_type, bounds=bounds, loadpipe=False)
+        assert 200 < output < 800
+
+    def test_inputoptimization_ph(self):
+        pred_type = "ph"
+        pipe, bounds = trainorloadpipe(pred_type=pred_type, sw="model suspension", floc="Moringa", load=False, printass=False)
+        output, best_param = inputoptimization(pred_type=pred_type, bounds=bounds, loadpipe=False)
+        assert 6 < output < 9
+
+    def test_inputoptimization_tur(self):
+        pred_type = "tur"
+        pipe, bounds = trainorloadpipe(pred_type=pred_type, sw="model suspension", floc="Moringa", load=False, printass=False)
+        output, best_param = inputoptimization(pred_type=pred_type, bounds=bounds, loadpipe=False)
+        assert 0 <= output < 100

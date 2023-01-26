@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from floc_analyzer.scripts.modules.connectdb import connectdb
 from floc_analyzer.scripts.modules.mlalgorithms import createpipeXGB as createpipeline
 from floc_analyzer.scripts.modules.mlalgorithms import assess_pipeline, save_pipeline, load_pipeline
+from floc_analyzer.scripts.modules.pso import minimize
 import floc_analyzer.scripts.modules.config as config
 
 class preparedataset:
@@ -34,11 +35,10 @@ class preparedataset:
 
 def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bool):
     X_train, X_test, y_train, y_test = preparedataset(pred_type=pred_type, sw=sw, floc=floc).traintestset()
-    
+
     lb = X_train.min()
     ub = X_train.max()
     bounds = {}
-
     for index,value in lb.items():
         bounds[index] = [value, ub[index]+0.1]
 
@@ -75,3 +75,13 @@ def outputprediction(inputvalues: list, pred_type: str, sw: str = None, floc: st
     #print("prediction: " + prediction)
     return prediction
     
+def inputoptimization(bounds: dict, pred_type: str, sw: str = None, floc: str = None, loadpipe: bool = True, printass: bool = False):
+    """
+        Bounds need to be dict of type {param: [min, max]}.\n
+        Keys for param: initial_pH, initial_EC, initial_turbidity, floc_concentration, floc_saline_Molarity
+        floc_dose, floc_cactus_share, stirring_speed_coagulation_phase, duration_coagulation_phase, stirring_speed_flocculation_phase, duration_flocculation_phase, duration_sedimentation_phase
+    """
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+    output, best_param = minimize(pipe=pipe, pred_type=pred_type, bounds=bounds)
+
+    return output, best_param

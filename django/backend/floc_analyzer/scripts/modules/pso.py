@@ -8,10 +8,12 @@ def create_objective_function(pipe: Pipeline):
         return output
     return objective_function
 
-def minimize(objective_function, pred_type: str, bounds: dict):
+def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
     particles = 50
     iterations = 100
     options = {'c1': 0.5, 'c2': 0.3, 'w':0.9}
+
+    objective_function = create_objective_function(pipe=pipe)
 
     if pred_type == "ec":
         bounds_tuple = (
@@ -80,4 +82,9 @@ def minimize(objective_function, pred_type: str, bounds: dict):
         )
         optimizer = GlobalBestPSO(n_particles=particles, dimensions=11, options=options, bounds=bounds_tuple)
     
-    return optimizer.optimize(objective_function, iters=iterations)
+    output, best_param = optimizer.optimize(objective_function, iters=iterations)
+
+    if output < 0:
+        output = 0
+
+    return output, best_param

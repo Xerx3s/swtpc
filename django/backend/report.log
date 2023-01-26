@@ -296,3 +296,465 @@ ValueError: too many values to unpack (expected 2)
 2023-01-26 15:48:16,494 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.8023428916931152, best pos: [8.18219064e+00 8.22764953e+02 2.11303257e+01 5.50926354e-01
  3.85547894e+02 1.03408779e+01 8.07645102e+01 1.55554004e+00
  4.77985113e+01 1.19727423e+01 5.38233084e+01]
+2023-01-26 15:55:14,858 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:55:15,496 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 323.7568054199219, best pos: [3.24039499e+02 3.67869322e+01 9.80863441e-01 1.31764960e+02
+ 5.26393373e+00 3.35117033e-02]
+2023-01-26 15:55:15,703 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:55:16,335 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.29057969  35.32167153   0.79937793 338.75513508]
+2023-01-26 15:55:16,593 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:55:17,227 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.8001024723052979, best pos: [8.21332272e+00 4.74747301e+02 1.77487043e+01 1.09165482e-01
+ 3.23964886e+02 2.01754341e+01 1.37424554e+02 1.94463899e+00
+ 3.61087865e+01 1.15720401e+01 5.25228252e+01]
+2023-01-26 15:57:02,522 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:57:03,456 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 324.5609130859375, best pos: [3.25088516e+02 4.67687406e+01 8.21011749e-01 1.87640119e+02
+ 2.86257139e+00 2.97665639e-02]
+2023-01-26 15:57:04,073 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:57:04,684 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.28346762  40.86518554   0.87453398 333.80936968]
+2023-01-26 15:57:04,943 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:57:05,567 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.8001024723052979, best pos: [  8.20214951 464.53296126  37.22424779   0.69666149 111.52468879
+  31.57054933  87.59368162   2.47868926  39.43341584  12.38692678
+  55.68049868]
+2023-01-26 15:57:19,955 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:57:20,615 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 364.3113098144531, best pos: [3.60842196e+02 3.84631017e+01 3.31674117e-01 5.15111243e+01
+ 1.29191611e+00 9.24448793e-03]
+2023-01-26 15:57:20,816 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:57:21,425 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.43983418  45.41540926   0.7839514  344.72564757]
+2023-01-26 15:57:21,696 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:57:22,327 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.8023428916931152, best pos: [8.16844683e+00 8.18871048e+02 2.85135416e+01 5.02320509e-01
+ 2.06087032e+02 3.48130627e+01 1.02792595e+02 2.33153948e+00
+ 3.41679781e+01 1.20854696e+01 5.79318938e+01]
+2023-01-26 16:25:31,463 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:25:32,363 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 317.37762451171875, best pos: [3.30951041e+02 3.82616105e+01 7.58406681e-01 3.13211140e+01
+ 3.17755462e+00 4.39743648e-03]
+2023-01-26 16:25:33,036 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:25:33,651 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.53796522  38.40109214   0.90332682 332.67306143]
+2023-01-26 16:25:33,924 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:25:34,558 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.7021936178207397, best pos: [8.19882282e+00 8.23374915e+02 4.31059488e+01 2.45345083e-01
+ 3.14851791e+02 2.68249142e+01 1.28488298e+02 2.20220334e+00
+ 2.51732263e+01 1.13808432e+01 3.75762043e+01]
+2023-01-26 16:56:01,168 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:56:01,793 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 345.0224609375, best pos: [3.31413168e+02 2.18271342e+01 6.50199419e-01 2.63127452e+02
+ 5.89417573e+00 1.08691498e-01]
+2023-01-26 16:56:02,001 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:56:02,987 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.29569363  35.27346086   0.85620258 338.76135023]
+2023-01-26 16:56:03,407 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:56:04,043 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.7066718339920044, best pos: [8.23111494e+00 4.64797333e+02 4.68257335e+00 7.39605123e-02
+ 3.20843743e+02 3.52827630e+01 1.11216211e+02 1.97369951e+00
+ 3.39900473e+01 1.40670131e+01 4.81364108e+01]
+2023-01-26 16:56:55,415 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:56:56,264 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 323.5203857421875, best pos: [3.25759801e+02 3.74423928e+01 5.96299241e-01 8.47428160e+01
+ 6.42302441e+00 3.35218628e-02]
+2023-01-26 16:56:57,155 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:56:57,767 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.32933378  36.73031609   0.81992388 337.52295588]
+2023-01-26 16:56:58,041 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:56:58,669 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.5176960229873657, best pos: [8.16511869e+00 8.21095035e+02 4.31701918e+01 5.47192433e-01
+ 2.80498733e+02 3.24372471e+01 9.03280334e+01 1.98019653e+00
+ 4.08802292e+01 1.68233208e+01 5.35014144e+01]
+2023-01-26 16:56:59,127 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:00,043 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:00,588 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:41,178 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:41,818 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 331.3963317871094, best pos: [3.31134899e+02 2.13654407e+01 1.05450395e+00 2.54343888e+02
+ 7.07977924e+00 4.35273913e-04]
+2023-01-26 16:57:42,021 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:42,674 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.34338521  38.87846615   0.81044935 335.36201723]
+2023-01-26 16:57:42,930 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:43,566 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -2.2201027870178223, best pos: [  8.23846263 457.22735631   5.16470134   0.75213224 146.15275772
+   4.35564276 130.97806702   2.99191291  41.98057918  12.05140977
+  56.6547215 ]
+2023-01-26 16:57:44,019 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:44,935 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:57:45,480 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:12,763 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:13,398 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 326.246826171875, best pos: [3.24516778e+02 2.75741903e+01 6.29512884e-01 2.59472233e+02
+ 4.89972867e+00 4.62951332e-02]
+2023-01-26 17:01:13,711 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:14,320 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.47013038  35.23480908   0.84769992 347.71694278]
+2023-01-26 17:01:14,578 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:15,210 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.5325369834899902, best pos: [8.15550887e+00 4.79053313e+02 3.91020678e+01 2.45862348e-01
+ 1.66584095e+02 1.43348363e+01 1.23722768e+02 2.10609549e+00
+ 3.26218770e+01 1.82593523e+01 3.84542356e+01]
+2023-01-26 17:01:15,664 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:16,280 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 325.60174560546875, best pos: [3.21968777e+02 3.44593346e+01 5.67583265e-01 2.54433325e+02
+ 1.91825434e+00 3.38266702e-02]
+2023-01-26 17:01:16,673 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:17,277 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.53505226  44.22231035   1.0911504  348.78387357]
+2023-01-26 17:01:17,799 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:18,531 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.733392357826233, best pos: [8.22382372e+00 8.27397796e+02 4.09799104e+01 5.71754956e-02
+ 2.12228400e+02 3.97687454e+01 1.04866156e+02 1.60127212e+00
+ 4.46012738e+01 1.23388449e+01 5.15245060e+01]
+2023-01-26 17:01:48,603 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:49,231 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 331.83929443359375, best pos: [3.31107741e+02 2.85936353e+01 3.54460067e-01 2.04160954e+02
+ 6.61136839e-01 3.62084415e-02]
+2023-01-26 17:01:50,582 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:51,199 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.37490904  40.28418713   0.85712409 342.17891463]
+2023-01-26 17:01:51,455 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:52,084 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.6496797800064087, best pos: [8.19210473e+00 6.16869736e+02 3.71287977e+00 3.33181392e-01
+ 2.11816076e+02 3.27475037e+01 1.15345488e+02 2.73195873e+00
+ 4.42923012e+01 1.30322417e+01 4.38074855e+01]
+2023-01-26 17:01:52,545 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:53,167 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 326.4745178222656, best pos: [3.27467856e+02 2.85813316e+01 3.28368713e-01 1.89778028e+02
+ 2.64527966e+00 3.53461459e-02]
+2023-01-26 17:01:53,682 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:54,320 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.3698177   36.92789651   0.97124092 329.78636012]
+2023-01-26 17:01:54,823 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 17:01:55,458 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.8001024723052979, best pos: [  8.1792517  483.83507297  41.8175547    0.57247546 220.28141466
+  22.44121619 111.79053189   1.9404455   32.73154377  11.62789988
+  57.90236035]
+2023-01-26 16:12:18,043 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:12:27,841 - django.request - WARNING - Not Found: /favicon.ico
+2023-01-26 16:14:03,135 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-01-26 16:14:15,767 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-01-26 16:14:31,715 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 510, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 518, in render_form_for_serializer
+    serializer.data,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `initial_EC_maxinitial_turbidity_min` is not valid for model `optimizeTurData`.
+2023-01-26 16:15:15,759 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/serializers.py changed, reloading.
+2023-01-26 16:15:25,310 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-26 16:16:13,611 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/serializers.py changed, reloading.
+2023-01-26 16:16:39,924 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 510, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 518, in render_form_for_serializer
+    serializer.data,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `flocculant` is not valid for model `optimizeTurData`.
+2023-01-26 16:17:29,717 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:17:39,078 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-26 16:18:53,569 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 153, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 86, in inputoptimization
+    output, best_param = minimize(pipe=pipe, pred_type=pred_type, bounds=bounds)
+  File "/opt/django/backend/floc_analyzer/scripts/modules/pso.py", line 23, in minimize
+    bounds["floc_saline_Molarity"][0],
+KeyError: 'floc_saline_Molarity'
+2023-01-26 16:20:12,815 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/views.py changed, reloading.
+2023-01-26 16:20:26,019 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:20:26,770 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 426.2123718261719, best pos: [316.07719048  36.51718865   0.6360109  170.89236284   5.33791892
+   0.51199503]
+2023-01-26 16:20:26,902 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 167, in post
+    "floc_cactus_share": best_param[6],
+IndexError: index 6 is out of bounds for axis 0 with size 6
+2023-01-26 16:25:29,096 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/views.py changed, reloading.
+2023-01-26 16:25:39,579 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:25:40,350 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 425.52728271484375, best pos: [327.94543484  30.85598663   0.51603939 238.46834613   5.06020385
+   0.52009766]
+2023-01-26 16:26:25,442 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-26 16:26:33,121 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:26:33,863 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.700768947601318, best pos: [  8.38827908  27.29569858   0.6371866  185.00482549]
+2023-01-26 16:26:47,446 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-26 16:26:52,892 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:26:53,760 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.568632125854492, best pos: [  8.2065882  471.93955274 130.95337658   0.80483132 233.56439576
+  25.23756445 130.25298389   2.14303697  37.05209256  10.29054205
+  55.20100639]
+2023-01-26 16:26:54,005 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 193, in post
+    "duration_sedimetation_phase": best_param[11],
+IndexError: index 11 is out of bounds for axis 0 with size 11
+2023-01-26 16:28:26,819 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/views.py changed, reloading.
+2023-01-26 16:28:38,123 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 16:28:39,180 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.568632125854492, best pos: [  8.16505526 478.29542413 130.79442093   0.83472627 211.59002245
+  22.11940215 118.76686603   1.54683238  32.51690541   4.86349515
+  53.0603131 ]
+2023-01-26 16:32:18,010 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:41:40,689 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-01-26 16:42:07,074 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:43:14,523 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/views.py changed, reloading.
+2023-01-26 16:44:03,873 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-01-26 16:44:37,361 - django.request - WARNING - Not Found: /list_bounds/
+2023-01-26 16:44:45,737 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 26, in get_bounds
+    bounds[index] = [value, ub[index]+0.1]
+TypeError: can only concatenate str (not "float") to str
+2023-01-26 16:46:47,414 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:46:55,443 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 26, in get_bounds
+    if type(bounds[index]) == (float or int):
+KeyError: 'id'
+2023-01-26 16:47:27,033 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:47:34,832 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 28, in get_bounds
+    if type(bounds[index]) == (float or int):
+KeyError: 'id'
+2023-01-26 16:49:16,737 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:51:14,836 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 22, in get_bounds
+    df.drop("id", inplace=True)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py", line 5396, in drop
+    return super().drop(
+  File "/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/core/generic.py", line 4505, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/core/generic.py", line 4546, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py", line 6977, in drop
+    raise KeyError(f"{list(labels[mask])} not found in axis")
+KeyError: "['id'] not found in axis"
+2023-01-26 16:51:55,861 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:52:04,151 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 22, in get_bounds
+    df.drop(column="id", inplace=True)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+TypeError: DataFrame.drop() got an unexpected keyword argument 'column'
+2023-01-26 16:52:36,753 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:52:48,626 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:52:58,776 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 29, in get_bounds
+    if type(bounds[index]) == (float or int):
+KeyError: 'surface_water'
+2023-01-26 16:54:47,956 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:54:54,358 - django.request - ERROR - Internal Server Error: /bounds/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 24, in get
+    data = get_bounds()
+  File "/opt/django/backend/floc_analyzer/models.py", line 29, in get_bounds
+    if type(bounds[index]) == (float or int):
+KeyError: 'initial_pH'
+2023-01-26 16:55:04,947 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 16:55:30,383 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.

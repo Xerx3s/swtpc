@@ -269,3 +269,30 @@ ValueError: too many values to unpack (expected 2)
 2023-01-26 14:04:13,317 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.5325369834899902, best pos: [8.22004817e+00 4.81239358e+02 2.25635258e+01 1.61056930e-01
  1.15404612e+02 3.06674577e+01 1.33568011e+02 2.10652063e+00
  3.96654251e+01 1.77489009e+01 3.73437926e+01]
+2023-01-26 15:46:19,605 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:46:20,242 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 315.9493103027344, best pos: [3.26023659e+02 3.85772027e+01 6.22463356e-01 8.41040370e+01
+ 3.40113164e+00 3.42228889e-02]
+2023-01-26 15:46:20,817 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:46:21,432 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.36843101  38.20773453   0.88503595 348.92441601]
+2023-01-26 15:46:21,691 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:46:22,318 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.424503207206726, best pos: [  8.22674329 607.09358599  51.28661925   0.66295002 238.58379822
+  26.12715559 128.72718415   2.02309455  46.1632501   10.84032084
+  42.05494165]
+2023-01-26 15:47:26,999 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:47:27,680 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 324.5609130859375, best pos: [3.33391845e+02 4.25613738e+01 9.64577211e-01 1.79528695e+02
+ 3.40184341e+00 2.01613241e-02]
+2023-01-26 15:47:28,860 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:47:29,488 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.25869122  43.92232512   0.91734457 333.03124398]
+2023-01-26 15:47:29,762 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:47:30,393 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -2.000929117202759, best pos: [8.21845942e+00 4.68171043e+02 4.54084550e+00 3.34424573e-01
+ 1.94793257e+02 9.64947202e+00 1.20916968e+02 2.10394242e+00
+ 3.04739778e+01 1.07752080e+01 5.25131857e+01]
+2023-01-26 15:48:13,443 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:48:14,109 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 362.0929870605469, best pos: [3.38003686e+02 3.24586407e+01 7.18018924e-01 2.49182292e+02
+ 3.35770859e+00 2.97507786e-02]
+2023-01-26 15:48:14,312 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:48:15,292 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7.669471740722656, best pos: [  9.34428387  36.67776722   0.98721178 340.51376378]
+2023-01-26 15:48:15,852 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-26 15:48:16,494 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.8023428916931152, best pos: [8.18219064e+00 8.22764953e+02 2.11303257e+01 5.50926354e-01
+ 3.85547894e+02 1.03408779e+01 8.07645102e+01 1.55554004e+00
+ 4.77985113e+01 1.19727423e+01 5.38233084e+01]

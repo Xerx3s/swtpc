@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework import permissions
 from rest_framework.response import Response
-from floc_analyzer.scripts.new_main import outputprediction
+from floc_analyzer.scripts.main import outputprediction
 from floc_analyzer.serializers import predictECSerializer, predictpHSerializer, predictTurSerializer
 from floc_analyzer.models import get_floc, get_sw
 

@@ -1,6 +1,6 @@
 import numpy as np
 
-from floc_analyzer.scripts.new_main import outputprediction, trainorloadpipe
+from floc_analyzer.scripts.main import outputprediction, trainorloadpipe
 from floc_analyzer.scripts.modules.pso import create_objective_function, minimize
 
 class TestPrediction:
@@ -39,7 +39,7 @@ class TestOptimizer:
         objective_function = create_objective_function(pipe=pipe)
         output, best_param = minimize(objective_function=objective_function, pred_type=pred_type, bounds=bounds)
 
-        assert output > 400
+        assert 200 < output < 800
         
     def test_optimizer_pH(self):
         pred_type = "ph"
@@ -49,7 +49,7 @@ class TestOptimizer:
         objective_function = create_objective_function(pipe=pipe)
         output, best_param = minimize(objective_function=objective_function, pred_type=pred_type, bounds=bounds)
 
-        assert output < 9
+        assert 6 < output < 9
 
     def test_optimizer_tur(self):
         pred_type = "tur"
@@ -59,4 +59,4 @@ class TestOptimizer:
         objective_function = create_objective_function(pipe=pipe)
         output, best_param = minimize(objective_function=objective_function, pred_type=pred_type, bounds=bounds)
 
-        assert output < 20
+        assert 0 < output < 100

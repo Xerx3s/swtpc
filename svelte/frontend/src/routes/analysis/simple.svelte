@@ -12,20 +12,20 @@
         "heavy_metals": false,
         "nitrate": false,
         "coliforms": false,
-        "arsenic": false
-        //Methode, um Flouride zu identifizieren?
+        "arsenic": false,
+        "fluoride": false
     }
 
     let methods = {
         "flocculation": false,
         "bsf": false,
-        "sodis": false
+        "sodis": false,
+        "aaa": false //activated alumina adsorption
     }
 
     let results = ""
 
     function set_selected_methods() {
-        
         selected_methods.set(methods)
     }
 
@@ -33,7 +33,8 @@
         methods = {
         "flocculation": false,
         "bsf": false,
-        "sodis": false
+        "sodis": false,
+        "aaa": false
         }
         let intro = "To reduce "
         let outro = " following concept has to be realised: "
@@ -59,6 +60,9 @@
         if (data.arsenic) {
             problems_list.push(`<a href="/">Arsenic</a>`)
         }
+        if (data.fluoride) {
+            problems_list.push(`<a href="/">Fluoride</a>`)
+        }
         let problems_string = problems_list.join(", ")
 
         //methods
@@ -68,7 +72,7 @@
             methods.flocculation = true
             methods_list.push(`<a href="/">Flocculation</a>`)
         }
-        if (data.turbidity == (1 || 2)|| data.organic_material || data.nitrate || data.arsenic) {
+        if (data.turbidity == (1 || 2) || data.organic_material || data.nitrate || data.arsenic) {
             methods.bsf = true
             if (!data.arsenic) {
                 methods_list.push(`<a href="/">Biosand Filtration</a>`)
@@ -77,13 +81,17 @@
                 methods_list.push(`<a href="/">modified Biosand Filtration</a>`)
             }
         }
+        if (data.fluoride) {
+            methods.aaa = true
+            methods_list.push(`<a href="/">Activated Alumina Adsorption</a>`)
+        }
         if (data.coliforms) {
             methods.sodis = true
             methods_list.push(`<a href="/">SODIS</a>`)
         }
         let methods_string = methods_list.join(", ")
 
-
+        set_selected_methods()
         results = intro + problems_string + outro + methods_string
     }
 
@@ -146,6 +154,12 @@
                     <Label>Excessive Hornification of Skin</Label>
                     <Meta>
                         <Checkbox bind:checked={data.arsenic} />
+                    </Meta>
+                </Item>
+                <Item>
+                    <Label>Discoloration of Teeth and/or frequent bone fractures</Label>
+                    <Meta>
+                        <Checkbox bind:checked={data.fluoride} />
                     </Meta>
                 </Item>
             </List>

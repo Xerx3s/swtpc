@@ -19,33 +19,29 @@
     <Button variant="unelevated" style="width: 50%; margin: auto;" href="/analysis">Start Analysis</Button>
 </Group>
 
-<div style="display:flex;">
-    <div class="paper-container" style="width:50%; padding:1em">
-        <Paper>
-            <Title>Currently supported treatment methods</Title>
-            <Content>
-                <ul>
-                    <li>Flocculation</li>
-                    <li>Biosand Filtration</li>
-                    <li>SODIS</li>
-                    <li>(Flouride Termination)</li>
-                </ul>
-            </Content>
-        </Paper>
-    </div>
-    <div class="paper-container" style="width:50%; padding:1em">
-        <Paper>
-            <Title>Additional treatment methods</Title>
-            <Content>
-                <ul>
-                    <li>Boiling</li>
-                    <li>Chlorination</li>
-                    <li>Membrane Filtration</li>
-                    <li>Ceramic Pot Filtration</li>
-                </ul>
-            </Content>
-        </Paper>
-    </div>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <Paper style="flex-grow:1; margin:1em">
+        <Title>Currently supported treatment methods</Title>
+        <Content>
+            <ul>
+                <li>Activated Alumina Adsorption</li>
+                <li>Biosand Filtration</li>
+                <li>Flocculation</li>
+                <li>SODIS</li>
+            </ul>
+        </Content>
+    </Paper>
+    <Paper style="flex-grow:1; margin:1em">
+        <Title>Additional treatment methods</Title>
+        <Content>
+            <ul>
+                <li>Boiling</li>
+                <li>Ceramic Pot Filtration</li>
+                <li>Chlorination</li>
+                <li>Membrane Filtration</li>
+            </ul>
+        </Content>
+    </Paper>
 </div>
 
 Bullets werden noch zu wiki verlinkt!

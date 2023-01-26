@@ -13,7 +13,7 @@
         "nitrate": 0.0,
         "arsenic": 0.0,
         "iron": 0.0,
-        "flouride": 0.0, //Methode, um Flouride zu identifizieren
+        "flouride": 0.0,
         "tvc": 0,
         "coliforms": 0,
         "ecoli": 0
@@ -22,7 +22,8 @@
     let methods = {
         "flocculation": false,
         "bsf": false,
-        "sodis": false
+        "sodis": false,
+        "aaa": false
     }
 
     let results = ""

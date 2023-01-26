@@ -24,7 +24,9 @@
 		"@smui/checkbox": "^7.0.0-beta.0",
 		"@smui/drawer": "^7.0.0-beta.0",
 		"@smui/icon-button": "^7.0.0-beta.0",
+		"@smui/layout-grid": "^7.0.0-beta.0",
 		"@smui/list": "^7.0.0-beta.0",
+		"@smui/menu": "^7.0.0-beta.0",
 		"@smui/paper": "^7.0.0-beta.0",
 		"@smui/segmented-button": "^7.0.0-beta.0",
 		"@smui/slider": "^7.0.0-beta.0",
@@ -53,6 +55,8 @@
 	"type": "module",
 	"dependencies": {
 		"@picocss/pico": "^1.5.6",
+		"marked": "^4.2.12",
+		"svelte-markdown": "^0.2.3",
 		"svelte-material-ui": "^7.0.0-beta.0"
 	}
 }

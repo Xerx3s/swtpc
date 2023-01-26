@@ -35,6 +35,13 @@ class preparedataset:
 def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bool):
     X_train, X_test, y_train, y_test = preparedataset(pred_type=pred_type, sw=sw, floc=floc).traintestset()
     
+    lb = X_train.min()
+    ub = X_train.max()
+    bounds = {}
+
+    for index,value in lb.items():
+        bounds[index] = [value, ub[index]+0.1]
+
     if load:
         pipe = load_pipeline(config.pipe_loadpath)
         print("pipe loaded.")
@@ -59,11 +66,11 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
         print('Accuracy: %.2f'%((100-evaluation["mape"])))
 
     #return pipe, X_train, X_test, y_train, y_test
-    return pipe
+    return pipe, bounds
 
 def outputprediction(inputvalues: list, pred_type: str, sw: str = None, floc: str = None, loadpipe: bool = True, printass: bool = False):
     #pipe, _, _, _, _ = trainorloadpipe(pred_type, loadpipe, printass)
-    pipe = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
     prediction = round(float(pipe.predict([inputvalues])),1)
     #print("prediction: " + prediction)
     return prediction

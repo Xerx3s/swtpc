@@ -11,7 +11,7 @@
         },
         { 
             id: "bsf",
-            name: "Bio-Sand Filtration",
+            name: "Biosand Filtration",
             image: "card-media-bsf",
             description: "Treatment Process to reduce pathogens and nitrate concentration in water."
         },
@@ -25,7 +25,7 @@
             id: "aaa",
             name: "Activated Alumina Adsorption",
             image: "card-media-aaa",
-            description: "Treatment Process to remove fluoride concentration in water."
+            description: "Treatment Process to reduce fluoride concentration in water."
         }
     ]
 

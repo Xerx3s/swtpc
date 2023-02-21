@@ -758,3 +758,1417 @@ Traceback (most recent call last):
 KeyError: 'initial_pH'
 2023-01-26 16:55:04,947 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
 2023-01-26 16:55:30,383 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 19:09:13,845 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-26 19:47:11,044 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/models.py changed, reloading.
+2023-01-27 11:31:43,070 - django.request - WARNING - Not Found: /favicon.ico
+2023-01-27 11:31:54,755 - django.request - WARNING - Not Found: /optimze
+2023-01-27 11:32:01,650 - django.request - WARNING - Not Found: /optimize
+2023-01-27 11:32:18,642 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-27 12:13:26,783 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 118, in post
+    float(request.data.get("initial_pH_min")),
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2023-01-27 12:13:46,452 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 118, in post
+    float(request.data.get("initial_pH_min")),
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2023-01-27 12:18:43,779 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 159, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in inputoptimization
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 37, in trainorloadpipe
+    X_train, X_test, y_train, y_test = preparedataset(pred_type=pred_type, sw=sw, floc=floc).traintestset()
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 29, in traintestset
+    y = self.dataset[self.target]
+AttributeError: 'preparedataset' object has no attribute 'dataset'
+2023-01-27 12:23:08,364 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 159, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in inputoptimization
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 37, in trainorloadpipe
+    X_train, X_test, y_train, y_test = preparedataset(pred_type=pred_type, sw=sw, floc=floc).traintestset()
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 29, in traintestset
+    y = self.dataset[self.target]
+AttributeError: 'preparedataset' object has no attribute 'dataset'
+2023-01-27 12:27:04,682 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 159, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in inputoptimization
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 46, in trainorloadpipe
+    pipe = load_pipeline(config.pipe_loadpath)
+  File "/opt/django/backend/floc_analyzer/scripts/modules/mlalgorithms.py", line 76, in load_pipeline
+    pipeline = load(loadpath)
+  File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '\\opt\\django\\backend\\floc_analyzer\\data\\flocculation_analysis_pipeline'
+2023-01-27 12:28:06,898 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 159, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in inputoptimization
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 46, in trainorloadpipe
+    pipe = load_pipeline(config.pipe_loadpath)
+  File "/opt/django/backend/floc_analyzer/scripts/modules/mlalgorithms.py", line 76, in load_pipeline
+    pipeline = load(loadpath)
+  File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '\\opt\\django\\backend\\floc_analyzer\\data\\flocculation_analysis_pipeline'
+2023-01-27 12:29:27,460 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-27 12:31:23,558 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-27 12:31:27,339 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-27 12:31:30,950 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-27 12:32:57,870 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-27 12:32:58,673 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.21424776e+00 4.69947969e+02 1.09217761e+02 3.01300626e-01
+ 2.20951790e+02 3.64798733e+01 1.35183742e+02 1.96809589e+00
+ 2.31078938e+01 1.02505672e+01 3.96558594e+01]
+2023-01-27 12:33:51,866 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-27 12:36:14,517 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-27 12:36:18,180 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-27 12:36:23,122 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-27 12:36:23,955 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.708403587341309, best pos: [8.19671346e+00 4.82686390e+02 1.22686304e+02 2.38753931e-01
+ 2.48664125e+02 3.48898038e+01 1.39276137e+02 2.14882046e+00
+ 2.67959554e+01 1.21840489e+01 4.06031045e+01]
+2023-01-27 12:37:09,614 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-27 12:38:00,628 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-27 12:38:01,381 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21160208e+00 4.83965310e+02 9.77099364e+01 3.35148001e-01
+ 1.66587354e+02 9.89657191e+00 1.02279129e+02            nan
+ 2.27772000e+01 1.21898750e+01 5.27953826e+01]
+2023-01-27 12:38:01,485 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-27 12:38:28,028 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-27 12:38:28,748 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23722996e+00 4.75131519e+02 8.83464729e+01 3.58820415e-01
+ 1.51631660e+02 1.86178043e+01 1.04101821e+02            nan
+ 2.29981998e+01 1.19172559e+01 5.64360725e+01]
+2023-01-27 12:38:28,861 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-27 12:42:10,075 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-27 12:42:10,895 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22003831e+00 4.70763216e+02 9.38167935e+01 4.13689400e-01
+ 2.22434075e+02 2.09016712e+01 9.86814906e+01            nan
+ 2.60481879e+01 1.05371765e+01 5.50912709e+01]
+2023-01-27 12:42:10,988 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-27 12:42:33,891 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 124, in post
+    int(request.data.get("floc_concentration_min")),
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-01-27 12:43:43,276 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-27 12:43:44,074 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23358219e+00 4.71210074e+02 9.33982316e+01 1.07336401e-01
+ 1.46744289e+02 1.80830055e+01 1.14408982e+02            nan
+ 2.51502022e+01 1.23907930e+01 5.83298097e+01]
+2023-01-27 12:43:44,187 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-27 12:43:57,463 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-27 12:44:16,247 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 124, in post
+    int(request.data.get("floc_concentration_min")),
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-01-27 12:44:49,582 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-27 12:44:50,016 - django.request - WARNING - Not Found: /favicon.ico
+2023-01-28 10:16:01,482 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:16:02,333 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19428331e+00 4.75809623e+02 1.01530874e+02 4.64824342e-01
+ 1.48042042e+02 2.78292159e+01 9.72858070e+01            nan
+ 2.65491248e+01 1.19485982e+01 5.72892088e+01]
+2023-01-28 10:16:02,475 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-28 10:17:47,022 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 124, in post
+    int(request.data.get("floc_concentration_min")),
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-01-28 10:18:59,061 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-28 10:19:50,545 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:19:51,417 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24919039e+00 4.73294788e+02 9.69643053e+01 2.22832408e-01
+ 1.70226433e+02 2.57369972e+01 1.04985107e+02            nan
+ 2.62045592e+01 1.23376649e+01 5.38830136e+01]
+2023-01-28 10:19:51,530 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-28 10:20:04,723 - django.request - WARNING - Not Found: /optimize
+2023-01-28 10:20:13,397 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-28 10:21:26,788 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:21:27,617 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24765860e+00 4.66062354e+02 9.56500185e+01 3.23219616e-01
+ 1.84840105e+02 3.97107841e+01 9.75878629e+01            nan
+ 2.72744391e+01 1.11518811e+01 5.37680580e+01]
+2023-01-28 10:21:27,732 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-28 10:21:31,591 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-28 10:22:08,531 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-28 10:22:18,105 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:22:18,858 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22785953e+00 4.66301635e+02 9.13087147e+01 3.60545541e-01
+ 2.07601571e+02 3.39986361e+01 1.10410311e+02            nan
+ 2.42457607e+01 1.20041887e+01 5.63381884e+01]
+2023-01-28 10:22:18,971 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-28 10:22:25,787 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-28 10:24:07,035 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:24:07,901 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21039588e+00 4.77724809e+02 9.99942620e+01 4.27495090e-01
+ 1.88635107e+02 2.23425787e+01 1.07303705e+02            nan
+ 2.58016409e+01 1.23893388e+01 5.32905553e+01]
+2023-01-28 10:24:08,009 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-28 10:25:32,510 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:25:33,331 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.22203917e+00 4.73881933e+02 8.80350753e+01 1.12065860e-01
+ 1.50628059e+02 2.25223033e+01 1.38281504e+02 1.96234834e+00
+ 2.68001354e+01 1.02115645e+01 4.51388992e+01]
+2023-01-28 10:25:57,586 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-01-28 10:26:07,752 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 124, in post
+    int(request.data.get("floc_concentration_min")),
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-01-28 10:29:31,886 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:29:32,611 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22653820e+00 4.81185874e+02 9.46607763e+01 3.26710519e-01
+ 1.64892074e+02 3.12053760e+01 9.60784059e+01            nan
+ 2.31030700e+01 1.21588206e+01 5.91653665e+01]
+2023-01-28 10:29:32,705 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 10:37:28,109 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 118, in post
+    float(request.data.get("initial_pH_min")),
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2023-01-28 10:38:08,937 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-28 10:45:29,024 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 118, in post
+    float(request.data.get("initial_pH_min")),
+AttributeError: 'str' object has no attribute 'get'
+2023-01-28 10:46:32,409 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:46:33,121 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23988966e+00 4.77553089e+02 9.99225440e+01 1.09808122e-01
+ 1.95913723e+02 2.43853806e+01 1.12929321e+02            nan
+ 2.29758119e+01 1.19260026e+01 5.37477970e+01]
+2023-01-28 10:46:33,207 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 10:47:58,696 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:47:59,401 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16303864e+00 4.70254847e+02 9.94746599e+01 4.57768409e-01
+ 1.89614222e+02 3.14278977e+01 7.95244488e+01            nan
+ 2.55654843e+01 1.03627547e+01 5.54245872e+01]
+2023-01-28 10:47:59,503 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 10:50:05,408 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-28 10:50:29,371 - django.request - WARNING - Bad Request: /opt_tur/
+2023-01-28 10:51:32,003 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 10:51:32,845 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24010255e+00 4.78318410e+02 8.69705462e+01 2.00887434e-01
+ 1.77832548e+02 1.02909204e+01 9.98692675e+01            nan
+ 2.57309111e+01 1.16126944e+01 5.34568474e+01]
+2023-01-28 10:51:32,954 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-01-28 11:00:10,637 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:00:31,109 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:00:32,108 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17851055e+00 4.81845062e+02 1.04672743e+02 4.11091671e-01
+ 1.48933241e+02 2.35818111e+01 9.81051378e+01            nan
+ 2.73063995e+01 1.09536742e+01 5.52581478e+01]
+2023-01-28 11:00:32,255 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:00:39,621 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:00:40,421 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20892276e+00 4.79077507e+02 9.85755930e+01 2.94244797e-01
+ 1.09082920e+02 2.65005302e+01 1.11969690e+02            nan
+ 2.60641312e+01 1.06438483e+01 5.31222599e+01]
+2023-01-28 11:00:40,512 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:01:34,018 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:01:59,619 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:02:00,439 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19379080e+00 4.82621791e+02 9.53980788e+01 1.23307669e-01
+ 2.47502629e+02 3.21728765e+01 1.13508434e+02            nan
+ 2.42929897e+01 1.24287654e+01 5.35194963e+01]
+2023-01-28 11:02:00,569 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:04:20,905 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:04:47,244 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:04:48,044 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17902092e+00 4.81157336e+02 1.04061115e+02 2.81380807e-01
+ 2.90611739e+02 2.45620486e+01 9.07069726e+01            nan
+ 2.72959431e+01 1.16865833e+01 5.39852733e+01]
+2023-01-28 11:04:48,174 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:05:29,907 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:05:42,222 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:05:43,098 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.19601957e+00 4.76635289e+02 1.00821817e+02 2.53693180e-01
+ 1.57407770e+02 1.87786839e+01 7.84680050e+01            nan
+ 2.88122512e+01 1.22405343e+01 3.80349854e+01]
+2023-01-28 11:05:43,228 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:06:11,786 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:06:20,063 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:06:21,233 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19072349e+00 4.74100807e+02 1.10613501e+02 4.25715215e-01
+ 2.24040875e+02 2.35226279e+01 1.15532002e+02            nan
+ 2.63100343e+01 1.18376069e+01 5.63860615e+01]
+2023-01-28 11:06:21,371 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:06:39,790 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:06:49,172 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:06:50,414 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19434959e+00 4.78194383e+02 1.07720526e+02 1.76537179e-01
+ 1.45945906e+02 3.87243824e+01 1.03085898e+02            nan
+ 2.55856208e+01 1.20595120e+01 5.28206511e+01]
+2023-01-28 11:06:50,553 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:07:28,059 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:07:38,887 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:07:39,789 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [  8.22110192 464.58901893 116.13172787   0.4773977  216.39304199
+  16.15476994  93.42276917          nan  27.77764593  10.13109376
+  42.65551881]
+2023-01-28 11:07:39,922 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:11:09,504 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:15:49,657 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:15:50,502 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.23786938e+00 4.66861885e+02 9.25364293e+01 2.86824009e-01
+ 2.69957842e+02 1.44321017e+01 1.02888189e+02            nan
+ 2.75402291e+01 1.23371013e+01 4.54833567e+01]
+2023-01-28 11:15:50,633 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+2023-01-28 11:16:12,584 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:16:22,026 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:16:22,865 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20255797e+00 4.65990683e+02 8.22989066e+01 2.59930218e-01
+ 1.35850464e+02 3.53396007e+01 9.86547768e+01            nan
+ 2.29566228e+01 1.09916665e+01 5.86145085e+01]
+2023-01-28 11:17:11,224 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:17:28,433 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-01-28 11:21:37,084 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:21:37,891 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15809442e+00 4.81242179e+02 9.62626406e+01 3.86962660e-01
+ 1.71954768e+02 1.61746831e+01 1.03188520e+02            nan
+ 2.53198182e+01 1.20989187e+01 5.65612749e+01]
+2023-01-28 11:21:47,251 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:21:48,071 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21174796e+00 4.85486803e+02 1.10613828e+02 3.17594293e-01
+ 1.95673149e+02 3.09629091e+01 1.07212076e+02            nan
+ 2.42336446e+01 1.16420251e+01 5.59001775e+01]
+2023-01-28 11:22:49,422 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:22:50,086 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:22:50,332 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.22025903e+00 4.85004311e+02 9.99473626e+01 1.32509097e-01
+ 1.96091947e+02 2.76336736e+01 1.02064408e+02            nan
+ 2.30322420e+01 1.14627430e+01 4.80376729e+01]
+2023-01-28 11:22:51,078 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.19945067e+00 4.84050997e+02 1.01959291e+02 2.35317759e-01
+ 1.56425448e+02 2.68947119e+01 1.05456477e+02            nan
+ 2.52936025e+01 1.20999057e+01 4.55572100e+01]
+2023-01-28 11:24:44,005 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:24:44,826 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23961548e+00 4.83289926e+02 9.83828492e+01 2.61708307e-01
+ 1.63586527e+02 3.08873235e+01 1.02085428e+02            nan
+ 2.46614047e+01 1.10280608e+01 5.38319138e+01]
+2023-01-28 11:25:46,916 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:25:47,701 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20306961e+00 4.83688483e+02 1.06614309e+02 2.21815322e-01
+ 1.59589609e+02 4.08509592e+01 9.03574198e+01            nan
+ 2.51503535e+01 1.19726235e+01 5.36493363e+01]
+2023-01-28 11:26:03,041 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:26:03,827 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22687473e+00 4.83654756e+02 1.10644102e+02 4.59575033e-01
+ 2.11145956e+02 1.94290596e+01 1.01076502e+02            nan
+ 2.70259398e+01 1.07851197e+01 5.40766019e+01]
+2023-01-28 11:30:44,349 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:30:45,083 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21329224e+00 4.71834031e+02 1.01649939e+02 2.62431664e-01
+ 2.45141546e+02 2.17504645e+01 9.16888682e+01            nan
+ 2.35143901e+01 1.23998131e+01 5.27578086e+01]
+2023-01-28 11:37:27,747 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:37:28,553 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23929073e+00 4.75520064e+02 1.00199430e+02 1.63442840e-01
+ 1.79896305e+02 3.90405401e+01 8.76558131e+01            nan
+ 2.56550037e+01 1.19910263e+01 5.40789818e+01]
+2023-01-28 11:38:56,858 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:38:57,569 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21750416e+00 4.71279594e+02 9.33044922e+01 3.55344653e-01
+ 1.37217096e+02 3.70308396e+01 1.04039471e+02            nan
+ 2.51880911e+01 1.23677682e+01 5.45020133e+01]
+2023-01-28 11:45:31,427 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:45:32,123 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22559538e+00 4.80892644e+02 1.12629617e+02 4.34295397e-01
+ 2.03628671e+02 3.71727562e+01 9.11377630e+01            nan
+ 2.84219247e+01 1.21360188e+01 5.28821954e+01]
+2023-01-28 11:47:21,471 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:47:22,161 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16011219e+00 4.75273140e+02 9.33419227e+01 3.92503709e-01
+ 2.60706869e+02 3.54886958e+01 9.83566517e+01            nan
+ 2.57536338e+01 1.08532962e+01 5.41804748e+01]
+2023-01-28 11:47:33,845 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:47:34,530 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18945877e+00 4.75863415e+02 1.08938304e+02 2.95044481e-01
+ 2.18576267e+02 3.48875140e+01 1.03259784e+02            nan
+ 2.56874715e+01 1.23223726e+01 5.38647160e+01]
+2023-01-28 11:48:49,696 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:48:50,544 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16526319e+00 4.79137220e+02 1.16966640e+02 1.81195697e-01
+ 1.43198639e+02 1.61996518e+01 9.65350263e+01            nan
+ 2.58456186e+01 1.22650380e+01 5.27656256e+01]
+2023-01-28 11:49:10,244 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:49:11,037 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20754249e+00 4.73988523e+02 1.04408136e+02 2.80197818e-01
+ 2.19894939e+02 1.53594053e+01 1.11908710e+02            nan
+ 2.57055743e+01 1.12842823e+01 5.63137495e+01]
+2023-01-28 11:51:10,754 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:51:11,681 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23885574e+00 4.67710803e+02 9.09820747e+01 3.35402962e-01
+ 1.76382444e+02 2.64390278e+01 9.52135550e+01            nan
+ 2.40603010e+01 1.08106705e+01 5.44685303e+01]
+2023-01-28 11:56:09,529 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:56:10,223 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19294377e+00 4.79492598e+02 1.14824357e+02 2.26996380e-01
+ 1.85393797e+02 2.20670401e+01 9.65652678e+01            nan
+ 2.76845974e+01 1.16846752e+01 5.35802284e+01]
+2023-01-28 11:56:26,724 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:56:27,481 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21022781e+00 4.67670023e+02 9.86631916e+01 1.70588730e-01
+ 1.52019881e+02 1.42192261e+01 1.08210263e+02            nan
+ 2.67286402e+01 1.20513753e+01 5.76628743e+01]
+2023-01-28 11:57:01,765 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:57:03,397 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18707310e+00 4.80031291e+02 1.03281358e+02 3.74511146e-01
+ 1.42336600e+02 1.68780472e+01 1.00936986e+02            nan
+ 2.83378724e+01 1.20173268e+01 5.25855980e+01]
+2023-01-28 11:57:38,414 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:57:39,213 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24069901e+00 4.84967808e+02 1.01544599e+02 3.18065125e-01
+ 1.88049402e+02 3.72015090e+01 8.43667648e+01            nan
+ 2.69102748e+01 1.22468942e+01 5.30015641e+01]
+2023-01-28 11:58:31,098 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 11:58:31,899 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.20685734e+00 4.82912953e+02 1.03283130e+02 2.86159113e-01
+ 1.56113864e+02 9.97444775e+00 1.14226190e+02            nan
+ 2.32548446e+01 1.20239419e+01 4.65154597e+01]
+2023-01-28 12:01:07,115 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:01:07,872 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.19174175e+00 4.79696356e+02 1.02788091e+02 4.76367098e-01
+ 2.02763541e+02 1.37431936e+01 9.20814018e+01            nan
+ 2.31664914e+01 1.10744936e+01 3.97346566e+01]
+2023-01-28 12:02:06,850 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:02:07,677 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21625225e+00 4.80006254e+02 9.46159793e+01 1.87309410e-01
+ 2.51690817e+02 9.47763755e+00 1.11457149e+02            nan
+ 2.45816265e+01 1.21603529e+01 5.30520795e+01]
+2023-01-28 12:02:23,805 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:02:24,610 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21676895e+00 4.75920323e+02 9.06683994e+01 4.49399614e-01
+ 2.04351224e+02 3.01623551e+01 9.14800875e+01            nan
+ 2.71025293e+01 1.08108678e+01 5.53603157e+01]
+2023-01-28 12:02:45,637 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:02:46,461 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16093312e+00 4.85022581e+02 1.02710781e+02 1.83279231e-01
+ 1.84910296e+02 3.30426332e+01 9.37822930e+01            nan
+ 2.55306006e+01 1.16566563e+01 5.87778838e+01]
+2023-01-28 12:03:01,589 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:03:02,459 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21762853e+00 4.64897667e+02 1.13491656e+02 4.19140834e-01
+ 1.79230618e+02 3.68360921e+01 1.06264683e+02            nan
+ 2.26221894e+01 1.15897463e+01 5.49219923e+01]
+2023-01-28 12:03:16,188 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:03:16,917 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15390675e+00 4.79672550e+02 1.05724539e+02 4.22498271e-01
+ 1.81796224e+02 2.77112737e+01 9.21746336e+01            nan
+ 2.74842575e+01 1.19682221e+01 5.49357477e+01]
+2023-01-28 12:05:50,371 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:05:51,080 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18309168e+00 4.75907067e+02 1.10767910e+02 3.70742491e-01
+ 1.47468775e+02 3.50163879e+01 9.45301411e+01            nan
+ 2.33797778e+01 1.24586883e+01 5.73106519e+01]
+2023-01-28 12:08:52,224 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:08:53,033 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20335771e+00 4.84892081e+02 1.10376299e+02 3.75726186e-01
+ 2.38124472e+02 1.14327509e+01 1.13303857e+02            nan
+ 2.84496728e+01 1.10615152e+01 5.66307407e+01]
+2023-01-28 12:09:42,692 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:09:43,385 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19378920e+00 4.82237774e+02 1.01143305e+02 2.09658224e-01
+ 1.57876268e+02 3.84489214e+01 1.10811461e+02            nan
+ 2.42193650e+01 1.14818488e+01 5.27545530e+01]
+2023-01-28 12:12:39,826 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:12:40,525 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21006655e+00 4.70727990e+02 9.52078663e+01 2.68629969e-01
+ 1.84782411e+02 1.42449411e+01 1.00817442e+02            nan
+ 2.70563524e+01 1.14378923e+01 5.46692226e+01]
+2023-01-28 12:13:16,645 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:13:17,458 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18142196e+00 4.70350622e+02 1.10572497e+02 4.15575351e-01
+ 1.71966024e+02 1.85473729e+01 1.07962369e+02            nan
+ 2.66138860e+01 1.17090670e+01 5.37958059e+01]
+2023-01-28 12:15:01,307 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:15:02,043 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15135430e+00 4.85308339e+02 9.49341725e+01 2.68704226e-01
+ 1.51531490e+02 3.58762395e+01 8.12729999e+01            nan
+ 2.59333317e+01 1.21457765e+01 5.35377279e+01]
+2023-01-28 12:15:38,167 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:15:38,982 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23151407e+00 4.67187838e+02 9.05088167e+01 3.89920887e-01
+ 1.62767630e+02 4.11551669e+01 9.39393449e+01            nan
+ 2.79657799e+01 1.10258670e+01 5.38439790e+01]
+2023-01-28 12:16:22,447 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:16:23,210 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21728480e+00 4.71919467e+02 1.08973936e+02 3.11389148e-01
+ 2.31908575e+02 2.11263418e+01 9.73081188e+01            nan
+ 2.85452480e+01 1.22470836e+01 5.30426067e+01]
+2023-01-28 12:16:44,777 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:16:45,732 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21716505e+00 4.82628131e+02 9.51121760e+01 3.87336165e-01
+ 2.36661293e+02 2.91743791e+01 8.99939312e+01            nan
+ 2.46318444e+01 1.22460925e+01 5.28100345e+01]
+2023-01-28 12:18:04,266 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:18:05,084 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15541099e+00 4.82425952e+02 1.09542298e+02 2.52215870e-01
+ 1.71107227e+02 8.97792292e+00 7.79701959e+01            nan
+ 2.65113431e+01 1.11728206e+01 5.28527824e+01]
+2023-01-28 12:19:04,275 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:19:04,975 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.19184646e+00 4.77685159e+02 9.34494637e+01 3.15858274e-01
+ 1.47400092e+02 2.25865375e+01 9.69831718e+01            nan
+ 2.86819560e+01 1.24769686e+01 4.61022327e+01]
+2023-01-28 12:19:39,466 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:19:40,172 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24320329e+00 4.72372642e+02 1.16174848e+02 2.55259257e-01
+ 2.83133841e+02 1.07826627e+01 1.01465316e+02            nan
+ 2.53943070e+01 1.24499803e+01 5.58372823e+01]
+2023-01-28 12:24:00,840 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:24:01,543 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22696962e+00 4.81073983e+02 1.03167620e+02 2.96428455e-01
+ 2.09429210e+02 3.97521748e+01 1.10445571e+02            nan
+ 2.41964696e+01 1.21731320e+01 5.57629389e+01]
+2023-01-28 12:24:41,287 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:24:42,098 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16739259e+00 4.72981482e+02 9.59375441e+01 2.22181725e-01
+ 1.82524674e+02 1.53297065e+01 9.90610325e+01            nan
+ 2.26336606e+01 1.13661138e+01 5.30748031e+01]
+2023-01-28 12:30:32,943 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:30:33,768 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16969782e+00 4.80039983e+02 9.44872148e+01 4.79007870e-01
+ 1.77024237e+02 2.14042183e+01 1.12890835e+02            nan
+ 2.64215311e+01 1.22505903e+01 5.40625177e+01]
+2023-01-28 12:35:01,610 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 12:35:02,439 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24858739e+00 4.84138668e+02 9.92013140e+01 2.08537073e-01
+ 1.63225340e+02 1.83327552e+01 1.03661382e+02            nan
+ 2.46339041e+01 1.24996666e+01 5.31358502e+01]
+2023-01-28 13:21:50,279 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 13:21:51,158 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.21945478e+00 4.79968489e+02 9.51277610e+01 3.18588081e-01
+ 2.13036338e+02 2.78063528e+01 1.16353960e+02            nan
+ 2.25124154e+01 1.18826965e+01 4.12287180e+01]
+2023-01-28 13:22:04,071 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 13:22:04,911 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19968118e+00 4.69128302e+02 9.14056305e+01 1.96688924e-01
+ 2.22099523e+02 3.18385475e+01 1.06188015e+02            nan
+ 2.28007201e+01 1.23918331e+01 5.66264177e+01]
+2023-01-28 13:22:33,087 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 13:22:33,934 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.20606790e+00 4.79257690e+02 8.75310647e+01 2.41129367e-01
+ 1.64742839e+02 2.44297428e+01 9.23976543e+01            nan
+ 2.56974992e+01 1.21594010e+01 4.13633095e+01]
+2023-01-28 13:24:48,790 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 13:24:49,529 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [  8.18937358 482.68664704 103.79892726   0.48601377 263.6559347
+  19.32071982  87.07136122          nan  26.36677633  12.1241706
+  52.66309359]
+2023-01-28 13:25:26,224 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-28 13:25:27,016 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20919127e+00 4.65153597e+02 9.22382585e+01 2.27403981e-01
+ 2.21526847e+02 2.15503612e+01 1.12269087e+02            nan
+ 2.44891623e+01 1.22612141e+01 5.30989496e+01]
+2023-01-29 08:10:08,984 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:10:09,846 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18553811e+00 4.82750549e+02 9.86583628e+01 2.81197027e-01
+ 2.53758062e+02 2.70603950e+01 1.02490762e+02            nan
+ 2.32085344e+01 1.23457352e+01 5.34749314e+01]
+2023-01-29 08:11:02,343 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:11:03,174 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22594499e+00 4.85436938e+02 1.03233217e+02 3.61077015e-01
+ 2.40948098e+02 8.37204722e+00 9.68830003e+01            nan
+ 2.40986501e+01 1.07960291e+01 5.93200947e+01]
+2023-01-29 08:11:15,003 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:11:15,845 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16640465e+00 4.79533722e+02 1.04808980e+02 4.40800562e-01
+ 2.92657908e+02 3.43777975e+01 9.14663591e+01            nan
+ 2.64759424e+01 1.21110423e+01 5.40231204e+01]
+2023-01-29 08:17:36,807 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:17:37,526 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22714481e+00 4.68268162e+02 9.39127258e+01 2.11796734e-01
+ 1.75471011e+02 1.60399981e+01 1.21072719e+02            nan
+ 2.55184832e+01 1.19900668e+01 5.64961155e+01]
+2023-01-29 08:17:49,211 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:17:49,940 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15125475e+00 4.84327609e+02 1.04289742e+02 1.42684182e-01
+ 1.69135437e+02 3.64216831e+01 1.16677854e+02            nan
+ 2.63579895e+01 1.23278473e+01 5.51951675e+01]
+2023-01-29 08:20:12,665 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:20:13,401 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.23062818e+00 4.76189089e+02 9.69701562e+01 2.93327028e-01
+ 1.60980803e+02 3.84383238e+01 1.03377271e+02            nan
+ 2.43073082e+01 1.22478805e+01 4.31686836e+01]
+2023-01-29 08:20:21,735 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:20:22,462 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15500704e+00 4.65224656e+02 1.08044726e+02 1.20918443e-01
+ 1.70370979e+02 1.48898252e+01 8.17941203e+01            nan
+ 2.61665520e+01 1.14638698e+01 5.68643649e+01]
+2023-01-29 08:21:28,233 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:21:29,090 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23795118e+00 4.69351840e+02 1.01795386e+02 1.04017070e-01
+ 1.75237982e+02 3.55449024e+01 9.71760627e+01            nan
+ 2.49938281e+01 1.12944817e+01 5.48817595e+01]
+2023-01-29 08:24:25,864 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:24:26,655 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:24:26,856 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24255063e+00 4.84610433e+02 9.76484089e+01 3.26587800e-01
+ 1.51869159e+02 3.71136435e+01 1.07344958e+02            nan
+ 2.57991247e+01 1.17201098e+01 5.39810151e+01]
+2023-01-29 08:24:27,574 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16468900e+00 4.74940864e+02 8.91168518e+01 3.82276138e-01
+ 2.64392827e+02 4.01881882e+00 1.03599399e+02            nan
+ 2.25414799e+01 1.16111581e+01 5.41776522e+01]
+2023-01-29 08:38:11,138 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:38:12,946 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17657267e+00 4.70534724e+02 1.09470412e+02 4.61655299e-01
+ 1.35842011e+02 3.30999798e+01 9.10400827e+01            nan
+ 2.36611045e+01 1.15956085e+01 5.63219616e+01]
+2023-01-29 08:49:26,769 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:49:26,883 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:49:29,669 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24136854e+00 4.72512597e+02 9.11509414e+01 1.98442180e-01
+ 1.75436177e+02 1.64582049e+01 1.08122266e+02            nan
+ 2.34248140e+01 1.15479203e+01 5.37049743e+01]
+2023-01-29 08:49:29,748 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:49:30,025 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20279219e+00 4.77974439e+02 8.71784076e+01 2.78937973e-01
+ 2.79891893e+02 3.57448046e+01 9.39412801e+01            nan
+ 2.25279653e+01 1.19047979e+01 5.37651123e+01]
+2023-01-29 08:49:30,783 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22702668e+00 4.73373338e+02 1.06238642e+02 1.12015658e-01
+ 1.75572199e+02 2.54075972e+01 1.09968518e+02            nan
+ 2.65607861e+01 1.22121089e+01 5.46244813e+01]
+2023-01-29 08:49:32,107 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:49:32,873 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15590935e+00 4.68177261e+02 9.58157451e+01 1.17082986e-01
+ 1.47083468e+02 1.28649177e+01 1.11710847e+02            nan
+ 2.84955322e+01 1.21940231e+01 5.81744971e+01]
+2023-01-29 08:50:03,246 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:50:04,036 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19148664e+00 4.73824611e+02 9.13022418e+01 3.29541770e-01
+ 1.67320835e+02 1.94227791e+01 1.13352680e+02            nan
+ 2.68965981e+01 1.16323408e+01 5.80682842e+01]
+2023-01-29 08:51:15,247 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:51:16,342 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [  8.1869231  464.99403675 113.83237098   0.48357273 245.58499186
+  22.5719443  100.3654477           nan  23.77311924  10.64515606
+  53.8421092 ]
+2023-01-29 08:51:17,977 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:51:18,700 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18275971e+00 4.69544972e+02 1.01973864e+02 4.51208378e-01
+ 2.23985360e+02 3.04642136e+01 9.74791179e+01            nan
+ 2.60659980e+01 1.05784326e+01 5.36331311e+01]
+2023-01-29 08:52:32,618 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:52:33,431 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19749569e+00 4.76276293e+02 1.07817281e+02 1.54939509e-01
+ 2.28432938e+02 2.78207923e+01 1.22636665e+02            nan
+ 2.69258520e+01 1.14933613e+01 5.72472846e+01]
+2023-01-29 08:52:41,503 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:52:42,443 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21536234e+00 4.71267384e+02 1.06576923e+02 1.96675774e-01
+ 1.99989773e+02 2.40728080e+01 1.03436531e+02            nan
+ 2.54365088e+01 1.12254698e+01 5.27671426e+01]
+2023-01-29 08:52:42,534 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:52:43,259 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.15264293e+00 4.76379079e+02 1.01097790e+02 3.34728007e-01
+ 2.03208158e+02 1.95362993e+01 1.17270163e+02            nan
+ 2.41209379e+01 1.14710824e+01 4.29465934e+01]
+2023-01-29 08:52:46,002 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:52:46,710 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23357227e+00 4.74711317e+02 9.39174110e+01 3.24671709e-01
+ 1.45689637e+02 2.58080583e+01 1.00172779e+02            nan
+ 2.75643431e+01 1.12555663e+01 5.90564373e+01]
+2023-01-29 08:54:10,991 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:54:11,721 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19786003e+00 4.75081867e+02 8.65890795e+01 3.78118092e-01
+ 1.36890866e+02 3.44433141e+01 1.12764960e+02            nan
+ 2.88629009e+01 1.08167085e+01 5.41314332e+01]
+2023-01-29 08:54:53,688 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:54:54,500 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18394788e+00 4.73451238e+02 8.90550552e+01 2.74848766e-01
+ 1.46496134e+02 3.79921707e+01 1.03187030e+02            nan
+ 2.32481702e+01 1.18150337e+01 5.28955171e+01]
+2023-01-29 08:57:01,917 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:57:03,066 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.18407642e+00 4.80219842e+02 1.09211164e+02 3.00103942e-01
+ 1.30914157e+02 6.09898415e+00 1.05441388e+02            nan
+ 2.73603370e+01 1.18608325e+01 4.73979503e+01]
+2023-01-29 08:57:08,115 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:57:08,647 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:57:09,226 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21606837e+00 4.73606743e+02 9.93397877e+01 3.32493779e-01
+ 1.71009801e+02 2.72278805e+01 1.10144003e+02            nan
+ 2.75920769e+01 1.16365832e+01 5.32297622e+01]
+2023-01-29 08:57:09,742 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19932774e+00 4.78077606e+02 1.04725169e+02 4.64315731e-01
+ 2.12246773e+02 2.00108593e+01 9.86442883e+01            nan
+ 2.73924462e+01 1.24462507e+01 5.78107834e+01]
+2023-01-29 08:59:03,908 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:59:04,724 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22659268e+00 4.65256584e+02 1.02843943e+02 1.85210438e-01
+ 1.64058793e+02 3.20426551e+01 9.78451425e+01            nan
+ 2.61342011e+01 1.18374188e+01 5.26648777e+01]
+2023-01-29 08:59:07,923 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:59:08,727 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:59:08,803 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21014147e+00 4.70195282e+02 9.88659237e+01 3.98872496e-01
+ 1.99414566e+02 2.96553635e+01 9.64818115e+01            nan
+ 2.87457543e+01 1.23619360e+01 5.75420623e+01]
+2023-01-29 08:59:09,566 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21590577e+00 4.69741382e+02 1.05562448e+02 3.51927391e-01
+ 2.75046936e+02 3.48216398e+01 1.08376257e+02            nan
+ 2.73910018e+01 1.16379992e+01 5.47108339e+01]
+2023-01-29 08:59:58,535 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 08:59:59,266 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.599085807800293, best pos: [8.17049335e+00 4.73462323e+02 1.29700705e+02 4.22146589e-01
+ 2.21444770e+02 1.67897169e+01 1.14898900e+02            nan
+ 2.88028454e+01 1.20765039e+01 5.37382899e+01]
+2023-01-29 09:00:12,132 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 09:00:12,845 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17220604e+00 4.69798832e+02 1.03350862e+02 1.63246585e-01
+ 2.72438160e+02 8.09727013e+00 1.14726581e+02            nan
+ 2.37018248e+01 1.12332410e+01 5.32498149e+01]
+2023-01-29 09:00:16,694 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 09:00:17,105 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 09:00:17,907 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.15427423e+00 4.65920167e+02 1.11464933e+02 2.59370114e-01
+ 1.50612297e+02 3.43682923e+01 8.51917679e+01            nan
+ 2.48332887e+01 1.20302526e+01 4.15518584e+01]
+2023-01-29 09:00:18,363 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19010405e+00 4.79487343e+02 1.03102258e+02 2.19958925e-01
+ 1.93456252e+02 2.80895569e+00 9.47698500e+01            nan
+ 2.66449646e+01 1.23420292e+01 5.56542283e+01]
+2023-01-29 09:00:32,174 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 09:00:32,876 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.599085807800293, best pos: [8.15537303e+00 4.68458615e+02 1.30577200e+02 4.21423035e-01
+ 2.14557282e+02 1.95851322e+01 9.56761441e+01            nan
+ 2.64830583e+01 1.22896376e+01 5.25768119e+01]
+2023-01-29 16:21:15,202 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 16:21:15,969 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21706811e+00 4.81686109e+02 9.99556861e+01 3.33296716e-01
+ 2.15234560e+02 1.47899593e+01 9.13145360e+01            nan
+ 2.41953402e+01 1.20330136e+01 5.35176380e+01]
+2023-01-29 16:21:17,473 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 16:21:18,192 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21884074e+00 4.71355509e+02 1.12437733e+02 3.68039137e-01
+ 2.63513033e+02 1.08610737e+01 9.77186922e+01            nan
+ 2.68295162e+01 1.09787644e+01 5.97757784e+01]
+2023-01-29 16:25:38,794 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 16:25:39,674 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20041341e+00 4.73134639e+02 9.50128430e+01 2.38516337e-01
+ 2.07692133e+02 3.85491735e+01 1.00888638e+02            nan
+ 2.27490960e+01 1.16585978e+01 5.40047479e+01]
+2023-01-29 16:25:40,014 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-01-29 16:25:40,778 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22435550e+00 4.76649228e+02 9.67852436e+01 4.20580605e-01
+ 2.72104752e+02 3.33823687e+01 8.59901048e+01            nan
+ 2.46568973e+01 1.07242413e+01 5.38421035e+01]
+2023-02-01 15:23:02,720 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:23:03,677 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21540742e+00 4.82510856e+02 1.11605934e+02 1.70853678e-01
+ 2.25539504e+02 3.09289972e+01 8.80481549e+01            nan
+ 2.59125480e+01 1.15933763e+01 5.30238674e+01]
+2023-02-01 15:24:11,925 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:24:12,800 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16974870e+00 4.78680545e+02 9.87439462e+01 3.48893666e-01
+ 2.40655623e+02 3.68199608e+01 1.04396728e+02            nan
+ 2.81649976e+01 1.13077780e+01 5.46766284e+01]
+2023-02-01 15:25:24,615 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:25:25,450 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 28.65203094482422, best pos: [9.67905003e+00 4.99473021e+02 8.99684539e+01 2.72026472e-01
+ 1.94951060e+02 3.52655060e+01 1.07587232e+02 1.00000000e+00
+ 2.15294684e+01 1.35666536e+01 3.20351260e+01]
+2023-02-01 15:25:42,732 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:25:43,560 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15128944e+00 4.81718051e+02 1.02009806e+02 1.71442858e-01
+ 2.40725303e+02 2.30329556e+01 1.04389895e+02            nan
+ 2.44495478e+01 1.24046811e+01 5.35550920e+01]
+2023-02-01 15:27:11,120 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:27:12,025 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17670489e+00 4.78511291e+02 1.16022566e+02 1.51008987e-01
+ 1.53093078e+02 3.52019037e+01 1.14861666e+02            nan
+ 2.34129943e+01 1.23443882e+01 5.59161879e+01]
+2023-02-01 15:27:14,903 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:27:15,786 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16791919e+00 4.75422062e+02 8.97958511e+01 2.78643067e-01
+ 1.64076694e+02 4.03942919e+01 8.90302608e+01            nan
+ 2.40207061e+01 1.21181341e+01 5.26604056e+01]
+2023-02-01 15:28:06,997 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:28:07,807 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18503862e+00 4.78407060e+02 1.10288643e+02 2.97482640e-01
+ 2.95142433e+02 2.39949637e+01 9.98373978e+01            nan
+ 2.67550434e+01 1.14654541e+01 5.54339242e+01]
+2023-02-01 15:28:08,108 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:28:08,831 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23775127e+00 4.78353219e+02 8.26459061e+01 3.74993619e-01
+ 1.84999836e+02 3.52109687e+01 9.09118350e+01            nan
+ 2.53029426e+01 1.24388304e+01 5.98279080e+01]
+2023-02-01 15:33:52,511 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:33:52,692 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:33:53,971 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21365216e+00 4.83781030e+02 1.00698937e+02 2.93777412e-01
+ 2.02496021e+02 3.39398472e+01 1.07098445e+02            nan
+ 2.45307347e+01 1.19099951e+01 5.36643643e+01]
+2023-02-01 15:33:54,185 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20941128e+00 4.74790277e+02 9.94483375e+01 4.12346972e-01
+ 1.98669745e+02 3.40744734e+01 1.01780491e+02            nan
+ 2.37528513e+01 1.22057999e+01 5.41374496e+01]
+2023-02-01 15:34:02,287 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 15:34:03,023 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22571247e+00 4.72685327e+02 8.37858319e+01 3.62858597e-01
+ 2.11363393e+02 1.78000766e+01 9.17128837e+01            nan
+ 2.50829375e+01 1.11831105e+01 5.48883137e+01]
+2023-02-01 16:01:09,653 - django.request - WARNING - Not Found: /favicon.ico
+2023-02-01 16:01:14,407 - django.request - WARNING - Not Found: /favicon.ico
+2023-02-01 16:12:26,865 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:12:28,486 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19074030e+00 4.78283165e+02 1.00459840e+02 4.20473747e-01
+ 1.55745184e+02 1.97940555e+01 9.97500410e+01            nan
+ 2.52017388e+01 1.23154470e+01 5.27489953e+01]
+2023-02-01 16:12:40,761 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:12:42,343 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22819607e+00 4.79346800e+02 1.00193122e+02 1.55460458e-01
+ 1.81203279e+02 4.09209211e+01 1.03664122e+02            nan
+ 2.27616186e+01 1.19414205e+01 5.28634742e+01]
+2023-02-01 16:12:42,885 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:12:43,651 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.20248946e+00 4.74630693e+02 1.05823776e+02 2.01048478e-01
+ 1.50649585e+02 1.90277793e+01 1.07727383e+02            nan
+ 2.56262610e+01 1.23942054e+01 4.90709504e+01]
+2023-02-01 16:23:39,351 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:23:40,039 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:23:40,425 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20322012e+00 4.72330204e+02 1.02722788e+02 3.14700636e-01
+ 1.81752900e+02 2.81191300e+01 9.67779904e+01            nan
+ 2.35421657e+01 1.20820300e+01 5.36447476e+01]
+2023-02-01 16:23:40,979 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21620409e+00 4.72643745e+02 1.00506473e+02 1.21842680e-01
+ 2.10092143e+02 3.16828151e+01 1.17469454e+02            nan
+ 2.84718399e+01 1.18727333e+01 5.51908298e+01]
+2023-02-01 16:23:42,879 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:23:43,671 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.16502833e+00 4.73010186e+02 1.06046833e+02 3.89330349e-01
+ 1.27485010e+02 2.81646410e+01 8.47177187e+01            nan
+ 2.53204726e+01 1.03117796e+01 4.37730609e+01]
+2023-02-01 16:28:19,852 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:28:20,620 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18318664e+00 4.66661294e+02 8.86677135e+01 3.74445064e-01
+ 2.54712961e+02 2.58563725e+01 8.52997277e+01            nan
+ 2.47078324e+01 1.21709125e+01 5.26857237e+01]
+2023-02-01 16:29:30,152 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-01 16:29:30,880 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18502215e+00 4.72418184e+02 1.07607039e+02 2.02901369e-01
+ 2.52208125e+02 2.36799553e+01 9.95690024e+01            nan
+ 2.27864396e+01 1.10868943e+01 5.32011731e+01]
+2023-02-14 09:13:28,194 - django.request - WARNING - Not Found: /favicon.ico
+2023-02-14 09:44:47,730 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-14 09:44:48,584 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.18029552e+00 4.69237617e+02 1.10565201e+02 3.63940112e-01
+ 1.49327797e+02 3.61794900e+01 1.04895975e+02            nan
+ 2.90509861e+01 1.15643685e+01 4.67536926e+01]
+2023-02-14 09:47:00,437 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-14 09:47:01,292 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17298346e+00 4.69456411e+02 1.01034120e+02 3.57875809e-01
+ 2.22859875e+02 3.78141574e+01 1.07822925e+02            nan
+ 2.56174061e+01 1.14839464e+01 5.28281401e+01]
+2023-02-20 11:34:05,234 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-20 11:34:06,026 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19408959e+00 4.81749383e+02 1.05878462e+02 4.02947136e-01
+ 2.25141014e+02 3.34892355e+01 1.04584608e+02            nan
+ 2.62309226e+01 1.22916941e+01 5.87707633e+01]
+2023-02-20 11:34:35,868 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-20 11:34:36,660 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23828170e+00 4.73650793e+02 9.36690877e+01 2.47147491e-01
+ 2.12068639e+02 2.88504041e+01 1.06251336e+02            nan
+ 2.65120864e+01 1.05477933e+01 5.27068013e+01]
+2023-02-20 11:35:11,256 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-20 11:35:11,623 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-20 11:35:12,725 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.19763959e+00 4.83407369e+02 8.71784471e+01 3.53849373e-01
+ 2.16596881e+02 3.35513729e+01 9.33937025e+01            nan
+ 2.29858419e+01 1.15271763e+01 5.51479555e+01]
+2023-02-20 11:35:13,107 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15428934e+00 4.69970741e+02 1.02545726e+02 1.05081954e-01
+ 2.16892359e+02 1.55820344e+01 9.64023219e+01            nan
+ 2.56630369e+01 1.21242500e+01 5.44278286e+01]
+2023-02-20 11:36:56,782 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-20 11:36:57,656 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23845995e+00 4.80330001e+02 8.90767604e+01 4.55636210e-01
+ 2.39658679e+02 2.79362058e+01 1.10533091e+02            nan
+ 2.53483923e+01 1.22743149e+01 5.56176233e+01]
+2023-02-20 11:37:15,931 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-02-20 11:37:16,917 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [  8.23002253 478.32782885 103.67959991   0.48513204 234.97182307
+  26.5945406   96.4917682           nan  25.71884646  12.4747831
+  52.74732421]
+2023-02-21 09:27:41,052 - django.request - WARNING - Not Found: /favicon.ico

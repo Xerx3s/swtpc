@@ -19,7 +19,10 @@ def get_floc():
 
 def get_bounds():
     df = connectdb().flocdatatodf()
-    df.drop(labels=["id", "surface_water", "flocculant"], axis=1, inplace=True)
+    df.drop(labels=[
+        "id", "surface_water", "flocculant",
+        "cal_final_EC", "delta_EC", "final_EC",
+        "final_pH", "final_turbidity"], axis=1, inplace=True)
     lb = df.min()
     ub = df.max()
     bounds = {}

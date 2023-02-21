@@ -36,8 +36,8 @@
         </Button>
       </Item>
       <Item>
-        <Button href="/analysis">
-          <Label>Analysis</Label>
+        <Button href="/methods">
+          <Label>Methods</Label>
         </Button>
       </Item>
     </List>

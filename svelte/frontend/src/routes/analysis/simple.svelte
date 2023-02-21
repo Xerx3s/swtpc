@@ -101,7 +101,7 @@
     <Paper style="margin:1em; flex-grow:1">
         <Title>Turbidity</Title>
         <Content>
-            <Slider bind:value={data.turbidity} min={0} max={3} step={1} discrete style="min-width:10em"/>
+            <Slider bind:value={data.turbidity} min={0} max={3} step={1} style="min-width:10em"/>
             <center>
             {#if data.turbidity === 0}
                 none

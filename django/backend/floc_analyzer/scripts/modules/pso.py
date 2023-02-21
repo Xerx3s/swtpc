@@ -87,4 +87,6 @@ def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
     if output < 0:
         output = 0
 
+    best_param = [0 if np.isnan(param) else param for param in best_param]
+
     return output, best_param

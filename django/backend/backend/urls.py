@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 import rest_framework
 from rest_framework import routers
-from db_connection.views import flocdataViewSet, UserViewSet, GroupViewSet
+from db_connection.views import flocdataViewSet, bsfdataViewSet, UserViewSet, GroupViewSet
 from floc_analyzer.views import predictEcView, predictPhView, predictTurView, optimizeTurView, list_flocculants, list_surface_waters, list_bounds
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'flocdata', flocdataViewSet)
+router.register(r'bsfdata', bsfdataViewSet)
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 

@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions
-from db_connection.models import flocculation_data
-from db_connection.serializers import flocdataSerializer, UserSerializer, GroupSerializer
+from db_connection.models import flocculation_data, bsf_data
+from db_connection.serializers import flocdataSerializer, bsfdataSerializer, UserSerializer, GroupSerializer
 from django.contrib.auth.models import User, Group
 
 
@@ -18,4 +18,9 @@ class GroupViewSet(viewsets.ModelViewSet):
 class flocdataViewSet(viewsets.ModelViewSet):
     queryset = flocculation_data.objects.all()
     serializer_class = flocdataSerializer
+    #permission_classes = [permissions.IsAuthenticated]
+
+class bsfdataViewSet(viewsets.ModelViewSet):
+    queryset = bsf_data.objects.all()
+    serializer_class = bsfdataSerializer
     #permission_classes = [permissions.IsAuthenticated]

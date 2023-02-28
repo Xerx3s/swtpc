@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from db_connection.models import flocculation_data
+from db_connection.models import flocculation_data, bsf_data
 from django.contrib.auth.models import User, Group
 
 
@@ -39,3 +39,26 @@ class flocdataSerializer(serializers.HyperlinkedModelSerializer):
             "stirring_speed_flocculation_phase",
             "duration_flocculation_phase",
             "duration_sedimentation_phase"]
+
+class bsfdataSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = bsf_data
+        fields = [
+            "url",
+            "diameter",
+            "material",
+            "material_height",
+            "min_grain_diameter",
+            "max_grain_diameter",
+            "mean_grain_diameter",
+            "min_flow",
+            "max_flow",
+            "mean_flow",
+            "min_pause",
+            "max_pause",
+            "mean_pause",
+            "time_schmutzdecke",
+            "initial_ecoli",
+            "final_ecoli",
+            "initial_turbidity",
+            "final_turbidity"]

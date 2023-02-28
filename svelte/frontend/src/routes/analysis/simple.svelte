@@ -43,25 +43,25 @@
         let problems_list: String[] = []
 
         if (data.turbidity > 0) {
-            problems_list.push(`<a href="/">Turbidity</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/turbidity" target="_blank" rel="noreferrer">Turbidity</a>`)
         }
         if (data.organic_material) {
-            problems_list.push(`<a href="/">Organic Material</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/organic-material" target="_blank" rel="noreferrer">Organic Material</a>`)
         }
         if (data.heavy_metals) {
-            problems_list.push(`<a href="/">Heavy Metals</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/heavy-metals" target="_blank" rel="noreferrer">Heavy Metals</a>`)
         }
         if (data.nitrate) {
-            problems_list.push(`<a href="/">Nitrate</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/nitrate" target="_blank" rel="noreferrer">Nitrate</a>`)
         }
         if (data.coliforms) {
-            problems_list.push(`<a href="/">Coliform Bacteria</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/coliform-bacteria" target="_blank" rel="noreferrer">Coliform Bacteria</a>`)
         }
         if (data.arsenic) {
-            problems_list.push(`<a href="/">Arsenic</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/arsenic" target="_blank" rel="noreferrer">Arsenic</a>`)
         }
         if (data.fluoride) {
-            problems_list.push(`<a href="/">Fluoride</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/fluoride" target="_blank" rel="noreferrer">Fluoride</a>`)
         }
         let problems_string = problems_list.join(", ")
 
@@ -70,24 +70,24 @@
 
         if (data.turbidity > 1 || data.heavy_metals) {
             methods.flocculation = true
-            methods_list.push(`<a href="/">Flocculation</a>`)
+            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
         }
         if (data.turbidity == (1 || 2) || data.organic_material || data.nitrate || data.arsenic) {
             methods.bsf = true
             if (!data.arsenic) {
-                methods_list.push(`<a href="/">Biosand Filtration</a>`)
+                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
             }
             else{
-                methods_list.push(`<a href="/">modified Biosand Filtration</a>`)
+                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
             }
         }
         if (data.fluoride) {
             methods.aaa = true
-            methods_list.push(`<a href="/">Activated Alumina Adsorption</a>`)
+            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a>`)
         }
         if (data.coliforms) {
             methods.sodis = true
-            methods_list.push(`<a href="/">SODIS</a>`)
+            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a>`)
         }
         let methods_string = methods_list.join(", ")
 

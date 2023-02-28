@@ -24,10 +24,10 @@
         <Title>Currently supported treatment methods</Title>
         <Content>
             <ul>
-                <li>Activated Alumina Adsorption</li>
-                <li>Biosand Filtration</li>
-                <li>Flocculation</li>
-                <li>SODIS</li>
+                <li><a href="http://192.168.178.69:3000/en/methods/aaa">Activated Alumina Adsorption</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/biosand-filtration">Biosand Filtration</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/flocculation">Flocculation</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/sodis">SODIS</a></li>
             </ul>
         </Content>
     </Paper>
@@ -35,15 +35,11 @@
         <Title>Additional treatment methods</Title>
         <Content>
             <ul>
-                <li>Boiling</li>
-                <li>Ceramic Pot Filtration</li>
-                <li>Chlorination</li>
-                <li>Membrane Filtration</li>
+                <li><a href="http://192.168.178.69:3000/en/methods/boiling">Boiling</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/ceramic-pot-filtration">Ceramic Pot Filtration</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/chlorination">Chlorination</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/membrane-filtration">Membrane Filtration</a></li>
             </ul>
         </Content>
     </Paper>
 </div>
-
-Bullets werden noch zu wiki verlinkt!
-<br />
-<br />

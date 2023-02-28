@@ -59,7 +59,7 @@
                   {:else}
                       Simple View
                   {/if}
-                  <Switch bind:checked={advanced} on:SMUISwitch:change={set_advanced_view}/>
+                  <Switch bind:checked={advanced} on:SMUISwitch:change={set_advanced_view} icons={false} />
           </Section>
       </Row>
   </TopAppBar>
@@ -76,7 +76,7 @@
   <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="/analysis">
     <Label>Analysis</Label>
   </Button>
-  <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="http://192.168.178.69:3000/">
+  <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="http://192.168.178.69:3000/" target="_blank" rel="noreferrer">
     <Label>Knowledge Base</Label>
   </Button>
 </footer>

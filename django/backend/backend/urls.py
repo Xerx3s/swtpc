@@ -19,6 +19,7 @@ import rest_framework
 from rest_framework import routers
 from db_connection.views import flocdataViewSet, bsfdataViewSet, UserViewSet, GroupViewSet
 from floc_analyzer.views import predictEcView, predictPhView, predictTurView, optimizeTurView, list_flocculants, list_surface_waters, list_bounds
+from bsf_concept.views import predictBsfView
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -38,4 +39,5 @@ urlpatterns = [
     path('floc/', list_flocculants.as_view()),
     path("bounds/", list_bounds.as_view()),
     path("opt_tur/", optimizeTurView.as_view()),
+    path("bsf/", predictBsfView.as_view()),
 ]

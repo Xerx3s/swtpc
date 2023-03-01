@@ -2469,3 +2469,105 @@ LINE 1: SELECT COUNT(*) AS "__count" FROM "db_connection_bsf_data"
 
 2023-02-28 11:20:02,939 - django.utils.autoreload - INFO - /opt/django/backend/db_connection/serializers.py changed, reloading.
 2023-02-28 11:20:18,761 - django.utils.autoreload - INFO - /opt/django/backend/db_connection/models.py changed, reloading.
+2023-03-01 07:50:55,314 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-01 09:40:16,194 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-03-01 09:41:41,459 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-03-01 09:42:19,690 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/pso.py changed, reloading.
+2023-03-01 09:43:10,247 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2023-03-01 09:43:54,873 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-03-01 09:44:34,356 - django.request - ERROR - Internal Server Error: /bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 21, in post
+    result=outputprediction(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 68, in outputprediction
+    pipe, _ = trainorloadpipe(loadpipe, printass)
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 33, in trainorloadpipe
+    X_train, X_test, y_train, y_test = preparedataset().traintestset()
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 12, in __init__
+    self.dataset = connectdb().flocdataEC()
+AttributeError: 'connectdb' object has no attribute 'flocdataEC'
+2023-03-01 09:45:50,331 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-03-01 09:46:01,728 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-03-01 09:46:10,246 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-03-01 09:46:12,901 - django.request - ERROR - Internal Server Error: /bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 21, in post
+    result=outputprediction(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 68, in outputprediction
+    pipe, _ = trainorloadpipe(loadpipe, printass)
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 33, in trainorloadpipe
+    X_train, X_test, y_train, y_test = preparedataset().traintestset()
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 15, in __init__
+    self.dataset.loc[hc["mean_grain_diameter"].isnull(),'mean_grain_diameter'] = (self.dataset["min_grain_diameter"] + self.dataset["max_grain_diameter"])/2
+NameError: name 'hc' is not defined
+2023-03-01 09:47:01,130 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-03-01 09:47:09,775 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-03-01 09:47:13,018 - django.request - ERROR - Internal Server Error: /bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 21, in post
+    result=outputprediction(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 70, in outputprediction
+    prediction = round(float(pipe.predict([inputvalues])),1)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/pipeline.py", line 457, in predict
+    Xt = transform.transform(Xt)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/impute/_base.py", line 515, in transform
+    X = self._validate_input(X, in_fit=False)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/impute/_base.py", line 319, in _validate_input
+    raise ve
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/impute/_base.py", line 302, in _validate_input
+    X = self._validate_data(
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/base.py", line 600, in _validate_data
+    self._check_n_features(X, reset=reset)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/base.py", line 400, in _check_n_features
+    raise ValueError(
+ValueError: X has 7 features, but SimpleImputer is expecting 8 features as input.
+2023-03-01 09:53:21,782 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-03-01 09:53:32,412 - django.request - WARNING - Method Not Allowed: /bsf/

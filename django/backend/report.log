@@ -2571,3 +2571,114 @@ Traceback (most recent call last):
 ValueError: X has 7 features, but SimpleImputer is expecting 8 features as input.
 2023-03-01 09:53:21,782 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
 2023-03-01 09:53:32,412 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-03-01 09:58:40,111 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/models.py changed, reloading.
+2023-03-01 09:59:24,296 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/serializers.py changed, reloading.
+2023-03-01 10:01:12,865 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/serializers.py changed, reloading.
+2023-03-01 10:02:03,622 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/views.py changed, reloading.
+2023-03-01 10:02:29,641 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/views.py changed, reloading.
+2023-03-01 10:02:45,566 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/views.py changed, reloading.
+2023-03-01 10:03:39,887 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/views.py changed, reloading.
+2023-03-01 10:07:04,591 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/views.py changed, reloading.
+2023-03-01 10:09:48,628 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/views.py changed, reloading.
+2023-03-01 10:10:31,614 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-03-01 10:13:22,798 - django.request - ERROR - Internal Server Error: /opt_bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 510, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 518, in render_form_for_serializer
+    serializer.data,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `load_pipediameter_min` is not valid for model `optimizeBsfData`.
+2023-03-01 10:13:43,420 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/serializers.py changed, reloading.
+2023-03-01 10:14:08,409 - django.request - WARNING - Method Not Allowed: /opt_bsf/
+2023-03-01 10:15:00,003 - django.request - ERROR - Internal Server Error: /opt_bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 67, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 81, in inputoptimization
+    output, best_param = minimize(pipe=pipe, bounds=bounds)
+TypeError: minimize() missing 1 required positional argument: 'pred_type'
+2023-03-01 10:16:01,562 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/pso.py changed, reloading.
+2023-03-01 10:16:11,162 - django.request - WARNING - Method Not Allowed: /opt_bsf/
+2023-03-01 10:16:13,807 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-01 10:16:14,555 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.6286491751670837, best pos: [48.03741519  2.33602564         nan  1.04079058 18.47134914 17.45008864
+ 14.87877946]
+2023-03-01 10:16:14,709 - django.request - ERROR - Internal Server Error: /opt_bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 679, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.10/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
+2023-03-01 10:17:30,140 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/pso.py changed, reloading.
+2023-03-01 10:17:38,934 - django.request - WARNING - Method Not Allowed: /opt_bsf/
+2023-03-01 10:17:41,711 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-01 10:17:42,594 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.6290203332901001, best pos: [52.29911804  7.96327558         nan  0.72602641 18.63550276 15.55047334
+ 14.79014379]

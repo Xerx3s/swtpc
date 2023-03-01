@@ -8,7 +8,7 @@ def create_objective_function(pipe: Pipeline):
         return output
     return objective_function
 
-def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
+def minimize(pipe: Pipeline, bounds: dict):
     particles = 50
     iterations = 100
     options = {'c1': 0.5, 'c2': 0.3, 'w':0.9}
@@ -39,10 +39,9 @@ def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
     
     output, best_param = optimizer.optimize(objective_function, iters=iterations)
     
-    """
     if output < 0:
         output = 0
 
     best_param = [0 if np.isnan(param) else param for param in best_param]
-    """
+
     return output, best_param

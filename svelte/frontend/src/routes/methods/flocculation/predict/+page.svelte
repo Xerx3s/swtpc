@@ -2,7 +2,6 @@
     import Textfield from "@smui/textfield"
     import Button, { Group } from "@smui/button"
     import Paper, { Title, Subtitle, Content } from "@smui/paper"
-    import List, {Item, Meta, Label, Separator } from "@smui/list"
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
 

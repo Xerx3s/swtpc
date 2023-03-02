@@ -2682,3 +2682,15 @@ ValueError: Out of range float values are not JSON compliant: nan
 2023-03-01 10:17:41,711 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
 2023-03-01 10:17:42,594 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.6290203332901001, best pos: [52.29911804  7.96327558         nan  0.72602641 18.63550276 15.55047334
  14.79014379]
+2023-03-01 17:28:54,987 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-01 18:00:19,627 - django.request - WARNING - Method Not Allowed: /tur/
+2023-03-01 18:00:37,448 - django.request - WARNING - Method Not Allowed: /ec/
+2023-03-01 18:06:52,363 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-01 18:06:53,142 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20221952e+00 4.67826873e+02 1.06933803e+02 1.83788191e-01
+ 2.09265691e+02 2.43746608e+01 9.75335581e+01            nan
+ 2.46426165e+01 1.05546906e+01 5.61418859e+01]
+2023-03-01 18:07:18,392 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-01 18:07:19,128 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.7689037322998047, best pos: [8.21873892e+00 4.72388378e+02 5.96097075e+01 2.04569807e-01
+ 1.46574517e+02 3.56011980e+01 1.04705031e+02            nan
+ 2.52836478e+01 1.24306099e+01 5.27875804e+01]
+2023-03-02 17:27:46,433 - django.request - WARNING - Method Not Allowed: /bsf/

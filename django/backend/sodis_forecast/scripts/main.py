@@ -4,7 +4,7 @@ from sodis_forecast.scripts.modules.disinfection import disinfectionuntil
 
 def sodis_forecast(
     location: dict = {"city": "Darmstadt", "country": "Deutschland"},
-    hour: float = 8.0,
+    hour: int = 8.0,
     wattemp: int = 18,
     tarlogdis: int = 4):
     """

@@ -20,6 +20,7 @@ from rest_framework import routers
 from db_connection.views import flocdataViewSet, bsfdataViewSet, UserViewSet, GroupViewSet
 from floc_analyzer.views import predictEcView, predictPhView, predictTurView, optimizeTurView, list_flocculants, list_surface_waters, list_bounds
 from bsf_concept.views import predictBsfView, optimizeBsfView, list_bsf_bounds
+from sodis_forecast.views import SODISForecastView
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -41,5 +42,6 @@ urlpatterns = [
     path("opt_tur/", optimizeTurView.as_view()),
     path("bsf/", predictBsfView.as_view()),
     path("opt_bsf/", optimizeBsfView.as_view()),
-    path("bsf_bounds/", list_bsf_bounds.as_view())
+    path("bsf_bounds/", list_bsf_bounds.as_view()),
+    path("sodis/", SODISForecastView.as_view())
 ]

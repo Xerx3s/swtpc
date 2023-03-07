@@ -3349,3 +3349,247 @@ TypeError: float() argument must be a string or a real number, not 'NoneType'
 2023-03-02 20:50:18,974 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
 2023-03-02 20:51:07,225 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
 2023-03-02 20:51:57,275 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-03-07 09:14:41,435 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:14:56,271 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:15:05,933 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-07 09:15:11,585 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 507, in get_rendered_html_form
+    serializer = self._get_serializer(view.serializer_class, view,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 443, in _get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: SODISForecastData() got unexpected keyword arguments: 'context'
+2023-03-07 09:18:43,447 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:18:53,644 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 507, in get_rendered_html_form
+    serializer = self._get_serializer(view.serializer_class, view,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 443, in _get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: SODISForecastData() got unexpected keyword arguments: 'context'
+2023-03-07 09:19:07,906 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:20:03,023 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 507, in get_rendered_html_form
+    serializer = self._get_serializer(view.serializer_class, view,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 443, in _get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: SODISForecastData() got unexpected keyword arguments: 'context'
+2023-03-07 09:26:04,334 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:26:20,833 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:26:32,091 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 507, in get_rendered_html_form
+    serializer = self._get_serializer(view.serializer_class, view,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 443, in _get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: SODISForecastData() got unexpected keyword arguments: 'context'
+2023-03-07 09:26:32,376 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-07 09:27:00,911 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 507, in get_rendered_html_form
+    serializer = self._get_serializer(view.serializer_class, view,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 443, in _get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: SODISForecastData() got unexpected keyword arguments: 'context'
+2023-03-07 09:27:01,152 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-07 09:27:31,534 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:28:23,146 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/serializers.py changed, reloading.
+2023-03-07 09:28:41,347 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/serializers.py changed, reloading.
+2023-03-07 09:29:00,620 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/views.py changed, reloading.
+2023-03-07 09:29:13,644 - django.request - WARNING - Method Not Allowed: /sodis/
+2023-03-07 09:29:13,896 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-07 09:29:23,297 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 15, in post
+    float(request.data.get('starting_hour')),
+ValueError: could not convert string to float: ''
+2023-03-07 09:29:24,932 - django.request - WARNING - Method Not Allowed: /sodis/
+2023-03-07 09:29:25,141 - django.request - WARNING - Not Found: /favicon.ico
+2023-03-07 09:29:48,909 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 20, in post
+    result, message =sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 22, in sodis_forecast
+    starttime = radcal.settime(hour)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/radiation.py", line 60, in settime
+    starttime = datetime.datetime.now(tz=self.tz).replace(day=nextday, hour=hour, minute=0, second=0, microsecond=0)
+TypeError: 'float' object cannot be interpreted as an integer
+2023-03-07 09:30:20,405 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/views.py changed, reloading.
+2023-03-07 09:30:35,346 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:30:44,686 - django.request - WARNING - Method Not Allowed: /sodis/
+2023-03-07 09:30:53,767 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 20, in post
+    result, message =sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 22, in sodis_forecast
+    starttime = radcal.settime(hour)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/radiation.py", line 60, in settime
+    starttime = datetime.datetime.now(tz=self.tz).replace(day=nextday, hour=hour, minute=0, second=0, microsecond=0)
+TypeError: 'float' object cannot be interpreted as an integer
+2023-03-07 09:32:22,307 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/main.py changed, reloading.
+2023-03-07 09:32:38,748 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:32:52,684 - django.request - WARNING - Method Not Allowed: /sodis/
+2023-03-07 09:32:55,274 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 15, in post
+    int(request.data.get('starting_hour')),
+ValueError: invalid literal for int() with base 10: '8.0'
+2023-03-07 09:33:20,827 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/models.py changed, reloading.
+2023-03-07 09:33:48,543 - django.request - WARNING - Method Not Allowed: /sodis/
+2023-03-07 09:33:51,481 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 15, in post
+    int(request.data.get('starting_hour')),
+ValueError: invalid literal for int() with base 10: '8.0'
+2023-03-07 09:33:52,701 - django.request - WARNING - Method Not Allowed: /sodis/

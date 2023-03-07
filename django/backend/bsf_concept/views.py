@@ -4,6 +4,19 @@ from rest_framework import permissions
 from rest_framework.response import Response
 from bsf_concept.scripts.main import outputprediction, inputoptimization
 from bsf_concept.serializers import predictBsfSerializer, optimizeBsfSerializer
+from bsf_concept.models import get_bounds, get_materials
+
+@permission_classes((permissions.AllowAny,))
+class list_bsf_bounds(APIView):
+    def get(self, request, *args, **kwargs):
+        data = get_bounds()
+        return Response(data=data)
+
+@permission_classes((permissions.AllowAny,))
+class list_bsf_materials(APIView):
+    def get(self, request, *args, **kwargs):
+        data = get_materials()
+        return Response(data=data)
 
 @permission_classes((permissions.AllowAny,))
 class predictBsfView(APIView):

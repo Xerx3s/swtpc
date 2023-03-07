@@ -1,4 +1,29 @@
 from django.db import models
+from bsf_concept.scripts.modules.connectdb import connectdb
+
+def get_materials():
+    df = connectdb().bsfdatatodf()
+    materials_list = df["material"].unique().tolist()
+    materials = []
+    for entry in materials_list:
+        materials.append((entry, entry))
+    return materials
+
+def get_bounds():
+    df = connectdb().bsfdatatodf()
+    df.drop(labels=[
+        "id", "material", "final_turbidity",
+        "min_grain_diameter", "max_grain_diameter",
+        "min_flow", "max_flow",
+        "min_pause", "max_pause",
+        "initial_ecoli", "final_ecoli",
+    ], axis=1, inplace=True)
+    lb = df.min()
+    ub = df.max()
+    bounds = {}
+    for index,value in lb.items():
+        bounds[index] = [value, ub[index]+0.1]
+    return bounds
 
 class predictBsfData(models.Model):
     print_assessment = models.BooleanField(blank=False, default=False)

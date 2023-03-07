@@ -74,8 +74,7 @@ def outputprediction(inputvalues: list, loadpipe: bool = True, printass: bool = 
 def inputoptimization(bounds: dict, loadpipe: bool = True, printass: bool = False):
     """
         Bounds need to be dict of type {param: [min, max]}.\n
-        Keys for param: initial_pH, initial_EC, initial_turbidity, floc_concentration, floc_saline_Molarity
-        floc_dose, floc_cactus_share, stirring_speed_coagulation_phase, duration_coagulation_phase, stirring_speed_flocculation_phase, duration_flocculation_phase, duration_sedimentation_phase
+        Keys for param: initial_turbidity, diameter, material_height, mean_grain_diameter, mean_flow, mean_pause, time_schmutzdecke.
     """
     pipe, _ = trainorloadpipe(loadpipe, printass)
     output, best_param = minimize(pipe=pipe, bounds=bounds)

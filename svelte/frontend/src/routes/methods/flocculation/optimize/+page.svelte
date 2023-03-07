@@ -13,7 +13,7 @@
     let show_result = false
 
     async function get_bounds() {
-        let url = "http://localhost:3001/bounds/"
+        let url = "http://localhost:3001/floc_bounds/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -228,8 +228,8 @@
                             bind:end={param.minmax[1]}
                             min={param.bounds[0]}
                             max={param.bounds[1]}
-                            step={0.1}
-                            minRange={0.2}
+                            step={param.step}
+                            minRange={param.minRange}
                             discrete
                         />
                         Value: {param.minmax[0]} to {param.minmax[1]} {param.unit}

@@ -17,7 +17,7 @@ class SODISForecastView(APIView):
             int(request.data.get('target_logdis'))]
         location = {"city": input_list[0], "country": input_list[1]}
 
-        result, message =sodis_forecast(
+        result, message, duration = sodis_forecast(
             location=location,
             hour=input_list[2],
             wattemp=input_list[3],
@@ -28,5 +28,6 @@ class SODISForecastView(APIView):
             "water_temperature": input_list[3],
             "target_logdis": input_list[4],
             "message": message,
+            "duration": duration,
             "result": result}
         return Response(data=data)

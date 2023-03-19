@@ -20,7 +20,7 @@
         "flocculation": false,
         "bsf": false,
         "sodis": false,
-        "aaa": false //activated alumina adsorption
+        "aaa": false
     }
 
     let results = ""
@@ -92,7 +92,12 @@
         let methods_string = methods_list.join(", ")
 
         set_selected_methods()
-        results = intro + problems_string + outro + methods_string
+        if (methods.aaa || methods.bsf || methods.flocculation || methods.sodis) {
+            results = intro + problems_string + outro + methods_string
+        } else {
+            results = "Please select matching inputs first."
+        }
+
     }
 
 </script>

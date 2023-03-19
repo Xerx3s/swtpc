@@ -12,7 +12,7 @@
 
 <h1>Welcome</h1>
 <p>This is the online tool for automated conceptual design of sustainable drinking water treatment plants from low-tech.</p>
-<p>Based on simple input parameters, different treatment methods can be selected and combined to produce the cleanest drinking water possible.
+<p>Based on simple input parameters, various treatment methods are selected and combined to produce the cleanest drinking water possible.
     This online tool focuses exclusively on low-tech methods in order to provide as many people as possible with access to clean water by the simplest means.</p>
 
 <Group style="display: flex; justify-content: strech;">

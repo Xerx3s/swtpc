@@ -97,4 +97,4 @@ def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: i
     duration = (nowtime - starttime).seconds/60/60
     if message == "":
         message = "Requested log disinfection of %d is achieved after %s hours." %(target, duration)
-    return disinfectiondata, message
+    return disinfectiondata, message, duration

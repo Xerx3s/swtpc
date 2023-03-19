@@ -21,15 +21,11 @@ def sodis_forecast(
     radcal = SRC(loc[0], loc[1], loc[2])
     starttime = radcal.settime(hour)
     raddata = radcal.get_radiationdata(starttime)
-    disdata, message = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
     result = raddata.join(disdata)
     result.drop(["dni", "dhi", "dni_cloudy", "dhi_cloudy"], axis=1, inplace=True)
     result.rename({"ghi": "total Radiation", "ghi_cloudy": "actual Radiation", "temp_air": "Air Temp", "total_clouds": "total Clouds"}, axis=1, inplace=True)
     result.dropna(inplace=True)
 
-    print(result[["actual Radiation", "total Clouds", "Air Temp", "Log Dis"]])
-    if message != "":
-        print(message)
-    #fig, pngImageB64String = plotsodisforecast(location, result, message)
-
-    return result, message
+    output = result[["actual Radiation", "total Clouds", "Air Temp", "Water Temp", "Log Dis"]]
+    return output, message, duration

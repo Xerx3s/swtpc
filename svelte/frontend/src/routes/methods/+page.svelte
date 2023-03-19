@@ -1,28 +1,57 @@
 <script lang="ts">
     import Card, { Content, PrimaryAction, Media, MediaContent, Actions, ActionButtons, ActionIcons } from '@smui/card';
     import Button, { Label } from '@smui/button';
+    import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
+
+    let advanced = false;
+
+    advanced_view.subscribe(value => {
+		advanced = value;
+    })
+
+    function set_advanced_view() {
+        advanced_view.set(advanced)
+    }
+
+    set_advanced_view();
 
     let methods = [
         {
             id: "flocculation",
+            link: "flocculation",
+            simple: true,
+            pred: true,
+            opt: true,
             name: "Flocculation",
             image: "card-media-flocculation",
             description: "Treatment Process to remove small particles and colloides from water."
         },
         { 
             id: "bsf",
+            link: "biosand-filtration",
+            simple: true,
+            pred: true,
+            opt: true,
             name: "Biosand Filtration",
             image: "card-media-bsf",
             description: "Treatment Process to reduce pathogens and nitrate concentration in water."
         },
         { 
             id: "sodis",
+            link: "sodis",
+            simple: true,
+            pred: true,
+            opt: false,
             name: "SODIS",
             image: "card-media-sodis",
             description: "Treatment Process reduce pathogens in water."
         },
         {
             id: "aaa",
+            link: "aaa",
+            simple: false,
+            pred: false,
+            opt: false,
             name: "Activated Alumina Adsorption",
             image: "card-media-aaa",
             description: "Treatment Process to reduce fluoride concentration in water."
@@ -65,12 +94,28 @@
             </Content>
             <Actions>
             <ActionButtons>
-                <Button href="/methods/{method.id}/predict">
-                <Label>Predict</Label>
+                <Button href="http://192.168.178.69:3000/en/methods/{method.link}" target="_blank" rel="noreferrer">
+                    <Label>Description</Label>
                 </Button>
-                <Button href="/methods/{method.id}/optimize">
-                <Label>Optimize</Label>
-                </Button>
+                {#if advanced}
+                    {#if method.pred}
+                        <Button href="/methods/{method.id}/predict">
+                            <Label>Predict</Label>
+                        </Button>
+                    {/if}
+                    {#if method.opt}
+                        <Button href="/methods/{method.id}/optimize">
+                            <Label>Optimize</Label>
+                        </Button>
+                    {/if}
+                {:else}
+                    {#if method.simple}
+                        <Button href="/methods/{method.id}/predict">
+                            <Label>Predict</Label>
+                        </Button>
+                    {/if}
+                    
+                {/if}
             </ActionButtons>
             </Actions>
         </Card>

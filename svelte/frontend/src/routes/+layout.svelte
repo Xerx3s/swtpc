@@ -9,7 +9,6 @@
 
     let advanced = false;
     let menu: Menu;
-    let clicked = "nothing yet."
 
     advanced_view.subscribe(value => {
 		advanced = value;

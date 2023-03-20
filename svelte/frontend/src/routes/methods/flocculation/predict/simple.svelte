@@ -8,7 +8,7 @@
 
     let data = {
         "turbidity": 0,
-        "flocculant": "Kaktus"
+        "flocculant": "Moringa"
     }
     let flocculants = get_flocculants()
     
@@ -77,7 +77,7 @@
                 No treatment to reduce turbidity is necessary.
             {:else if data.flocculant == "Moringa"}
                 Based on the indication of turbidity, a dose of {100 * data.turbidity} mg/l flocculant should be sufficient.
-                The amount corresponds to about {data.turbidity / 2} Moringa seed per liter of water.
+                The amount corresponds to about {data.turbidity / 2} dried and ground Moringa seed per liter of water.
             {:else if data.flocculant == "MoringaKaktus"}
                 {#if data.turbidity > 2}
                     Dried and ground cactus clatodes can support flocculation with Moringa and increase flocculation activity.

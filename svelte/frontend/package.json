@@ -48,7 +48,7 @@
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"smui-theme": "^7.0.0-beta.0",
-		"svelte": "^3.54.0",
+		"svelte": "^3.57.0",
 		"svelte-check": "^2.9.2",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
@@ -58,7 +58,11 @@
 	"type": "module",
 	"dependencies": {
 		"@picocss/pico": "^1.5.6",
+		"chart.js": "^4.2.1",
+		"frappe-charts": "^1.6.2",
 		"marked": "^4.2.12",
+		"svelte-chartjs": "^3.1.2",
+		"svelte-frappe-charts": "^1.10.0",
 		"svelte-markdown": "^0.2.3",
 		"svelte-material-ui": "^7.0.0-beta.0"
 	}

@@ -27,5 +27,6 @@ def sodis_forecast(
     result.rename({"ghi": "total Radiation", "ghi_cloudy": "actual Radiation", "temp_air": "Air Temp", "total_clouds": "total Clouds"}, axis=1, inplace=True)
     result.dropna(inplace=True)
 
-    output = result[["actual Radiation", "total Clouds", "Air Temp", "Water Temp", "Log Dis"]]
+    result["time"] = result.index
+    output = result[["time", "actual Radiation", "total Clouds", "Air Temp", "Water Temp", "Log Dis"]]
     return output, message, duration

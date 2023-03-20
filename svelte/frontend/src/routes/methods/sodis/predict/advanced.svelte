@@ -5,6 +5,7 @@
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
     import Dialog, { Actions } from '@smui/dialog';
+    import Chart from "svelte-frappe-charts"
     
 
     let data = {
@@ -19,6 +20,7 @@
     let message = ""
     let show_results = false
     let final_logdis = 0.0
+    let graph_data = sodis_forecast()
 
     async function sodis_forecast() {
         let url = "http://localhost:3001/sodis/"
@@ -35,12 +37,32 @@
         duration = res2["duration"].toFixed(1)
         message = res2["message"]
         final_logdis = res2["result"]["Log Dis"][res2["result"]["Log Dis"].length -1].toFixed(1)        
+
+        // Graph wird zu früh erstellt. Wirft Exception...
+        let graph_data = {
+            labels: res2["result"]["time"],
+            datasets: [
+                {
+                    name: "logarithmic Disinfection",
+                    values: res2["result"]["Log Dis"],
+                    chartType: "line"
+                },
+                {
+                    name: "Radiation",
+                    values: res2["result"]["actual Radiation"],
+                    chartType: "bar"
+                },
+            ]
+        };
+
+        return graph_data
     }
 
     function handleClick() {
         sodis_forecast()
         show_results = true
-        }
+    }
+
 </script>
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
@@ -81,6 +103,16 @@
                 <br />
                 <Textfield type="number" input$step=0.01 bind:value={duration} label="Duration" suffix="h" style="flex-grow:1; margin-bottom:0.5em"/>
                 <br />
+            </Content>
+        </Paper>
+        <Paper style="margin:1em; flex-grow:1; min-width:20em">
+            <Title>Graph</Title>
+            <Content style="display:flex; flex-direction:column; margin:1em">
+                {#await graph_data}
+                    ...
+                {:then graph_data} 
+                    <Chart data={graph_data} />
+                {/await}
             </Content>
         </Paper>
     </div>

@@ -96,13 +96,14 @@
         let res2 = await res.json()
         
         pred_fEC = res2["final_EC"].toFixed(0)
+
+        return true
         }
     
     function handleClick() {
         predict_tur()
         predict_ph()
-        predict_ec()
-        show_results = true
+        show_results = predict_ec()
         }
 </script>
 
@@ -167,12 +168,16 @@
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
-                <Textfield type="number" input$step=0.1 bind:value={pred_fpH} label="Final pH" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
-                <Textfield type="number" input$step=1 bind:value={pred_fEC} label="Final EC" suffix="µS/cm" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
-                <Textfield type="number" input$step=1 bind:value={pred_ftur} label="Final Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
+                {#await show_results}
+                    <LinearProgress indeterminate />
+                {:then show_results}
+                    <Textfield type="number" input$step=0.1 bind:value={pred_fpH} label="Final pH" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                    <Textfield type="number" input$step=1 bind:value={pred_fEC} label="Final EC" suffix="µS/cm" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                    <Textfield type="number" input$step=1 bind:value={pred_ftur} label="Final Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                {/await}
             </Content>
         </Paper>
     </div>

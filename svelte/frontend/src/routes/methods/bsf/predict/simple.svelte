@@ -9,10 +9,11 @@
     import List, {Item, Meta, Label } from "@smui/list"
     import Checkbox from "@smui/checkbox"
 
+    let show_results = false
+
     let param = {
         "turbidity": 0,
-        "organic_material": false,
-        "results": false
+        "organic_material": false
     }
 
     let data = {
@@ -43,12 +44,13 @@
         console.log(JSON.stringify(data))
         let res2 = await res.json()
         pred_ftur = res2["final_turbidity"].toFixed(0)
+
+        return true
     }
 
     function handleclick() {
-        param.results = true
         data.initial_turbidity = param.turbidity * 10
-        predict_bsf()
+        show_results = predict_bsf()
     }
 
 </script>
@@ -88,20 +90,24 @@
 <Group style="display: flex; justify-content: strech; margin-bottom:1em">
     <Button variant="unelevated" style="width: 50%; margin: auto;" on:click={handleclick}>Analyze</Button>
 </Group>
-{#if param.results}
+{#if show_results}
     <div style="display:flex; margin-bottom:1em">
         <Paper style="flex-grow:1;">
             <Title>Results</Title>
             <Content>
-                Based on the given input parameters and the assumptions listed below,
-                a residual turbidity of {pred_ftur} NTU is expected after treatment of the water by biosand filtration.
-                {#if param.organic_material}
-                    Any bacteria present in the water should have been reduced by at least 90 %.
-                {/if}
-                <br /> <br />
-                Assumptions as follows: <br />
-                 - Bucket (diameter 40 cm) filled with 50 cm of fine sand. <br />
-                 - Last scraping of the schmutzdecke was 14 days ago
+                {#await show_results}
+                    <LinearProgress indeterminate />
+                {:then show_results}
+                    Based on the given input parameters and the assumptions listed below,
+                    a residual turbidity of {pred_ftur} NTU is expected after treatment of the water by biosand filtration.
+                    {#if param.organic_material}
+                        Any bacteria present in the water should have been reduced by at least 90 %.
+                    {/if}
+                    <br /> <br />
+                    Assumptions as follows: <br />
+                    - Bucket (diameter 40 cm) filled with 50 cm of fine sand. <br />
+                    - Last scraping of the schmutzdecke was 14 days ago
+                {/await}
             </Content>
         </Paper>
     </div>

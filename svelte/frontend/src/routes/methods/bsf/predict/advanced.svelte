@@ -36,12 +36,13 @@
         console.log(JSON.stringify(data))
         let res2 = await res.json()
         pred_ftur = res2["final_turbidity"].toFixed(0)
+
+        return true
     }
 
     function handleClick() {
-        predict_bsf()
+        show_results = predict_bsf()
         pred_tvc = ((1 - 0.998) * data.initial_tvc).toFixed(0)
-        show_results = true
         }
 </script>
 
@@ -88,10 +89,14 @@
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
-                <Textfield type="number" input$step=1 bind:value={pred_ftur} label="Final Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
-                <Textfield type="number" input$step=1 bind:value={pred_tvc} label="Final Total Viable Count" suffix="cfu/100ml" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
+                {#await show_results}
+                    <LinearProgress indeterminate />
+                {:then show_results}
+                    <Textfield type="number" input$step=1 bind:value={pred_ftur} label="Final Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                    <Textfield type="number" input$step=1 bind:value={pred_tvc} label="Final Total Viable Count" suffix="cfu/100ml" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                {/await}
             </Content>
         </Paper>
     </div>

@@ -78,7 +78,7 @@ def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: i
         #Tc = 30.0
         if Tc < 20 and msg_count == 0:
             #message = "It's too cold (below 20°C) to use SODIS for disinfection."
-            message += "Due to the low ambient temperature (below 20 °C), the prediction is not reliable.\n"
+            message += "Due ambient temperatures below 20 °C, the prediction may not be reliable.\n"
             msg_count = 1
             #break
         #print("Radiation: %d" %radiation)

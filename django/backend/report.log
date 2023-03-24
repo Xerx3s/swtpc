@@ -3692,3 +3692,20 @@ KeyError: 'time'
 2023-03-20 11:46:58,836 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/main.py changed, reloading.
 2023-03-20 11:54:39,609 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/main.py changed, reloading.
 2023-03-20 11:57:15,312 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/main.py changed, reloading.
+2023-03-20 17:29:49,726 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-20 17:29:50,499 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15670318e+00 4.78406647e+02 1.07753610e+02 3.61913245e-01
+ 1.75266266e+02 2.31073085e+01 1.08959885e+02            nan
+ 2.54370568e+01 1.24158993e+01 5.36104970e+01]
+2023-03-20 17:30:07,798 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-20 17:30:08,672 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15334843e+00 4.85038466e+02 1.13183917e+02 4.05360477e-01
+ 1.62890040e+02 2.93514812e+01 8.93580575e+01            nan
+ 2.36344723e+01 1.17528510e+01 5.25734773e+01]
+2023-03-24 17:16:41,519 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/modules/disinfection.py changed, reloading.
+2023-03-24 17:26:38,847 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-24 17:26:39,685 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17734446e+00 4.81238869e+02 9.99411780e+01 4.47969458e-01
+ 2.34151816e+02 2.01301721e+01 9.48083632e+01            nan
+ 2.78177101e+01 1.22281967e+01 5.71105494e+01]
+2023-03-24 17:26:40,723 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-03-24 17:26:41,543 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24862726e+00 4.72229718e+02 8.79726426e+01 1.85717376e-01
+ 2.23504173e+02 1.18271579e+01 1.10844061e+02            nan
+ 2.68613155e+01 1.23685144e+01 5.35106850e+01]

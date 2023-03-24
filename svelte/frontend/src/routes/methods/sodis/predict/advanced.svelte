@@ -5,8 +5,9 @@
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
     import Dialog, { Actions } from '@smui/dialog';
-    import Chart from "svelte-frappe-charts"
-    
+    import { onMount } from 'svelte';
+    import { Line } from 'svelte-chartjs';
+    import 'chart.js/auto';
 
     let data = {
         "location_city": "Darmstadt",
@@ -38,28 +39,92 @@
         message = res2["message"]
         final_logdis = res2["result"]["Log Dis"][res2["result"]["Log Dis"].length -1].toFixed(1)        
 
-        // Graph wird zu früh erstellt. Wirft Exception...
-        let graph_data = {
-            labels: res2["result"]["time"],
-            datasets: [
-                {
-                    name: "logarithmic Disinfection",
-                    values: res2["result"]["Log Dis"],
-                    chartType: "line"
-                },
-                {
-                    name: "Radiation",
-                    values: res2["result"]["actual Radiation"],
-                    chartType: "bar"
-                },
-            ]
-        };
+        let x_data = res2["result"]["time"].map(function(v) {return v.slice(11, 16) })
+        let graph_data = [
+            {
+                labels: x_data,
+                datasets: [
+                    {
+                        label: "logarithmic Disinfection",
+                        data: res2["result"]["Log Dis"],
+                        borderColor: "purple",
+                    },
+                ],
+            },
+            {
+                labels: x_data,
+                datasets: [
+                    {
+                        label: "Radiation",
+                        data: res2["result"]["actual Radiation"],
+                        borderColor: "red",
+                    },
+                ],
+            },
+            {
+                labels: x_data,
+                datasets: [
+                    {
+                        label: "ambient Temperature",
+                        data: res2["result"]["Air Temp"],
+                        borderColor: "green",
+                    },
+                ],
+            },
+            {
+                labels: x_data,
+                datasets: [
+                    {
+                        label: "Water Temperature",
+                        data: res2["result"]["Water Temp"],
+                        borderColor: "blue",
+                    },
+                ],
+            },
+            {
+                labels: x_data,
+                datasets: [
+                    {
+                        label: "total Cloud Coverage",
+                        data: res2["result"]["total Clouds"],
+                        borderColor: "grey",
+                    },
+                ],
+            }
+        ];
 
         return graph_data
     }
 
+    let options: {
+        title: {
+            display: true,
+            text: 'Chart.js Line Chart'
+        },
+        },
+        interaction: {
+            mode: 'index',
+            intersect: false
+        },
+        scales: {
+            x: {
+                display: true,
+                title: {
+                display: true,
+                text: 'Month'
+                }
+            },
+            y: {
+                display: true,
+                title: {
+                display: true,
+                text: 'Value'
+                }
+            }
+        }
+    
     function handleClick() {
-        sodis_forecast()
+        graph_data = sodis_forecast()
         show_results = true
     }
 
@@ -97,21 +162,36 @@
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
-                {message}
-                <br />
-                <Textfield type="number" input$step=0.01 bind:value={final_logdis} label="Final Logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
-                <Textfield type="number" input$step=0.01 bind:value={duration} label="Duration" suffix="h" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
+                {#await graph_data}
+                    <LinearProgress indeterminate />
+                {:then graph_data}
+                    {message}
+                    <br />
+                    <Textfield type="number" input$step=0.01 bind:value={final_logdis} label="Final Logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                    <Textfield type="number" input$step=0.01 bind:value={duration} label="Duration" suffix="h" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <br />
+                {/await}
             </Content>
         </Paper>
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Graph</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
                 {#await graph_data}
-                    ...
-                {:then graph_data} 
-                    <Chart data={graph_data} />
+                    <LinearProgress indeterminate />
+                {:then graph_data}
+                    <Line data={graph_data[0]} options={options} width={100} height={25} />
+                    (y-axis: log dis; x-axis: hh:mm) 
+                    <Line data={graph_data[1]} options={options} width={100} height={25} />
+                    (y-axis: W/m²; x-axis: hh:mm)
+                    <Line data={graph_data[2]} options={options} width={100} height={25} />
+                    (y-axis: °C; x-axis: hh:mm)
+                    <!--
+                    <Line data={graph_data[3]} options={options} width={100} height={25} />
+                    (y-axis: °C; x-axis: hh:mm)
+                    -->
+                    <Line data={graph_data[4]} options={options} width={100} height={25} />
+                    (y-axis: %; x-axis: hh:mm)
                 {/await}
             </Content>
         </Paper>

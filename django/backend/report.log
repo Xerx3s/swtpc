@@ -3709,3 +3709,30 @@ KeyError: 'time'
 2023-03-24 17:26:41,543 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24862726e+00 4.72229718e+02 8.79726426e+01 1.85717376e-01
  2.23504173e+02 1.18271579e+01 1.10844061e+02            nan
  2.68613155e+01 1.23685144e+01 5.35106850e+01]
+2023-03-29 20:21:31,912 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 20, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 20, in sodis_forecast
+    loc = getlocation(location["country"], location["city"])
+  File "/opt/django/backend/sodis_forecast/scripts/modules/radiation.py", line 20, in getlocation
+    return loc.latitude, loc.longitude, loc.altitude
+AttributeError: 'NoneType' object has no attribute 'latitude'
+2023-03-29 20:26:10,015 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/modules/radiation.py changed, reloading.
+2023-03-29 20:26:40,064 - django.utils.autoreload - INFO - /opt/django/backend/sodis_forecast/scripts/modules/radiation.py changed, reloading.

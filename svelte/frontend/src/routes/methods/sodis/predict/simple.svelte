@@ -5,8 +5,10 @@
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
     import Dialog, { Actions } from '@smui/dialog';
-    //import LeafletMap from '$lib/LeafletMap.svelte';
-    
+    import Map from '$lib/leafletmap/Map.svelte';
+    import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
+
+    let coords
 
     let data = {
         "location_city": "Darmstadt",
@@ -15,6 +17,13 @@
         "water_temperature": 18,
         "target_logdis": 4
     }
+    
+    coords_store.subscribe(value => {
+		coords = value;
+        data.location_city = value.city;
+        data.location_country = value.country;
+    })
+    
 
     let duration = 0.0
     let message = ""
@@ -46,14 +55,25 @@
 </script>
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <Paper style="margin:1em; flex-grow:1; min-width:40em">
+        <Content style="display:flex; flex-direction:column; margin:0em">
+            <Map />
+        </Content>
+    </Paper>
+</div>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Location</Title>
+        {#await coords}
+            <LinearProgress indeterminate />
+        {:then coords}
         <Content style="display:flex; flex-direction:column; margin:1em">
             <Textfield type="text" bind:value={data.location_city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
             <Textfield type="text" bind:value={data.location_country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
         </Content>
+        {/await}
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Initial Values</Title>

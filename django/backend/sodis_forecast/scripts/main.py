@@ -3,7 +3,8 @@ from sodis_forecast.scripts.modules.radiation import SunRadiationCalculator as S
 from sodis_forecast.scripts.modules.disinfection import disinfectionuntil
 
 def sodis_forecast(
-    location: dict = {"city": "Darmstadt", "country": "Deutschland"},
+    #loc: dict = {"city": "Darmstadt", "country": "Deutschland"},
+    latlng: dict = [0.0, 0.0],
     hour: int = 8.0,
     wattemp: int = 18,
     tarlogdis: int = 4):
@@ -16,9 +17,9 @@ def sodis_forecast(
     Additionally a message is returned containing if and why the target disinfection could not be reached.
     """
 
-    print("Forecast in %s at %.2f" %(location["city"], hour))
-    loc = getlocation(location["country"], location["city"])
-    radcal = SRC(loc[0], loc[1], loc[2])
+    #print("Forecast in %s at %.2f" %(loc["city"], hour))
+    #loc = getlocation(location["country"], location["city"])
+    radcal = SRC(float(latlng[0]), float(latlng[1])) #geodätische Höhe hinzufügen.
     starttime = radcal.settime(hour)
     raddata = radcal.get_radiationdata(starttime)
     disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)

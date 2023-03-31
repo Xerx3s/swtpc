@@ -10,20 +10,20 @@ class SODISForecastView(APIView):
     serializer_class = SODISForecastSerializer
     def post(self, request, *args, **kwargs):
         input_list = [
-            str(request.data.get('location_city')),
-            str(request.data.get('location_country')),
+            str(request.data.get('latitude')),
+            str(request.data.get('longitude')),
             int(request.data.get('starting_hour')),
             int(request.data.get('water_temperature')),
             int(request.data.get('target_logdis'))]
-        location = {"city": input_list[0], "country": input_list[1]}
 
         result, message, duration = sodis_forecast(
-            location=location,
+            latlng=[input_list[0],input_list[1]],
             hour=input_list[2],
             wattemp=input_list[3],
             tarlogdis=input_list[4])
         data = {
-            "location": location,
+            "latitude": input_list[0],
+            "longitude": input_list[1],
             "starting_hour": input_list[2],
             "water_temperature": input_list[3],
             "target_logdis": input_list[4],

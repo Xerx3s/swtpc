@@ -8,27 +8,32 @@
     import Map from '$lib/leafletmap/Map.svelte';
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
 
-    let coords
-
-    let data = {
-        "location_city": "Darmstadt",
-        "location_country": "Deutschland",
-        "starting_hour": 8,
-        "water_temperature": 18,
-        "target_logdis": 4
-    }
-    
-    coords_store.subscribe(value => {
-		coords = value;
-        data.location_city = value.city;
-        data.location_country = value.country;
-    })
-    
+    let map_component;
 
     let duration = 0.0
     let message = ""
     let show_results = false
     let final_logdis = 0.0
+
+    let location = {
+        "city": "Darmstadt",
+        "country": "Deutschland"
+    }
+
+    let data = {
+        "latitude": 49.87334845778753,
+        "longitude": 8.65687138520094,
+        "starting_hour": 8,
+        "water_temperature": 18,
+        "target_logdis": 4
+    }
+
+    coords_store.subscribe(value => {
+		data.latitude = value.lat
+        data.longitude = value.lng
+        location.city = value.city
+        location.country = value.country
+    })
 
     async function sodis_forecast() {
         let url = "http://localhost:3001/sodis/"
@@ -49,31 +54,33 @@
         return true
     }
 
+    function setNewLocation() {
+        map_component.newlocation(location.city, location.country)
+    }
+
     function handleClick() {
         show_results = sodis_forecast()
-        }
+    }
 </script>
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     <Paper style="margin:1em; flex-grow:1; min-width:40em">
         <Content style="display:flex; flex-direction:column; margin:0em">
-            <Map />
+            <Map bind:this={map_component}/>
         </Content>
     </Paper>
 </div>
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Location</Title>
-        {#await coords}
-            <LinearProgress indeterminate />
-        {:then coords}
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Textfield type="text" bind:value={data.location_city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />
-            <Textfield type="text" bind:value={data.location_country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
+            <div style="display:flex; flex-direction:row">
+            <Textfield type="text" bind:value={location.city} on:change={setNewLocation} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Button on:click={setNewLocation} style="flex-grow:0.5; margin-top:0.75em">next</Button>
+        </div><br />
+            <Textfield type="text" bind:value={location.country} on:change={setNewLocation} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
         </Content>
-        {/await}
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Initial Values</Title>

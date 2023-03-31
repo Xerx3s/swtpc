@@ -4,18 +4,33 @@
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
 
     let marker;
+    let coords;
+    let map;
+    let city_counter;
+
+    coords_store.subscribe(value => {
+        coords = value;
+    })
 
     function initMap(node) {
-        const map = L.map(node).setView([51.505, -0.09], 13);
+        map = L.map(node).setView([49.87334845778753, 8.65687138520094], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         
-        map.on('click', (event) => onClick(event, map))
+        map.on('click', (event) => onClick(event))
     }
 
-    function onClick(event, map) {
+    function addmarker(lat, lng) {
+        if (marker) { // check
+            map.removeLayer(marker); // remove
+        }
+        
+        marker = new L.marker([lat, lng]).addTo(map)
+    }
+
+    function onClick(event) {
         reverseGeocode(event.latlng.lat, event.latlng.lng).then( (rev) => {
             coords_store.set({
                 "lat": event.latlng.lat,
@@ -24,18 +39,12 @@
                 "country": rev.country
             })
         })
-        
-        if (marker) { // check
-            map.removeLayer(marker); // remove
-        }
-        
-        marker = new L.marker([event.latlng.lat, event.latlng.lng]).addTo(map)
-            //.bindPopup('success')
-            .openPopup();
+
+        addmarker(event.latlng.lat, event.latlng.lng)
     }
 
-    async function reverseGeocode(lat, lon) {
-        const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`;
+    async function reverseGeocode(lat, lng) {
+        const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}`;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -43,9 +52,30 @@
             city: data.address.city || data.address.town,
             country: data.address.country,
         };
-}
+    }
 
+    export async function newlocation(city, country) {
+        const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&city=${city}&country=${country}`;
+        const response = await fetch(url);
+        const loc = await response.json();
 
+        if (city == coords.city && (city_counter < loc.length-1)) {
+            city_counter += 1
+        } else {
+            city_counter = 0
+        }
+        
+        coords_store.set({
+            "lat": loc[city_counter].lat,
+            "lng": loc[city_counter].lon,
+            "city": city,
+            "country": country
+        })
+        
+        addmarker(loc[city_counter].lat, loc[city_counter].lon)
+        var latlng = L.latLng(loc[city_counter].lat, loc[city_counter].lon);
+        map.setView(latlng,13);
+    }
 </script>
 
 <div use:initMap></div>

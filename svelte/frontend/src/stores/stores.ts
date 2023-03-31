@@ -10,8 +10,8 @@ export const selected_methods = writable({
 });
 
 export const coords_store = writable({
-    "lat": 0.0,
-    "lng": 0.0,
+    "lat": 49.87334845778753,
+    "lng": 8.65687138520094,
     "city": "Darmstadt",
     "country": "Deutschland"
 })

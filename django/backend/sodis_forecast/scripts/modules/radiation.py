@@ -35,7 +35,7 @@ class SunRadiationCalculator:
     """
     initializing this class gives the option to use its contained functions.
     """
-    def __init__(self, latitude: float, longitude: float, altitude: float):
+    def __init__(self, latitude: float, longitude: float, altitude: float = 0.0):
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
@@ -49,7 +49,6 @@ class SunRadiationCalculator:
         that the user wants so see the results for the next day.
         """
         nowhour = datetime.datetime.now(tz=self.tz).hour
-        nextday = datetime.datetime.now(tz=self.tz).day + 1
 
         if hour != None:
             if hour > nowhour:
@@ -57,7 +56,7 @@ class SunRadiationCalculator:
                 starttime = datetime.datetime.now(tz=self.tz).replace(hour=hour, minute=0, second=0, microsecond=0)
             else:
                 # specify starting hour on next day
-                starttime = datetime.datetime.now(tz=self.tz).replace(day=nextday, hour=hour, minute=0, second=0, microsecond=0)
+                starttime = datetime.datetime.now(tz=self.tz).replace(hour=hour, minute=0, second=0, microsecond=0) + datetime.timedelta(days=1)
         else:
             # use current hour
             starttime = datetime.datetime.now(tz=self.tz).replace(minute=0, second=0, microsecond=0)

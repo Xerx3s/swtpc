@@ -3,15 +3,21 @@
     import IconButton from "@smui/icon-button"
     import Menu from "@smui/menu"
     import List, {Item, Separator, Text } from "@smui/list"
-	  import { advanced_view } from "/opt/svelte/frontend/src/stores/stores";
+	  import { advanced_view, show_selected_methods } from "/opt/svelte/frontend/src/stores/stores";
     import Button, { Label } from "@smui/button"
     import Switch from "@smui/switch"
+    import MethodsRow from '$lib/methodsrow/MethodsRow.svelte';
 
     let advanced = false;
+    let show_methods = false;
     let menu: Menu;
 
     advanced_view.subscribe(value => {
 		advanced = value;
+    })
+
+    show_selected_methods.subscribe(value => {
+      show_methods = value;
     })
 
     function set_advanced_view() {
@@ -62,6 +68,11 @@
           </Section>
       </Row>
   </TopAppBar>
+
+  {#if show_methods}
+    <MethodsRow />
+  {/if}
+
 </header>
 
 <main class="main-content">

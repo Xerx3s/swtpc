@@ -10,6 +10,7 @@
     })
 </script>
 
+<h5>Flocculation Prediction</h5>
 {#if advanced}
     <Advanced_input />
 {:else}

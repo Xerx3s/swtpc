@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { selected_methods } from "/opt/svelte/frontend/src/stores/stores";
+	import { selected_methods, show_selected_methods } from "/opt/svelte/frontend/src/stores/stores";
     import Button, { Group } from "@smui/button"
     import Paper, { Title, Subtitle, Content } from "@smui/paper"
     import List, {Item, Meta, Label } from "@smui/list"
@@ -43,6 +43,7 @@
 
     function set_selected_methods() {
         selected_methods.set(methods)
+        show_selected_methods.set(true)
     }
 
     function selectmethods() {

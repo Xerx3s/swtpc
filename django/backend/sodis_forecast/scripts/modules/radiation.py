@@ -1,35 +1,11 @@
-from unicodedata import name
 import pandas as pd
 import numpy as np
-from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
 from pvlib.location import Location
 from pvlib.irradiance import disc
 import datetime
 from pyowm import OWM
 import pytz
-
-def getlocation(country: str, city: str):
-    """
-    returns a tuple with latitude, longitude and altitude
-    of a specific city in a specific country.
-    """
-    geolocator = Nominatim(user_agent="sodis_app")
-    loc = geolocator.geocode(city + "," + country)
-    # altitude ist meistens 0! Alternative finden!
-    return loc.latitude, loc.longitude, loc.altitude
-
-def getrevlocation(lat: float, lon: float):
-    """
-    returns city and country based on given latitude and longitude.
-    """
-    geolocator = Nominatim(user_agent="sodis_app")
-    loc = geolocator.reverse((lat, lon))
-    try:
-        city = loc.raw["address"]["city"]
-    except:
-        city = loc.raw["address"]["town"]
-    return city, loc.raw["address"]["country"]
 
 class SunRadiationCalculator:
     """
@@ -61,6 +37,14 @@ class SunRadiationCalculator:
             # use current hour
             starttime = datetime.datetime.now(tz=self.tz).replace(minute=0, second=0, microsecond=0)
         return starttime
+
+    def owm_sunriseset(self):
+        owm = OWM("a9c05d43e3817e2b68f4f0f305504cf7")
+        mgr = owm.weather_manager()
+        one_call = mgr.one_call(lat=self.latitude, lon=self.longitude)
+
+        return one_call.current.sunrise_time(), one_call.current.sunset_time()
+
 
     def owm_onecall(self):
         """

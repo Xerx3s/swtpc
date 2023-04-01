@@ -1,4 +1,3 @@
-from sodis_forecast.scripts.modules.radiation import getlocation
 from sodis_forecast.scripts.modules.radiation import SunRadiationCalculator as SRC
 from sodis_forecast.scripts.modules.disinfection import disinfectionuntil
 

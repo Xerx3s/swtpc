@@ -43,7 +43,7 @@ def SODISkinetics(Tc: float, radiation:float, elapsedTS:float, timestep:float) -
 
 def tempchange(wattemp:float, Tc: float, radiation:float, timestep:float):
     """
-    This function calculates the temerature change of the water.
+    This function calculates the temperature change of the water.
     """
     wattemp = 273.0 + wattemp
     Tk = 273.0 + Tc
@@ -56,7 +56,7 @@ def tempchange(wattemp:float, Tc: float, radiation:float, timestep:float):
 
 def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: int = 12, target: int = 4):
     """
-    Function to calculate the disinfection and temperaure changes for each given timestep.
+    Function to calculate the disinfection and temperature changes for each given timestep.
     """
     elapsedTS = pd.Timedelta(minutes=0.0) # in min
     timestep = pd.Timedelta(minutes=15.0) # in min
@@ -78,7 +78,7 @@ def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: i
         #Tc = 30.0
         if Tc < 20 and msg_count == 0:
             #message = "It's too cold (below 20°C) to use SODIS for disinfection."
-            message += "Due ambient temperatures below 20 °C, the prediction may not be reliable.\n"
+            message += "Due to ambient temperatures below 20 °C, the prediction may not be reliable.\n"
             msg_count = 1
             #break
         #print("Radiation: %d" %radiation)

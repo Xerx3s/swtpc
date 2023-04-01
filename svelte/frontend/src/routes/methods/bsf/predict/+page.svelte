@@ -10,6 +10,7 @@
     })
 </script>
 
+<h5>Biosand Filtration Prediction</h5>
 {#if advanced}
     <Advanced_input />
 {:else}

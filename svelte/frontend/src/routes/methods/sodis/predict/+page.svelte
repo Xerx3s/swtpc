@@ -10,6 +10,7 @@
     })
 </script>
 
+<h5>Solar Disinfection Prediction</h5>
 {#if advanced}
     <Advanced_input />
 {:else}

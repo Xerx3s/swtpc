@@ -210,6 +210,7 @@
     }
 </script>
 
+<h5>Flocculation Optimization</h5>
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     {#await param_sets}
         <Paper style="margin:1em; flex-grow:1">

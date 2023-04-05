@@ -10,6 +10,15 @@
     })
 </script>
 
+<div>
+    <h5>Online Water Analysis Tool</h5>
+    <p>
+        You are at the Online Water Analysis Tools.<br />
+        Please fill in the form below and click the analysis button.<br />
+        Afterwards a combination of treatment methods will be suggested to you.
+    </p>
+</div>
+
 {#if advanced}
     <Advanced_input />
 {:else}

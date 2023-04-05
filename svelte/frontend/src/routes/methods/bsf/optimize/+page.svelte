@@ -160,7 +160,17 @@
     }
 </script>
 
-<h5>Biosand Filtration Optimization</h5>
+<div>
+    <h5>Biosand Filtration Optimization</h5>
+    <p>
+        Define the possible areas where the necessary parameters are located by dragging the sliders.
+        If you have specific values, narrow the selected range as much as possible.<br />
+        As soon as you click the Optimize button, the processing will start and the results will be presented afterwards.<br />
+        The results are the respective optimal parameters within the specified range.
+        These have been selected with the aim of maximizing the cleaning performance.
+    </p>
+</div>
+
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     {#await param_sets}
         <Paper style="margin:1em; flex-grow:1">

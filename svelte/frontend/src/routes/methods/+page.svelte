@@ -77,7 +77,7 @@
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     {#each methods as method}
-        <Card style="margin:1em; flex-grow:1; justify-content:flex-end">
+        <Card style="margin:1em; flex-grow:1; justify-content:flex-end; max-width:45%">
             <Media class={method.image} aspectRatio="16x9">
             <MediaContent>
                 <div

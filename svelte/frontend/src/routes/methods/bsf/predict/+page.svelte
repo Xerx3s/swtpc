@@ -10,7 +10,14 @@
     })
 </script>
 
-<h5>Biosand Filtration Prediction</h5>
+<div>
+    <h5>Biosand Filtration Prediction</h5>
+    <p>
+        Please enter the required parameters. <br />
+        You will then be presented with the expected final values that are possible based on the treatment method and the entered input parameters.
+    </p>
+</div>
+
 {#if advanced}
     <Advanced_input />
 {:else}

@@ -7,7 +7,8 @@ export const selected_methods = writable({
     "flocculation": false,
     "bsf": false,
     "sodis": false,
-    "aaa": false
+    "aaa": false,
+    "ro": false
 });
 
 export const coords_store = writable({

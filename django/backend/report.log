@@ -4325,3 +4325,32 @@ Traceback (most recent call last):
   File "/opt/django/backend/sodis_forecast/scripts/main.py", line 21, in sodis_forecast
     radcal = SRC(float(latlng[0]), float(latlng[1])) #geodätische Höhe hinzufügen.
 ValueError: could not convert string to float: 'None'
+2023-04-05 13:10:22,838 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:10:23,628 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21661642e+00 4.79631833e+02 1.06530135e+02 3.32861973e-01
+ 1.42034708e+02 2.97089877e+01 9.62372825e+01            nan
+ 2.70074501e+01 1.19355470e+01 5.47625427e+01]
+2023-04-05 13:10:27,374 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:10:27,990 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.8534404039382935, best pos: [26.94716704 24.14667277         nan 15.13894516 16.82269668 17.51088162
+ 87.78203441]
+2023-04-05 13:28:57,723 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:28:58,507 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.8534404039382935, best pos: [26.10001815 24.11534853         nan 36.73571929 21.61397741 17.91434952
+ 83.25014023]
+2023-04-05 13:37:44,108 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:37:44,710 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.8473499417304993, best pos: [25.72931754 24.34130289         nan 19.49525377 20.46490261 18.78349598
+ 87.01745976]
+2023-04-05 13:40:41,653 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:40:42,355 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.8534404039382935, best pos: [26.28787963 24.1991513          nan 28.13639995 21.69396274 17.59905233
+ 86.595183  ]
+2023-04-05 13:41:21,926 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:41:22,519 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.8534404039382935, best pos: [25.27474492 24.27693572         nan 36.17769133 20.36263748 17.80073951
+ 84.74082486]
+2023-04-05 13:41:54,449 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:41:55,886 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.6822935938835144, best pos: [ 26.54767363  23.91808684          nan  35.66973094  16.51238715
+  17.68305799 100.63534695]
+2023-04-05 13:41:59,235 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:41:59,827 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.7973366379737854, best pos: [26.75034078 24.36111573         nan 80.87059247 18.64473205 18.20978559
+ 86.08834823]
+2023-04-05 13:42:46,821 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-05 13:42:48,020 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16369308e+00 4.68915793e+02 8.88959799e+01 3.55851853e-01
+ 2.65289570e+02 2.06147892e+01 1.20560050e+02            nan
+ 2.48505924e+01 1.18018437e+01 5.67975828e+01]

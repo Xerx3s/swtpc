@@ -201,8 +201,10 @@
             <Slider bind:value={data.starting_hour} min={sun.rise} max={sun.set} step={1} style="min-width:10em"/>
             <Textfield type="number" input$step=1 input$min={sun.rise} input$max={sun.set} bind:value={data.starting_hour} label="Starting Hour" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
+            <!--
             <Textfield type="number" input$step=1 bind:value={data.water_temperature} label="Water Temperature" suffix="°C" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
+            -->
             <Textfield type="number" input$step=1 bind:value={data.target_logdis} label="Target Logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
         </Content>

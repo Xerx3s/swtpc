@@ -10,7 +10,14 @@
     })
 </script>
 
-<h5>Solar Disinfection Prediction</h5>
+<div>
+    <h5>Solar Disinfection Prediction</h5>
+    <p>
+        Please indicate your location. To do so, please click on the map or enter the city and country below. <br />
+        Please also select the time at which the disinfection will be started.
+    </p>
+</div>
+
 {#if advanced}
     <Advanced_input />
 {:else}

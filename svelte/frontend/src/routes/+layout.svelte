@@ -64,7 +64,7 @@
                   {:else}
                       Simple View
                   {/if}
-                  <Switch bind:checked={advanced} on:SMUISwitch:change={set_advanced_view} icons={false} />
+                  <Switch color="secondary" bind:checked={advanced} on:SMUISwitch:change={set_advanced_view} icons={false} />
           </Section>
       </Row>
   </TopAppBar>

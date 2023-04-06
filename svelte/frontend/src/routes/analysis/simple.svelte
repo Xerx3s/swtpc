@@ -57,7 +57,7 @@
             problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/heavy-metals" target="_blank" rel="noreferrer">Heavy Metals</a>`)
         }
         if (data.salts) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/salinity" target="_blank" rel="noreferrer">high Salinity</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/salinity" target="_blank" rel="noreferrer">Salinity</a>`)
         }
         if (data.nitrate) {
             problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/nitrate" target="_blank" rel="noreferrer">Nitrate</a>`)
@@ -77,12 +77,13 @@
         let methods_list: String[] = []
 
         if (data.salts) {
-            methods.ro = true
-            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a>`)
             if (data.turbidity > 0) {
                 methods.flocculation = true
                 methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
             }
+            methods.ro = true
+            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a>`)
+
         } else {
             if (data.turbidity > 1 || data.heavy_metals) {
                 methods.flocculation = true
@@ -91,10 +92,12 @@
             if (data.turbidity == (1 || 2) || data.organic_material || data.nitrate || data.arsenic) {
                 methods.bsf = true
                 if (!data.arsenic) {
-                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
+                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
                 }
                 else{
-                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
+                    if (!data.fluoride) {
+                        methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
+                    }
                 }
             }
             if (data.fluoride) {
@@ -109,10 +112,10 @@
         let methods_string = methods_list.join(", ")
 
         set_selected_methods()
-        if (methods.aaa || methods.bsf || methods.flocculation || methods.sodis) {
+        if (methods.aaa || methods.bsf || methods.flocculation || methods.sodis || methods.ro) {
             results = intro + problems_string + outro + methods_string
         } else {
-            results = "Please select matching inputs first."
+            results = "No treatment required."
         }
 
     }

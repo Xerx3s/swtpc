@@ -4354,3 +4354,113 @@ ValueError: could not convert string to float: 'None'
 2023-04-05 13:42:48,020 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16369308e+00 4.68915793e+02 8.88959799e+01 3.55851853e-01
  2.65289570e+02 2.06147892e+01 1.20560050e+02            nan
  2.48505924e+01 1.18018437e+01 5.67975828e+01]
+2023-04-06 07:10:10,603 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:10:11,418 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24471575e+00 4.67493694e+02 1.01428766e+02 4.66134104e-01
+ 2.95062367e+02 2.52612790e+01 9.96824292e+01            nan
+ 2.40009147e+01 1.22393451e+01 5.69632827e+01]
+2023-04-06 07:10:12,889 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:10:13,723 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17479884e+00 4.82835442e+02 1.11746010e+02 2.73408498e-01
+ 1.99018331e+02 1.32144762e+01 1.05011674e+02            nan
+ 2.73422958e+01 1.19513223e+01 5.25764608e+01]
+2023-04-06 07:14:07,974 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-04-06 07:14:08,313 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-06 07:15:35,319 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 159, in post
+    output, best_param = inputoptimization(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 85, in inputoptimization
+    output, best_param = minimize(pipe=pipe, pred_type=pred_type, bounds=bounds)
+  File "/opt/django/backend/floc_analyzer/scripts/modules/pso.py", line 25, in minimize
+    bounds["floc_dose"][0]/bounds["floc_concentration"][0],
+ZeroDivisionError: division by zero
+2023-04-06 07:15:42,650 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-04-06 07:16:06,727 - django.request - ERROR - Internal Server Error: /opt_tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 134, in post
+    int(request.data.get("duration_coagulation_phase_min")),
+ValueError: invalid literal for int() with base 10: '0.1'
+2023-04-06 07:16:14,648 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:16:15,469 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 327.9864807128906, best pos: [3.04040464e+02 4.94374544e+01 6.46784128e-01 1.22659561e+01
+ 1.79601637e+00 1.47093057e-01]
+2023-04-06 07:20:32,363 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-04-06 07:20:37,243 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:20:38,091 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.0974104404449463, best pos: [8.16260467e+00 5.76730511e+02 3.31543446e+00 6.18053452e-01
+ 1.12928482e+02 2.21662715e+01 7.65059776e+01 2.96293317e-01
+ 3.67235665e+01 3.35317268e+00 7.63483407e+01]
+2023-04-06 07:26:52,068 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:26:52,631 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:26:53,770 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20924147e+00 4.79080372e+02 1.10696510e+02 1.10005868e-01
+ 2.59811983e+02 3.36152211e+01 1.03715844e+02            nan
+ 2.68632998e+01 1.17903766e+01 5.34409876e+01]
+2023-04-06 07:26:54,184 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24406290e+00 4.80787592e+02 9.73021939e+01 3.96856852e-01
+ 2.33920200e+02 3.71975015e+01 1.05509754e+02            nan
+ 2.41894274e+01 1.21542078e+01 5.99240508e+01]
+2023-04-06 07:28:04,107 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:28:04,859 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21082659e+00 4.76593903e+02 1.15810769e+02 1.02944366e-01
+ 1.66540828e+02 1.57799703e+01 9.59422713e+01            nan
+ 2.57028672e+01 1.19133793e+01 5.49544996e+01]
+2023-04-06 07:28:33,348 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:28:34,398 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24945117e+00 4.80389116e+02 1.01053889e+02 2.03266922e-01
+ 1.15588619e+02 2.96839396e+01 1.19097922e+02            nan
+ 2.44324488e+01 1.04863274e+01 5.39400806e+01]
+2023-04-06 07:28:54,382 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:28:55,488 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20971323e+00 4.79569607e+02 9.89977139e+01 1.13680084e-01
+ 1.82222121e+02 2.62957809e+01 1.05671246e+02            nan
+ 2.52854338e+01 1.15754732e+01 5.56393753e+01]
+2023-04-06 07:29:24,311 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:29:25,506 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22594035e+00 4.70979139e+02 1.12102366e+02 4.44622085e-01
+ 1.11618888e+02 2.45327521e+01 9.65520763e+01            nan
+ 2.50068619e+01 1.22282406e+01 5.27538491e+01]
+2023-04-06 07:29:36,519 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:29:37,626 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21912155e+00 4.80439512e+02 9.74651798e+01 2.35443488e-01
+ 2.50086430e+02 3.73452054e+01 1.06537144e+02            nan
+ 2.88080956e+01 1.12376568e+01 5.77012669e+01]
+2023-04-06 07:29:38,479 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:29:39,251 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17436519e+00 4.75401552e+02 9.77124283e+01 3.08197893e-01
+ 2.04832388e+02 1.24414179e+01 9.85928679e+01            nan
+ 2.51636590e+01 1.24066948e+01 5.41430708e+01]
+2023-04-06 07:29:41,542 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:29:42,347 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22238506e+00 4.77621277e+02 1.05353308e+02 4.34263123e-01
+ 1.68825554e+02 3.24818648e+01 1.00886596e+02            nan
+ 2.61990120e+01 1.13065606e+01 5.38303579e+01]
+2023-04-06 07:32:02,246 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/views.py changed, reloading.
+2023-04-06 07:32:42,183 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:32:43,156 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-06 07:32:43,189 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.17705889e+00 4.78493332e+02 9.55596247e+01 2.58805975e-01
+ 1.59477517e+02 1.86408195e+01 1.04795635e+02            nan
+ 2.85046673e+01 1.22119384e+01 4.38776208e+01]
+2023-04-06 07:32:43,956 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18410010e+00 4.77872757e+02 9.69658920e+01 3.19929207e-01
+ 1.57533662e+02 1.77458227e+01 9.68560167e+01            nan
+ 2.53768817e+01 1.07953959e+01 5.42199577e+01]

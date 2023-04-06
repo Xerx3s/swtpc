@@ -7,9 +7,10 @@
     import Textfield from "@smui/textfield"
 
     let data = {
-        "turbidity": 130,
+        "turbidity": 4,
         "ec": 400,
         "ph": 7.5,
+        "tds": 200,
         "nitrate": 0.0,
         "arsenic": 0.0,
         "iron": 0.0,
@@ -23,6 +24,7 @@
         "turbidity": ["NTU", 5],
         "ec": ["µS/cm", null],
         "ph": ["", 6.5, 8.5],
+        "tds": ["mg/l", 300],
         "nitrate": ["mg/l", 50],
         "arsenic": ["mg/l", 0.01],
         "iron": ["mg/l", 0.3],
@@ -36,7 +38,8 @@
         "flocculation": false,
         "bsf": false,
         "sodis": false,
-        "aaa": false
+        "aaa": false,
+        "ro": false,
     }
 
     let results = ""
@@ -51,7 +54,8 @@
         "flocculation": false,
         "bsf": false,
         "sodis": false,
-        "aaa": false
+        "aaa": false,
+        "ro": false
         }
         let intro = "To reduce or adjust "
         let outro = " following concept has to be realised: "
@@ -67,6 +71,9 @@
         //}
         if (data.nitrate > limits.nitrate[1]) {
             problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/nitrate" target="_blank" rel="noreferrer">Nitrate</a>`)
+        }
+        if (data.tds > limits.tds[1]) {
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/salinity" target="_blank" rel="noreferrer">Salinity</a>`)
         }
         if (data.arsenic > limits.arsenic[1]) {
             problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/arsenic" target="_blank" rel="noreferrer">Arsenic</a>`)
@@ -91,34 +98,43 @@
         //methods
         let methods_list: String[] = []
 
-        if (data.turbidity > limits.turbidity[1] || data.iron > limits.iron[1]) {
-            methods.flocculation = true
-            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
-        }
-        if (data.turbidity > (20 * limits.turbidity[1]) || data.tvc > limits.tvc[1] || data.nitrate > limits.nitrate[1] || data.arsenic > limits.arsenic[1]) {
-            methods.bsf = true
-            if (data.arsenic < limits.arsenic[1]) {
-                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
+        if (data.tds > limits.tds[1]) {
+            if (data.turbidity > 0) {
+                methods.flocculation = true
+                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
             }
-            else{
-                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
+            methods.ro = true
+            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a>`)
+        } else {
+            if (data.turbidity > limits.turbidity[1] || data.iron > limits.iron[1]) {
+                methods.flocculation = true
+                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
             }
-        }
-        if (data.fluoride > limits.fluoride[1]) {
-            methods.aaa = true
-            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a>`)
-        }
-        if (data.tvc > limits.tvc[1] || data.coliforms > limits.coliforms[1] || data.ecoli > limits.ecoli[1]) {
-            methods.sodis = true
-            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a>`)
+            if (data.turbidity > (20 * limits.turbidity[1]) || data.tvc > limits.tvc[1] || data.nitrate > limits.nitrate[1] || data.arsenic > limits.arsenic[1]) {
+                methods.bsf = true
+                if (data.arsenic < limits.arsenic[1]) {
+                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
+                }
+                else{
+                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
+                }
+            }
+            if (data.fluoride > limits.fluoride[1]) {
+                methods.aaa = true
+                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a>`)
+            }
+            if (data.tvc > limits.tvc[1] || data.coliforms > limits.coliforms[1] || data.ecoli > limits.ecoli[1]) {
+                methods.sodis = true
+                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a>`)
+            }
         }
         let methods_string = methods_list.join(", ")
 
         set_selected_methods()
-        if (methods.aaa || methods.bsf || methods.flocculation || methods.sodis) {
+        if (methods.aaa || methods.bsf || methods.flocculation || methods.sodis || methods.ro) {
             results = intro + problems_string + outro + methods_string
         } else {
-            results = "Please select matching inputs first."
+            results = "No treatment required."
         }
 
     }
@@ -133,6 +149,8 @@
             <Textfield type="number" input$step="0.1" bind:value={data.ph} label="pH-Value" suffix=""  style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
             <Textfield type="number" bind:value={data.ec} label="Electrical Conductivity" suffix="µS/cm"  style="flex-grow:1; margin-bottom:0.5em"/>
+            <br />
+            <Textfield type="number" bind:value={data.tds} label="Total dissolved Solids" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1">

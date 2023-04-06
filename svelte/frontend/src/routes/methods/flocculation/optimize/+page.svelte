@@ -7,10 +7,28 @@
     import Textfield from "@smui/textfield"
     import Slider from '@smui/slider';
     import LinearProgress from '@smui/linear-progress';
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 
     let param_sets = get_bounds()
     let result = optimize()
     let show_result = false
+
+    let description = {
+        initial_pH: "Initial pH-Value",
+        initial_EC: "Initial EC (in µS/cm)",
+        initial_turbidity: "Initial Turbidity (in NTU)",
+        flocculant: "Flocculant", 
+        floc_concentration: "Flocculant Concentration in Base Solution (in g/l)", 
+        floc_saline_Molarity: "Saline Molarity of Flocculant Base Solution (in mol/l)",
+        floc_cactus_share: "Cactus Share in Flocculant Base Solution (in %)",
+        floc_dose: "Flocculant Dosage (in mg/l)",
+        stirring_speed_coagulation_phase: "Stirring Speed during Coagulation Phase (in RPM)",
+        duration_coagulation_phase: "Duration of Coagulation Phase (in minutes)",
+        stirring_speed_flocculation_phase: "Stirring Speed during Flocculation Phase (in RPM)",
+        duration_flocculation_phase: "Duration of Flocculation Phase (in minutes)",
+        duration_sedimentation_phase: "Duration of Sedimentation Phase (in minutes)",
+        final_turbidity: "Final Turbidity (in NTU)"
+        }
 
     async function get_bounds() {
         let url = "http://localhost:3001/floc_bounds/"
@@ -183,21 +201,25 @@
         let res2 = await res.json()
         let res3 = []
         for (const [key, value] of Object.entries(res2)) {
+            let name = description[key]
             if (!(isNaN(value))) {
                 if (key == "initial_pH" || key == "floc_saline_Molarity") {
                 let rounded = value.toFixed(1)
                 res3.push({ 
                     id: key,
+                    name: name,
                     opt: rounded })
                 } else {
                     let rounded = value.toFixed(0)
                     res3.push({ 
                         id: key,
+                        name: name,
                         opt: rounded })
                 }
             } else {
                 res3.push({ 
                 id: key,
+                name: name,
                 opt: value })
             }
         }
@@ -265,7 +287,7 @@
             {:then result}
                 {#each result as r}
                     <Content style="display:flex; flex-direction:column; margin:1em">
-                    <Textfield bind:value={r.opt} bind:label={r.id} style="flex-grow:1; margin-bottom:0.5em"/>
+                    <Textfield bind:value={r.opt} bind:label={r.name} style="flex-grow:1; margin-bottom:0.5em"/>
                     <br />
                     </Content>
                     <Separator />

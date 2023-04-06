@@ -195,7 +195,7 @@ class optimizeTurView(APIView):
                 "duration_coagulation_phase": best_param[7],
                 "stirring_speed_flocculation_phase": best_param[8],
                 "duration_flocculation_phase": best_param[9],
-                "duration_sedimetation_phase": best_param[10],
+                "duration_sedimentation_phase": best_param[10],
                 "final_turbidity": output}
 
         return Response(data=data)

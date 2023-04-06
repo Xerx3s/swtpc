@@ -63,7 +63,7 @@
             problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/nitrate" target="_blank" rel="noreferrer">Nitrate</a>`)
         }
         if (data.coliforms) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/coliform-bacteria" target="_blank" rel="noreferrer">Coliform Bacteria</a>`)
+            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/coliform-bacteria" target="_blank" rel="noreferrer">Pathogens</a>`)
         }
         if (data.arsenic) {
             problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/arsenic" target="_blank" rel="noreferrer">Arsenic</a>`)

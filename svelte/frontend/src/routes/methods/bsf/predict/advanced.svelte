@@ -42,7 +42,7 @@
 
     function handleClick() {
         show_results = predict_bsf()
-        pred_tvc = ((1 - 0.998) * data.initial_tvc).toFixed(0)
+        pred_tvc = ((1 - 0.90) * data.initial_tvc).toFixed(0)
         }
 </script>
 

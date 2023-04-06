@@ -285,13 +285,29 @@
             {#await result}
                 <LinearProgress indeterminate />
             {:then result}
-                {#each result as r}
-                    <Content style="display:flex; flex-direction:column; margin:1em">
-                    <Textfield bind:value={r.opt} bind:label={r.name} style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    </Content>
-                    <Separator />
-                {/each}
+                <Content style="display:flex; flex-direction:column; margin:1em">
+                    <p>
+                        The following table shows the results of the optimization.
+                        The optimum values for maximum cleaning performance were calculated in each case from the ranges given above.
+                        As can be seen, the turbidity should reduce from {result[2].opt} NTU to {result[12].opt} NTU.
+                    </p>
+                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                        <Head>
+                          <Row>
+                            <Cell>Description</Cell>
+                            <Cell numeric>Value</Cell>
+                          </Row>
+                        </Head>
+                        <Body>
+                            {#each result as r}
+                                <Row>
+                                    <Cell>{r.name}</Cell>
+                                    <Cell numeric>{r.opt}</Cell>
+                                </Row>
+                            {/each}
+                        </Body>
+                      </DataTable>
+                </Content>
             {/await}
         </Paper>
     </div>

@@ -7,10 +7,23 @@
     import Textfield from "@smui/textfield"
     import Slider from '@smui/slider';
     import LinearProgress from '@smui/linear-progress';
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 
     let param_sets = get_bounds()
     let result = optimize()
     let show_result = false
+
+    let description = {
+        initial_turbidity: "Initial Turbidity (in NTU)", 
+        diameter: "Diameter (in cm)", 
+        material_height: "Material Height (in cm)", 
+        mean_grain_diameter: "Mean Grain Diameter (in mm)",
+        mean_flow: "Mean Flow (in l/h)",
+        mean_pause: "Mean Pause Periode (in h)",
+        time_schmutzdecke: "Time since last Scraping of Schmutzdecke (in d)",
+        initial_turbdity: "Initial Turbidity (in NTU)",
+        final_turbidity: "Final Turbidity (in NTU)"
+    }
 
     async function get_bounds() {
         let url = "http://localhost:3001/bsf_bounds/"
@@ -33,9 +46,9 @@
                         description: "Initial Turbidity (in NTU)", 
                         unit: "NTU",
                         bounds: [bounds.initial_turbidity[0], bounds.initial_turbidity[1]],
-                        minmax: [80, 120],
+                        minmax: [5, 50],
                         step: 1,
-                        minRange: 10,
+                        minRange: 5,
                     },
                 ]
             },
@@ -133,21 +146,25 @@
         let res2 = await res.json()
         let res3 = []
         for (const [key, value] of Object.entries(res2)) {
+            let name = description[key]
             if (!(isNaN(value))) {
                 if (key == "initial_pH" || key == "floc_saline_Molarity") {
                 let rounded = value.toFixed(1)
                 res3.push({ 
                     id: key,
+                    name: name,
                     opt: rounded })
                 } else {
                     let rounded = value.toFixed(0)
                     res3.push({ 
                         id: key,
+                        name: name,
                         opt: rounded })
                 }
             } else {
                 res3.push({ 
                 id: key,
+                name: name,
                 opt: value })
             }
         }
@@ -213,13 +230,30 @@
             {#await result}
                 <LinearProgress indeterminate />
             {:then result}
-                {#each result as r}
-                    <Content style="display:flex; flex-direction:column; margin:1em">
-                    <Textfield bind:value={r.opt} bind:label={r.id} style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    </Content>
-                    <Separator />
-                {/each}
+                <Content style="display:flex; flex-direction:column; margin:1em">
+                    <p>
+                        The following table shows the results of the optimization.
+                        The optimum values for maximum cleaning performance were calculated in each case from the ranges given above.
+                        As can be seen, the turbidity should reduce from {result[6].opt} NTU to {result[7].opt} NTU.
+                        Additionally any pathogens present in the water should have been reduced by at least 90 %.
+                    </p>
+                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                        <Head>
+                        <Row>
+                            <Cell>Description</Cell>
+                            <Cell numeric>Value</Cell>
+                        </Row>
+                        </Head>
+                        <Body>
+                            {#each result as r}
+                                <Row>
+                                    <Cell>{r.name}</Cell>
+                                    <Cell numeric>{r.opt}</Cell>
+                                </Row>
+                            {/each}
+                        </Body>
+                    </DataTable>
+                </Content>
             {/await}
         </Paper>
     </div>

@@ -9,6 +9,7 @@
     import Map from '$lib/leafletmap/Map.svelte';
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
+    import Tooltip, { Wrapper } from '@smui/tooltip';
 
     let map_component;
 
@@ -99,20 +100,37 @@
         <Title>Location</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
             <div style="display:flex; flex-direction:row">
-                <Textfield type="text" bind:value={location.city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
-                <Button on:click={setNewLocation} style="flex-grow:0.5; margin-top:0.75em">Search</Button>
+                <Wrapper>
+                    <Textfield type="text" bind:value={location.city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <Tooltip>Enter the city name of your location</Tooltip>
+                </Wrapper>
+                <Wrapper>
+                    <Button on:click={setNewLocation} style="flex-grow:0.5; margin-top:0.75em">Search</Button>
+                    <Tooltip>
+                        Click this button after entering city and country.
+                        You can click multiple times to skip through all cities of the same name.
+                    </Tooltip>
+                </Wrapper>
             </div>
             <br />
-            <Textfield type="text" bind:value={location.country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="text" bind:value={location.country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the country name of your location</Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Initial Values</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Slider bind:value={data.starting_hour} min={sun.rise} max={sun.set} step={1} style="min-width:10em"/>
-            <Textfield type="number" input$step=1 input$min={sun.rise} input$max={sun.set} bind:value={data.starting_hour} label="Starting Hour" style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />
+            <Wrapper>
+                <Slider bind:value={data.starting_hour} min={sun.rise} max={sun.set} step={1} style="min-width:10em"/>
+                <Textfield type="number" input$step=1 input$min={sun.rise} input$max={sun.set} bind:value={data.starting_hour} label="Starting Hour" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Either use the slider or enter a value to define the starting hour.
+                    It is assumed that at the selected time the bottles filled with water are placed in direct sunlight.
+                </Tooltip>
+            </Wrapper>
         </Content>
     </Paper>
 </div>

@@ -13,7 +13,7 @@
 <div>
     <h5>Solar Disinfection Prediction</h5>
     <p>
-        Please indicate your location. To do so, please click on the map or enter the city and country below. <br />
+        Select your location. To do so, please click on the map or enter the city and country below. <br />
         Please also select the time at which the disinfection will be started. <br />
         {#if advanced}
             Optionally, select the desired logarithmic disinfection.

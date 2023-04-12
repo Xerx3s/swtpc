@@ -5,6 +5,7 @@
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
     import Tooltip, { Wrapper } from '@smui/tooltip';
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 
     let data = {
         "surface_water": "model suspension",
@@ -237,12 +238,37 @@
                 {#await show_results}
                     <LinearProgress indeterminate />
                 {:then show_results}
-                    <Textfield type="number" input$step=0.1 bind:value={pred_fpH} label="Final pH" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    <Textfield type="number" input$step=1 bind:value={pred_fEC} label="Final EC" suffix="µS/cm" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    <Textfield type="number" input$step=1 bind:value={pred_ftur} label="Final Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
+                Based on the values entered above, a final pH of {pred_fpH} and an EC of {pred_fEC} µS/cm should result.
+                The residual turbidity is approximately {pred_ftur} NTU.
+                <br />
+                {#if pred_ftur > 5}
+                    <p>
+                        Since the residual turbidity is still above the WHO guideline value of 5 NTU, it is recommended to integrate another treatment stage for turbidity reduction.
+                        For example, <a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">biosand filtration</a> can be useful for this.
+                    </p>
+                {/if}
+                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                        <Head>
+                        <Row>
+                            <Cell>Description</Cell>
+                            <Cell numeric>Value</Cell>
+                        </Row>
+                        </Head>
+                        <Body>
+                            <Row>
+                                <Cell>Final pH</Cell>
+                                <Cell numeric>{pred_fpH}</Cell>
+                            </Row>
+                            <Row>
+                                <Cell>Final EC (in µS/cm)</Cell>
+                                <Cell numeric>{pred_fEC}</Cell>
+                            </Row>
+                            <Row>
+                                <Cell>Final turbidity (in NTU)</Cell>
+                                <Cell numeric>{pred_ftur}</Cell>
+                            </Row>
+                        </Body>
+                    </DataTable>
                 {/await}
             </Content>
         </Paper>

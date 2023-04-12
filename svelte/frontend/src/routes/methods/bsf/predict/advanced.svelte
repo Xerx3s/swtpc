@@ -5,6 +5,7 @@
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
     import Tooltip, { Wrapper } from '@smui/tooltip';
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 
 
     let data = {
@@ -117,10 +118,32 @@
                 {#await show_results}
                     <LinearProgress indeterminate />
                 {:then show_results}
-                    <Textfield type="number" input$step=1 bind:value={pred_ftur} label="Final Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    <Textfield type="number" input$step=1 bind:value={pred_tvc} label="Final Total Viable Count" suffix="cfu/100ml" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
+                    <p>
+                        Based on the given input parameters, a residual turbidity of {pred_ftur} NTU is expected after treatment of the water by biosand filtration.
+                        Pathogens should have been reduced to a total viable count of {pred_tvc} cfu/100ml.
+                        {#if pred_tvc > 99}
+                            This is still a high value considering that the WHO guidelines set a value of 0 cfu/100ml.
+                            If problems that can be attributed to pathogens continue to occur, another disinfection step such as <a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a> or <a href="http://192.168.178.69:3000/en/methods/chlorination" target="_blank" rel="noreferrer">chlorination</a> should be integrated.
+                        {/if}
+                    </p>
+                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                        <Head>
+                        <Row>
+                            <Cell>Description</Cell>
+                            <Cell numeric>Value</Cell>
+                        </Row>
+                        </Head>
+                        <Body>
+                            <Row>
+                                <Cell>Final turbidity (in NTU)</Cell>
+                                <Cell numeric>{pred_ftur}</Cell>
+                            </Row>
+                            <Row>
+                                <Cell>Final total viable count (in cfu/100ml)</Cell>
+                                <Cell numeric>{pred_tvc}</Cell>
+                            </Row>
+                        </Body>
+                    </DataTable>
                 {/await}
             </Content>
         </Paper>

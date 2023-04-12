@@ -125,27 +125,26 @@
             display: true,
             text: 'Chart.js Line Chart'
         },
-        },
-        interaction: {
-            mode: 'index',
-            intersect: false
-        },
         scales: {
-            x: {
-                display: true,
-                title: {
-                display: true,
-                text: 'Month'
+            xAxes: [
+                {
+                    position: "bottom",
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
                 }
-            },
-            y: {
-                display: true,
-                title: {
-                display: true,
-                text: 'Value'
+            ],
+            yAxes: [
+                {
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
                 }
-            }
-        }
+            ],
+        },
+    }
         
     async function owm_sunriseset() {
         let key = "a9c05d43e3817e2b68f4f0f305504cf7"
@@ -200,7 +199,10 @@
                 </Wrapper>
             </div>
             <br />
-            <Textfield type="text" bind:value={location.country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="text" bind:value={location.country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the country name of your location</Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>

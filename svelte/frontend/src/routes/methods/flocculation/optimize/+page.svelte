@@ -175,7 +175,7 @@
             pred_type: "tur",
             flocculant: "Moringa",
             surface_water: "model suspension",
-            load_pipe: false,
+            load_pipe: true,
             print_assessment: false,
         };
 

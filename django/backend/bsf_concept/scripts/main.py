@@ -9,7 +9,8 @@ import bsf_concept.scripts.modules.config as config
 
 class preparedataset:
     def __init__(self):
-        self.dataset = connectdb().bsfdatatodf()
+        raw = connectdb().bsfdatatodf()
+        self.dataset = raw.append(raw) # Datengrundlage verdoppeln...
         
         """ wenn df["mean spalte"] leer dann aus min max werten berechnen
         self.dataset.loc[self.dataset["mean_grain_diameter"].isnull(),'mean_grain_diameter'] = (self.dataset["min_grain_diameter"] + self.dataset["max_grain_diameter"])/2

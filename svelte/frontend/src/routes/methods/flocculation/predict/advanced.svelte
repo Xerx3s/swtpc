@@ -6,6 +6,8 @@
     import LinearProgress from '@smui/linear-progress';
     import Tooltip, { Wrapper } from '@smui/tooltip';
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
+    import Checkbox from '@smui/checkbox';
+    import FormField from '@smui/form-field';
 
     let data = {
         "surface_water": "model suspension",
@@ -23,7 +25,7 @@
         "duration_flocculation_phase": 15,
         "duration_sedimentation_phase": 45,
         "print_assessment": false,
-        "load_pipe": false}
+        "load_pipe": true}
 
     let pred_ftur = 0.0
     let pred_fpH = 0.0
@@ -114,6 +116,18 @@
         show_results = predict_ec()
         }
 </script>
+
+<div style="color:red;">
+    <b>Development tools:</b>
+    <FormField>
+      <Checkbox bind:checked={data.load_pipe} />
+      <span slot="label">load pipe</span>
+    </FormField>
+    <FormField>
+      <Checkbox bind:checked={data.print_assessment} />
+      <span slot="label">print assessment</span>
+    </FormField>
+</div>
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     <Paper style="margin:1em; flex-grow:1; min-width:20em">

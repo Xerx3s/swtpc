@@ -4810,3 +4810,100 @@ Traceback (most recent call last):
     with open(filename, 'wb') as f:
 FileNotFoundError: [Errno 2] No such file or directory: 'bsf_concept/data/pipe_bsf.dump'
 2023-04-12 09:46:08,476 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-04-12 09:57:59,971 - django.request - ERROR - Internal Server Error: /bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 34, in post
+    result=outputprediction(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 70, in outputprediction
+    pipe, _ = trainorloadpipe(loadpipe, printass)
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 52, in trainorloadpipe
+    actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)
+  File "/opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py", line 61, in assess_pipeline
+    used_features = pipe[2].get_support(indices=True)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/pipeline.py", line 265, in __getitem__
+    name, est = self.steps[ind]
+IndexError: list index out of range
+2023-04-12 09:58:14,230 - django.request - ERROR - Internal Server Error: /bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 34, in post
+    result=outputprediction(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 70, in outputprediction
+    pipe, _ = trainorloadpipe(loadpipe, printass)
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 52, in trainorloadpipe
+    actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)
+  File "/opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py", line 61, in assess_pipeline
+    used_features = pipe[2].get_support(indices=True)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/pipeline.py", line 265, in __getitem__
+    name, est = self.steps[ind]
+IndexError: list index out of range
+2023-04-12 10:01:12,024 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py changed, reloading.
+2023-04-12 10:02:38,407 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py changed, reloading.
+2023-04-12 10:03:38,262 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py changed, reloading.
+2023-04-12 10:03:50,764 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 10:04:07,685 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py changed, reloading.
+2023-04-12 10:06:43,932 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 10:08:15,732 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 10:09:13,603 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 10:09:48,688 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 10:10:26,954 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 10:19:43,319 - django.request - ERROR - Internal Server Error: /tur/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 91, in post
+    result=outputprediction(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in outputprediction
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 51, in trainorloadpipe
+    pipe = load_pipeline("floc_analyzer/data/pipe_tur.dump")
+  File "/opt/django/backend/floc_analyzer/scripts/modules/mlalgorithms.py", line 76, in load_pipeline
+    pipeline = load(loadpath)
+  File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'floc_analyzer/data/pipe_tur.dump'

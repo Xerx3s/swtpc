@@ -122,7 +122,7 @@
 
     async function optimize() {
         let data = {
-            load_pipe: false,
+            load_pipe: true,
             print_assessment: false,
         };
         (await param_sets).forEach(set => {

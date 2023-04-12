@@ -26,7 +26,7 @@
         "initial_turbidity": 30, // NTU
         "initial_tvc": 1000, // cfu/100ml
         "print_assessment": false,
-        "load_pipe": false}
+        "load_pipe": true}
 
     let pred_ftur = 0.0
 

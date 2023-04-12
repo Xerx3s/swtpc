@@ -41,8 +41,8 @@ def createpipeXGB():
     estimator=xgb.XGBRegressor()
     #estimator=xgb.XGBRegressor(eta=0.1, gamma=0, max_depth=10, min_child_weight=1, subsample=0.6,
     #                            colsample_bytree=0.7, tree_method="exact", num_parallel_tree=1)
-    #pipe = make_pipeline(imputer, scaler, selector, estimator)
-    pipe = make_pipeline(estimator)
+    pipe = make_pipeline(imputer, scaler, selector, estimator)
+    #pipe = make_pipeline(estimator)
     return pipe
 
 def assess_pipeline(pipe: Pipeline, X_train, X_test, y_train, y_test):

@@ -40,12 +40,13 @@ def trainorloadpipe(load: bool, printass: bool):
         bounds[index] = [value, ub[index]+0.1]
 
     if load:
-        pipe = load_pipeline(config.pipe_loadpath)
+        pipe = load_pipeline("bsf_concept/data/pipe_bsf.dump")
         print("pipe loaded.")
     else:
         pipe = createpipeline()
         pipe.fit(X_train.values, y_train)
-        print("new pipe trained.")
+        save_pipeline(pipe, "bsf_concept/data/pipe_bsf.dump")
+        print("new pipe trained and saved.")
     
     if printass:
         actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)

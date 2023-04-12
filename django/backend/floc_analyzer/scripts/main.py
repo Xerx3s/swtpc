@@ -43,12 +43,23 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
         bounds[index] = [value, ub[index]+0.1]
 
     if load:
-        pipe = load_pipeline(config.pipe_loadpath)
+        if pred_type == "ph":
+            pipe = load_pipeline("floc_analyzer/data/pipe_ph.dump")
+        elif pred_type == "ec":
+            pipe = load_pipeline("floc_analyzer/data/pipe_ec.dump")
+        elif pred_type == "tur":
+            pipe = load_pipeline("floc_analyzer/data/pipe_tur.dump")
         print("pipe loaded.")
     else:
         pipe = createpipeline()
         pipe.fit(X_train.values, y_train)
-        print("new pipe trained.")
+        if pred_type == "ph":
+            save_pipeline(pipe, "floc_analyzer/data/pipe_ph.dump")
+        elif pred_type == "ec":
+            save_pipeline(pipe, "floc_analyzer/data/pipe_ec.dump")
+        elif pred_type == "tur":
+            save_pipeline(pipe, "floc_analyzer/data/pipe_tur.dump")
+        print("new pipe trained and saved.")
     
     if printass:
         actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)

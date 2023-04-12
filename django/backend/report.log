@@ -4680,3 +4680,133 @@ ValueError: invalid literal for int() with base 10: '0.1'
 2023-04-11 15:22:29,903 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
 2023-04-11 15:22:30,777 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -0.04202081263065338, best pos: [27.43593309 12.53839363         nan 38.17882497 17.51029314 10.83960822
   8.79903826]
+2023-04-12 09:24:45,078 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-12 09:25:04,999 - django.request - WARNING - Method Not Allowed: /tur/
+2023-04-12 09:25:11,815 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-12 09:36:10,279 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-12 09:36:27,465 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-12 09:36:31,220 - django.request - ERROR - Internal Server Error: /ec/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 38, in post
+    result=outputprediction(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in outputprediction
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 49, in trainorloadpipe
+    load_pipeline(pipe, "floc_analyzer/data/ec_pipe")
+UnboundLocalError: local variable 'pipe' referenced before assignment
+2023-04-12 09:36:49,844 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-12 09:37:12,149 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-12 09:37:19,118 - django.request - ERROR - Internal Server Error: /ec/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 38, in post
+    result=outputprediction(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in outputprediction
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 80, in trainorloadpipe
+    return pipe, bounds
+UnboundLocalError: local variable 'pipe' referenced before assignment
+2023-04-12 09:37:39,178 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-12 09:39:13,703 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-12 09:39:41,635 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-12 09:40:37,457 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-12 09:40:47,928 - django.request - ERROR - Internal Server Error: /ph/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/floc_analyzer/views.py", line 62, in post
+    result=outputprediction(
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 84, in outputprediction
+    pipe, _ = trainorloadpipe(pred_type, sw, floc, loadpipe, printass)
+  File "/opt/django/backend/floc_analyzer/scripts/main.py", line 47, in trainorloadpipe
+    pipe = load_pipeline("floc_analyzer/data/ph_pipe")
+  File "/opt/django/backend/floc_analyzer/scripts/modules/mlalgorithms.py", line 76, in load_pipeline
+    pipeline = load(loadpath)
+  File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'floc_analyzer/data/ph_pipe'
+2023-04-12 09:40:55,766 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-12 09:41:51,838 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-12 09:42:04,230 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-12 09:42:12,908 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-12 09:42:30,165 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-12 09:42:35,439 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-12 09:43:00,176 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-12 09:44:50,282 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 09:45:03,700 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-04-12 09:45:22,850 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-04-12 09:45:43,602 - django.request - ERROR - Internal Server Error: /bsf/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/bsf_concept/views.py", line 34, in post
+    result=outputprediction(
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 70, in outputprediction
+    pipe, _ = trainorloadpipe(loadpipe, printass)
+  File "/opt/django/backend/bsf_concept/scripts/main.py", line 48, in trainorloadpipe
+    save_pipeline(pipe, "bsf_concept/data/pipe_bsf.dump")
+  File "/opt/django/backend/bsf_concept/scripts/modules/mlalgorithms.py", line 74, in save_pipeline
+    dump(pipeline, savepath)
+  File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'bsf_concept/data/pipe_bsf.dump'
+2023-04-12 09:46:08,476 - django.request - WARNING - Method Not Allowed: /bsf/

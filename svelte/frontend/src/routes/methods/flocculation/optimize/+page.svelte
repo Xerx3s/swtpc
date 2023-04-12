@@ -235,6 +235,9 @@
 <div>
     <h5>Flocculation Optimization</h5>
     <p>
+        For more information on the treatment method, see the <a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">knowledge base entry</a>.
+    </p>
+    <p>
         Define the possible areas where the necessary parameters are located by dragging the sliders.
         If you have specific values, narrow the selected range as much as possible.<br />
         As soon as you click the Optimize button, the processing will start and the results will be presented afterwards.<br />

@@ -13,6 +13,9 @@
 <div>
     <h5>Biosand Filtration Prediction</h5>
     <p>
+        For more information on the treatment method, see the <a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">knowledge base entry</a>.
+    </p>
+    <p>
         Please enter the required parameters. <br />
         You will then be presented with the expected final values that are possible based on the treatment method and the entered input parameters.
     </p>

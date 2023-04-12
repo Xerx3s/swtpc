@@ -13,6 +13,9 @@
 <div>
     <h5>Solar Disinfection Prediction</h5>
     <p>
+        For more information on the treatment method, see the <a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">knowledge base entry</a>.
+    </p>
+    <p>
         Select your location. To do so, please click on the map or enter the city and country below. <br />
         Please also select the time at which the disinfection will be started. <br />
         {#if advanced}

@@ -9,8 +9,10 @@
     import { Line } from 'svelte-chartjs';
     import 'chart.js/auto';
     import Map from '$lib/leafletmap/Map.svelte';
-    import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
     import Slider from "@smui/slider";
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
+    import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
+    import Tooltip, { Wrapper } from '@smui/tooltip';
     
     let map_component;
 
@@ -154,17 +156,15 @@
         // Werte ändern sich erst nach zweimaligem Ausführen...
         let utcrise = new Date(response.sys.sunrise * 1000)
         let utcset = new Date(response.sys.sunset * 1000)
-        sun.rise = new Date(utcrise.getTime() + (response.timezone+60) * 1000).getUTCHours() //+60 min sonst ist die Radiation noch 0...
+        sun.rise = new Date(utcrise.getTime() + (response.timezone+3600) * 1000).getUTCHours() //+60 min sonst ist die Radiation noch 0...
         sun.set = new Date(utcset.getTime() + response.timezone * 1000).getUTCHours()
         data.starting_hour = await sun.rise + 1
-
-        //console.log("sunrise: " + sun.rise)
-        //console.log("sunset: " + sun.set)
     } 
 
-
-    function setNewLocation() {
-        map_component.newlocation(location.city, location.country)
+    async function setNewLocation() {
+        let coords = await map_component.newlocation(location.city, location.country)
+        data.latitude = coords.lat
+        data.longitude = coords.lng
         owm_sunriseset()
     }
     
@@ -187,8 +187,17 @@
         <Title>Location</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
             <div style="display:flex; flex-direction:row">
-                <Textfield type="text" bind:value={location.city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
-                <Button on:click={setNewLocation} style="flex-grow:0.5; margin-top:0.75em">Search</Button>
+                <Wrapper>
+                    <Textfield type="text" bind:value={location.city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <Tooltip>Enter the city name of your location</Tooltip>
+                </Wrapper>
+                <Wrapper>
+                    <Button on:click={setNewLocation} style="flex-grow:0.5; margin-top:0.75em">Search</Button>
+                    <Tooltip>
+                        Click this button after entering city and country.
+                        You can click multiple times to skip through all cities of the same name.
+                    </Tooltip>
+                </Wrapper>
             </div>
             <br />
             <Textfield type="text" bind:value={location.country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
@@ -198,14 +207,25 @@
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Initial Values</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Slider bind:value={data.starting_hour} min={sun.rise} max={sun.set} step={1} style="min-width:10em"/>
-            <Textfield type="number" input$step=1 input$min={sun.rise} input$max={sun.set} bind:value={data.starting_hour} label="Starting Hour" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Slider bind:value={data.starting_hour} min={sun.rise} max={sun.set} step={1} style="min-width:10em"/>
+                <Textfield type="number" input$step=1 input$min={sun.rise} input$max={sun.set} bind:value={data.starting_hour} label="Starting Hour" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Either use the slider or enter a value to define the starting hour.
+                    It is assumed that at the selected time the bottles filled with water are placed in direct sunlight.
+                </Tooltip>
+            </Wrapper>
             <br />
             <!--
             <Textfield type="number" input$step=1 bind:value={data.water_temperature} label="Water Temperature" suffix="°C" style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
             -->
-            <Textfield type="number" input$step=1 bind:value={data.target_logdis} label="Target Logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.target_logdis} label="Target Logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    A value of 1 corresponds to a pathogen reduction of 90 %, 2 of 99 %, etc.
+                    The actual reduction required always depends on the raw water used, but a value of 4 should not be undercut if possible.</Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>
@@ -223,12 +243,25 @@
                 {#await graph_data}
                     <LinearProgress indeterminate />
                 {:then graph_data}
-                    {message}
-                    <br />
-                    <Textfield type="number" input$step=0.01 bind:value={final_logdis} label="Final Logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    <Textfield type="number" input$step=0.01 bind:value={duration} label="Duration" suffix="h" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
+                    {message} <br />
+                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                        <Head>
+                        <Row>
+                            <Cell>Description</Cell>
+                            <Cell numeric>Value</Cell>
+                        </Row>
+                        </Head>
+                        <Body>
+                            <Row>
+                                <Cell>Final log disinfection</Cell>
+                                <Cell numeric>{final_logdis}</Cell>
+                            </Row>
+                            <Row>
+                                <Cell>Duration (in h)</Cell>
+                                <Cell numeric>{duration}</Cell>
+                            </Row>
+                        </Body>
+                    </DataTable>
                 {/await}
             </Content>
         </Paper>

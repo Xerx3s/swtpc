@@ -4,7 +4,7 @@
     import Paper, { Title, Subtitle, Content } from "@smui/paper"
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
-
+    import Tooltip, { Wrapper } from '@smui/tooltip';
 
     let data = {
         "surface_water": "model suspension",
@@ -51,6 +51,13 @@
     }
 
     async function predict_tur() {
+
+        if (data.flocculant == "Kaktus") {
+            data.floc_cactus_share = 100
+        } else if (data.flocculant == "Moringa") {
+            data.floc_cactus_share = 0
+        }
+
         let url = "http://localhost:3001/tur/"
 
         let res = await fetch(url, {
@@ -111,12 +118,21 @@
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Indicator Parameter</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Textfield type="number" input$step=0.1 bind:value={data.initial_pH} label="Initial pH" style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />
-            <Textfield type="number" input$step=1 bind:value={data.initial_EC} label="Initial EC" suffix="µS/cm" style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />
-            <Textfield type="number" input$step=1 bind:value={data.initial_turbidity} label="Initial Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />
+            <Wrapper>
+                <Textfield type="number" input$step=0.1 bind:value={data.initial_pH} label="Initial pH" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Initial pH of the raw water used</Tooltip>
+            </Wrapper>
+                <br />
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.initial_EC} label="Initial EC" suffix="µS/cm" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Initial electrical conductivity of the raw water used</Tooltip>
+            </Wrapper>
+                <br />
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.initial_turbidity} label="Initial Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Initial turbidity of the raw water used</Tooltip>
+            </Wrapper>
+                <br />
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
@@ -125,35 +141,85 @@
             {#await flocculants}
                 <LinearProgress indeterminate />
             {:then flocculants}
-                <Select bind:value={data.flocculant} label="Flocculant" style="flex-grow:1; margin-bottom:0.5em">
-                    {#each flocculants as flocculant}
-                        <Option value={flocculant}>{flocculant}</Option>
-                    {/each}
-                </Select>
+                <Wrapper>
+                    <Select bind:value={data.flocculant} label="Flocculant" style="flex-grow:1; margin-bottom:0.5em">
+                        {#each flocculants as flocculant}
+                            <Option value={flocculant}>{flocculant}</Option>
+                        {/each}
+                    </Select>
+                    <Tooltip>Select the flocculant you want to use</Tooltip>
+                </Wrapper>
             {/await}
-                <br />
+            <br />
+            <Wrapper>
                 <Textfield type="number" input$step=1 bind:value={data.floc_concentration} label="Flocculant Concentration in Base Solution" suffix="g/l" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
+                <Tooltip>Enter the amount of flocculant (usually powder form) that you wish to use to prepare the concentrated base solution.</Tooltip>
+            </Wrapper>
+            <br />
+            <Wrapper>
                 <Textfield type="number" input$step=0.1 bind:value={data.floc_saline_Molarity} label="Saline Molarity of Flocculant Base Solution" suffix="mol/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the amount of salt you want to use to prepare the stock solution. Common salt (NaCl) has a molar mass of about 58 g/mol.</Tooltip>
+            </Wrapper>
+            <br />
+            {#if data.flocculant == "MoringaKaktus"}
+                <Wrapper>
+                    <Textfield type="number" input$step=1 bind:value={data.floc_cactus_share} label="Cactus Share in Flocculant Base Solution" suffix="%" style="flex-grow:1; margin-bottom:0.5em"/>
+                    <Tooltip>Enter the percentage of cactus in the flocculant</Tooltip>
+                </Wrapper>
                 <br />
-                <Textfield type="number" input$step=1 bind:value={data.floc_cactus_share} label="Cactus Share in Flocculant Base Solution" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
+            {/if}
+            <Wrapper>
                 <Textfield type="number" input$step=1 bind:value={data.floc_dose} label="Flocculant Dosage" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
-                <br />
+                <Tooltip>Enter the amount of flocculant you want to use to flocculate one liter of raw water</Tooltip>
+            </Wrapper>
+            <br />
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Flocculation Process Parameter</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Textfield type="number" input$step=1 bind:value={data.stirring_speed_coagulation_phase} label="Stirring Speed during Coagulation Phase" suffix="RPM" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.stirring_speed_coagulation_phase} label="Stirring Speed during Coagulation Phase" suffix="RPM" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Specify the stirring speed at the beginning of the flocculation process.
+                    This should be quite high during the coagulation phase.
+                </Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.duration_coagulation_phase} label="Duration of Coagulation Phase" suffix="min" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.duration_coagulation_phase} label="Duration of Coagulation Phase" suffix="min" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Specify the stirring time at the beginning of the flocculation process.
+                    This should be quite short during the coagulation phase.
+                    Normally a stirring time around a minute or two should be enough.
+                </Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.stirring_speed_flocculation_phase} label="Stirring Speed during Flocculation Phase" suffix="RPM" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.stirring_speed_flocculation_phase} label="Stirring Speed during Flocculation Phase" suffix="RPM" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Specify the stirring speed during the flocculation phase of the process.
+                    This should not be too high.
+                </Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.duration_flocculation_phase} label="Duration of Flocculation Phase" suffix="min" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.duration_flocculation_phase} label="Duration of Flocculation Phase" suffix="min" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Specify the stirring time during the flocculation phase of the process.
+                    This shouldn't be too short.
+                    Wait until visibly larger flocs have formed before proceeding to the next phase.</Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.duration_sedimentation_phase} label="Duration of Sedimentation Phase" suffix="min" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.duration_sedimentation_phase} label="Duration of Sedimentation Phase" suffix="min" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>
+                    Specify the sedimentation time at the end of the flocculation process.
+                    This should be quite long.
+                    Wait until all the flocs have settled.
+                    Longer standing times rarely have negative effects.
+                </Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>

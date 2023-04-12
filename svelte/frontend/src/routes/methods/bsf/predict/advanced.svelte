@@ -4,6 +4,7 @@
     import Paper, { Title, Subtitle, Content } from "@smui/paper"
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
+    import Tooltip, { Wrapper } from '@smui/tooltip';
 
 
     let data = {
@@ -14,7 +15,7 @@
         "mean_pause": 12,
         "time_schmutzdecke": 14,
         "initial_turbidity": 30,
-        "initial_tvc": 10000,
+        "initial_tvc": 1000,
         "print_assessment": false,
         "load_pipe": false}
 
@@ -50,31 +51,55 @@
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Indicator Parameter</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Textfield type="number" input$step=1 bind:value={data.initial_turbidity} label="Initial Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.initial_turbidity} label="Initial Turbidity" suffix="NTU" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Initial turbidity of the raw water used</Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.initial_tvc} label="Initial Total Viable Count" suffix="cfu/100ml" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.initial_tvc} label="Initial Total Viable Count" suffix="cfu/100ml" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Indicator for the pathogen load of the raw water</Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Filter Parameter</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Textfield type="number" input$step=1 bind:value={data.diameter} label="Diameter" suffix="cm" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.diameter} label="Diameter" suffix="cm" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Diameter of the bucket used for the construction of the biosand filter.</Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=0.1 bind:value={data.material_height} label="Material Height" suffix="cm" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=0.1 bind:value={data.material_height} label="Material Height" suffix="cm" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Height of the filled sand layer</Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=0.01 bind:value={data.mean_grain_diameter} label="Mean Grain Diameter" suffix="mm" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=0.05 bind:value={data.mean_grain_diameter} label="Mean Grain Diameter" suffix="mm" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>mean grain diameter of the sand used</Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Filtration Process Parameter</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
-            <Textfield type="number" input$step=1 bind:value={data.mean_flow} label="Mean Flow" suffix="l/h" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.mean_flow} label="Mean Flow" suffix="l/h" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>mean flow rate when using the filter.</Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.mean_pause} label="Duration of daily Pause Time" suffix="h/d" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.mean_pause} label="Duration of daily Pause Time" suffix="h/d" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Total pause time over one day of use.</Tooltip>
+            </Wrapper>
             <br />
-            <Textfield type="number" input$step=1 bind:value={data.time_schmutzdecke} label="Time since last Scraping of Schmutzdecke" suffix="d" style="flex-grow:1; margin-bottom:0.5em"/>
+            <Wrapper>
+                <Textfield type="number" input$step=1 bind:value={data.time_schmutzdecke} label="Time since last Scraping of Schmutzdecke" suffix="d" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Days that the schmutzdecke could develop again since the last surface scraping.</Tooltip>
+            </Wrapper>
             <br />
         </Content>
     </Paper>

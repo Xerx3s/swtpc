@@ -7,6 +7,7 @@
     import LinearProgress from '@smui/linear-progress';
     import Dialog, { Actions } from '@smui/dialog';
     import Map from '$lib/leafletmap/Map.svelte';
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
 
     let map_component;
@@ -50,12 +51,9 @@
         // Werte ändern sich erst nach zweimaligem Ausführen...
         let utcrise = new Date(response.sys.sunrise * 1000)
         let utcset = new Date(response.sys.sunset * 1000)
-        sun.rise = new Date(utcrise.getTime() + (response.timezone+60) * 1000).getUTCHours() //+60 min sonst ist die Radiation noch 0...
+        sun.rise = new Date(utcrise.getTime() + (response.timezone+3600) * 1000).getUTCHours() //+60 min sonst ist die Radiation noch 0...
         sun.set = new Date(utcset.getTime() + response.timezone * 1000).getUTCHours()
         data.starting_hour = await sun.rise + 1
-
-        //console.log("sunrise: " + sun.rise)
-        //console.log("sunset: " + sun.set)
     } 
 
     async function sodis_forecast() {
@@ -77,8 +75,10 @@
         return true
     }
 
-    function setNewLocation() {
-        map_component.newlocation(location.city, location.country)
+    async function setNewLocation() {
+        let coords = await map_component.newlocation(location.city, location.country)
+        data.latitude = coords.lat
+        data.longitude = coords.lng
         owm_sunriseset()
     }
 
@@ -129,12 +129,25 @@
                 {#await show_results}
                     <LinearProgress indeterminate />
                 {:then show_results}
-                    {message}
-                    <br />
-                    <Textfield type="number" input$step=0.01 bind:value={final_logdis} label="Final logarithmic Disinfection" suffix="" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
-                    <Textfield type="number" input$step=0.01 bind:value={duration} label="Duration" suffix="h" style="flex-grow:1; margin-bottom:0.5em"/>
-                    <br />
+                    {message} <br />
+                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                        <Head>
+                        <Row>
+                            <Cell>Description</Cell>
+                            <Cell numeric>Value</Cell>
+                        </Row>
+                        </Head>
+                        <Body>
+                            <Row>
+                                <Cell>Final log disinfection</Cell>
+                                <Cell numeric>{final_logdis}</Cell>
+                            </Row>
+                            <Row>
+                                <Cell>Duration (in h)</Cell>
+                                <Cell numeric>{duration}</Cell>
+                            </Row>
+                        </Body>
+                    </DataTable>
                 {/await}
             </Content>
         </Paper>

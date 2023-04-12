@@ -75,6 +75,11 @@
         addmarker(loc[city_counter].lat, loc[city_counter].lon)
         var latlng = L.latLng(loc[city_counter].lat, loc[city_counter].lon);
         map.setView(latlng,13);
+
+        return {
+            "lat": loc[city_counter].lat,
+            "lng": loc[city_counter].lon,
+        }
     }
 </script>
 

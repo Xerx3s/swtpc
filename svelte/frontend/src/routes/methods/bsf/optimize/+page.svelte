@@ -20,7 +20,7 @@
         mean_grain_diameter: "Mean Grain Diameter (in mm)",
         mean_flow: "Mean Flow (in l/h)",
         mean_pause: "Mean Pause Periode (in h)",
-        time_schmutzdecke: "Time since last Scraping of Schmutzdecke (in d)",
+        time_schmutzdecke: "Scraping cycle of Schmutzdecke (in d)",
         initial_turbdity: "Initial Turbidity (in NTU)",
         final_turbidity: "Final Turbidity (in NTU)"
     }
@@ -107,7 +107,7 @@
                     },
                     {
                         id: "time_schmutzdecke",
-                        description: "Time since last Scraping of Schmutzdecke (in d)",
+                        description: "Scraping cycle of Schmutzdecke (in d)",
                         unit: "d",
                         bounds: [bounds.time_schmutzdecke[0], bounds.time_schmutzdecke[1]],
                         minmax: [10, 20],

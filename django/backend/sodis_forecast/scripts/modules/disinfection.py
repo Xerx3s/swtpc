@@ -72,7 +72,7 @@ def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: i
         radiation = nowdata["ghi_cloudy"]
         #radiation = 800
         if radiation == 0:
-            message += "Not enough Suntime left. Max log disinfection possible: %.2f.\n" %logdis
+            message += "Not enough Suntime left.\n" %logdis
             break
         Tc = nowdata["temp_air"]
         #Tc = 30.0
@@ -95,6 +95,5 @@ def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: i
         disinfectiondata = pd.concat([disinfectiondata,data])
     
     duration = (nowtime - starttime).seconds/60/60
-    if message == "":
-        message = "Requested log disinfection of %d is achieved after %s hours." %(target, duration)
+    message += "A log disinfection of %.1f is achieved after %d hours." %(logdis, duration)
     return disinfectiondata, message, duration

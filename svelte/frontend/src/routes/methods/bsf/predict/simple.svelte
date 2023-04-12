@@ -24,7 +24,7 @@
         "mean_pause": 12, // h/d
         "time_schmutzdecke": 14, // d
         "initial_turbidity": 30, // NTU
-        "initial_tvc": 10000, // cfu/100ml
+        "initial_tvc": 1000, // cfu/100ml
         "print_assessment": false,
         "load_pipe": false}
 
@@ -101,7 +101,7 @@
                     Based on the given input parameters and the assumptions listed below,
                     a residual turbidity of {pred_ftur} NTU is expected after treatment of the water by biosand filtration.
                     {#if param.organic_material}
-                        Any bacteria present in the water should have been reduced by at least 90 %.
+                        Any pathogens present in the water should have been reduced by at least 90 %.
                     {/if}
                     <br /> <br />
                     Assumptions as follows: <br />

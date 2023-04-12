@@ -9,33 +9,36 @@
     })
 </script>
 
-<Group variant="unelevated" style="display: flex; justify-content: stretch;">
-  {#if methods.flocculation}
-    <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/flocculation/predict">
-      <Label>Flocculation</Label>
+<p>
+  <b>Required treatment methods:</b>
+  <Group variant="unelevated" style="display: flex; justify-content: stretch;">
+    {#if methods.flocculation}
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/flocculation/predict">
+        <Label>Flocculation</Label>
+      </Button>
+    {/if}
+    {#if methods.bsf}
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/bsf/predict">
+        <Label>BSF</Label>
+      </Button>
+    {/if}
+    {#if methods.aaa}
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">
+        <Label>AAA</Label>
+      </Button>
+    {/if}
+    {#if methods.sodis}
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/sodis/predict">
+        <Label>SODIS</Label>
+      </Button>
+    {/if}
+    {#if methods.ro}
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">
+        <Label>RO</Label>
+      </Button>
+    {/if}
+    <Button variant="outlined" color="secondary" style="flex-grow:1; color:red" on:click={() => show_selected_methods.set(false)}>
+      <Label>Reset</Label>
     </Button>
-  {/if}
-  {#if methods.bsf}
-    <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/bsf/predict">
-      <Label>BSF</Label>
-    </Button>
-  {/if}
-  {#if methods.aaa}
-    <Button variant="outlined" color="secondary" style="flex-grow:1" href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">
-      <Label>AAA</Label>
-    </Button>
-  {/if}
-  {#if methods.sodis}
-    <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/sodis/predict">
-      <Label>SODIS</Label>
-    </Button>
-  {/if}
-  {#if methods.ro}
-    <Button variant="outlined" color="secondary" style="flex-grow:1" href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">
-      <Label>RO</Label>
-    </Button>
-  {/if}
-  <Button variant="outlined" color="secondary" style="flex-grow:1; color:red" on:click={() => show_selected_methods.set(false)}>
-    <Label>Reset</Label>
-  </Button>
-</Group>
+  </Group>
+</p>

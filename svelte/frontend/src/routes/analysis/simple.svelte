@@ -205,7 +205,10 @@
         <Paper style="flex-grow:1;">
             <Title>Results</Title>
             <Content>
-                {@html results}
+                {@html results} <br />
+                A new row below the top navigation bar is now visible.
+                It contains all required treatment steps in the correct order.
+                You can click on the individual methods to go to the respective prediction models.
             </Content>
         </Paper>
     </div>

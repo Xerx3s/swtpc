@@ -40,9 +40,21 @@
           <Label>Analysis</Label>
         </Button>
       </Item>
+      <!--
+      <Item>
+        <Button href="/dimensioning">
+          <Label>Pre-dimensioning</Label>
+        </Button>
+      </Item>
+      -->
       <Item>
         <Button href="/methods">
           <Label>Methods</Label>
+        </Button>
+      </Item>
+      <Item>
+        <Button href="http://192.168.178.69:3000/" target="_blank" rel="noreferrer">
+          <Label>Knowledge Base</Label>
         </Button>
       </Item>
     </List>
@@ -78,7 +90,7 @@
 <main class="main-content">
   <slot />
 </main>
-
+<!--
 <footer style="display:flex; justify-content:stretch">
   <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="/">
     <Label>Motivation</Label>
@@ -90,4 +102,4 @@
     <Label>Knowledge Base</Label>
   </Button>
 </footer>
-
+-->

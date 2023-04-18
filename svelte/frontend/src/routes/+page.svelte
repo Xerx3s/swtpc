@@ -19,15 +19,22 @@
     <Button variant="unelevated" style="width: 50%; margin: auto;" href="/analysis">Start Analysis</Button>
 </Group>
 
+<p>
+    For a more accurate result, use the switch in the Top Navigation Bar.
+    If you set it to "Advanced View", you will get access to more sophisticated ways to perform the analysis.
+    However, this also requires more precise input parameters. <br /> <br />
+    A <a href="http://192.168.178.69:3000" target="_blank" rel="noreferrer">knowledge base</a> is available for more background information on the individual technologies.
+</p>
+
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     <Paper style="flex-grow:1; margin:1em">
         <Title>Currently supported treatment methods</Title>
         <Content>
             <ul>
-                <li><a href="http://192.168.178.69:3000/en/methods/aaa">Activated Alumina Adsorption</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/biosand-filtration">Biosand Filtration</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/flocculation">Flocculation</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/sodis">SODIS</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></li>
             </ul>
         </Content>
     </Paper>
@@ -35,11 +42,24 @@
         <Title>Additional treatment methods</Title>
         <Content>
             <ul>
-                <li><a href="http://192.168.178.69:3000/en/methods/boiling">Boiling</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/ceramic-pot-filtration">Ceramic Pot Filtration</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/chlorination">Chlorination</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/membrane-filtration">Membrane Filtration</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/boiling" target="_blank" rel="noreferrer">Boiling</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/ceramic-pot-filtration" target="_blank" rel="noreferrer">Ceramic Pot Filtration</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/chlorination" target="_blank" rel="noreferrer">Chlorination</a></li>
+                <li><a href="http://192.168.178.69:3000/en/methods/membrane-filtration" target="_blank" rel="noreferrer">Membrane Filtration</a></li>
             </ul>
         </Content>
     </Paper>
 </div>
+
+<p>
+    <b>Disclaimer:</b> <br />
+    This website does not store any user data.
+    All data entered is only used for analysis and then immediately discarded. <br />
+    When using external APIs, care has been taken to ensure that they are handled in an equally compliant manner.
+    The privacy policies of <a href="https://openweather.co.uk/privacy-policy" target="_blank" rel="noreferrer">OpenWeatherMap</a> and <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/" target="_blank" rel="noreferrer">OpenStreetMap</a> can be viewed on the respective official pages.
+    <br /> <br />
+    The content of this page runs under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike License</a> and may therefore be remixed, adapted and build upon even for commercial purposes.
+    However projects based on this work must give credit to it and carry the same license under the identical terms.
+    This license is often compared to “copyleft” free and open source software licenses.
+    All new works will carry the same license, so any derivatives will also allow commercial use.
+</p>

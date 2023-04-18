@@ -4907,3 +4907,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 650, in load
     with open(filename, 'rb') as f:
 FileNotFoundError: [Errno 2] No such file or directory: 'floc_analyzer/data/pipe_tur.dump'
+2023-04-18 12:09:43,970 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-18 12:10:07,891 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-18 13:16:17,586 - django.request - WARNING - Method Not Allowed: /ph/
+2023-04-18 13:16:17,834 - django.request - WARNING - Not Found: /favicon.ico

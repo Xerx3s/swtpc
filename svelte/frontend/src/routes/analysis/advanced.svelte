@@ -5,6 +5,7 @@
     import List, {Item, Meta, Label } from "@smui/list"
     import Checkbox from "@smui/checkbox"
     import Textfield from "@smui/textfield"
+    import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 
     let data = {
         "turbidity": 4,
@@ -93,7 +94,7 @@
         let methods_list: String[] = []
 
         if (data.tds > limits.tds[1]) {
-            if (data.turbidity > 0) {
+            if (data.turbidity > 5) {
                 methods.flocculation = true
                 methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
             }
@@ -180,6 +181,59 @@
             <Title>Results</Title>
             <Content>
                 {@html results}
+                <br />
+                To obtain the best possible treatment result, the sequence of treatment steps should correspond to the following table: 
+                <br /><br />
+                <DataTable table$aria-label="Results" style="width: 100%;">
+                    <Head>
+                        <Row>
+                            <Cell numeric>Order</Cell>
+                            <Cell>Treatment Method</Cell>
+                        </Row>
+                    </Head>
+                    <Body>
+                        {#if methods.flocculation}
+                            <Row>
+                                <Cell numeric>1</Cell>
+                                <Cell><a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></Cell>
+                            </Row>
+                        {/if}
+                        {#if methods.ro}
+                            <Row>
+                                <Cell numeric>2</Cell>
+                                <Cell><a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a></Cell>
+                            </Row>
+                        {/if}
+                        {#if methods.bsf}
+                            <Row>
+                                <Cell numeric>2</Cell>
+                                <Cell>
+                                    {#if data.arsenic}
+                                        <a href="http://192.168.178.69:3000/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>
+                                    {:else}
+                                        <a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>
+                                    {/if}
+                                </Cell>
+                            </Row>
+                        {/if}
+                        {#if methods.aaa}
+                            <Row>
+                                <Cell numeric>3</Cell>
+                                <Cell><a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></Cell>
+                            </Row>
+                        {/if}
+                        {#if methods.sodis}
+                            <Row>
+                                <Cell numeric>4</Cell>
+                                <Cell><a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></Cell>
+                            </Row>
+                        {/if}
+                    </Body>
+                </DataTable>
+                <br /> <br />
+                A new row below the top navigation bar is now visible.
+                It contains all required treatment steps in the correct order.
+                You can click on the individual methods to go to the respective prediction models.
             </Content>
         </Paper>
     </div>

@@ -63,18 +63,19 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
     
     if printass:
         actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)
-        print("\nPrediction Test with test dataset")
-        print("actual vs. predicted output:")
-        print(actualvpredicted)
-        print('\nnumber of rows: %d' %(scores["rows"]))
-        print("Trainings-Score: %.4f" %(scores["train_score"]))
-        print("Test-Score: %.4f" %(scores["test_score"]))
-        print("Used input features: ", (scores["used_features"]))
-        print('\nEvaluation report:')
-        print ("RMSE: %.2f" %(evaluation["rmse"]))
-        print ("MAE: %.2f" %(evaluation["mae"]))
-        print ("MAPE: %.2f" %(evaluation["mape"]))
-        print('Accuracy: %.2f'%((100-evaluation["mape"])))
+        print(
+            "\nPrediction Test (%s) with test dataset\n" %(pred_type),
+            "actual vs. predicted output:\n",
+            actualvpredicted,
+            '\nnumber of rows: %d' %(scores["rows"]),
+            "\nTrainings-Score: %.4f" %(scores["train_score"]),
+            "\nTest-Score: %.4f" %(scores["test_score"]),
+            "\nUsed input features: ", (scores["used_features"]),
+            '\nEvaluation report:',
+            "\nRMSE: %.2f" %(evaluation["rmse"]),
+            "\nMAE: %.2f" %(evaluation["mae"]),
+            "\nMAPE: %.2f" %(evaluation["mape"]),
+            '\nAccuracy: %.2f'%((100-evaluation["mape"])))
 
     #return pipe, X_train, X_test, y_train, y_test
     return pipe, bounds

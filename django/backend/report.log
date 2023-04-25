@@ -4911,3 +4911,39 @@ FileNotFoundError: [Errno 2] No such file or directory: 'floc_analyzer/data/pipe
 2023-04-18 12:10:07,891 - django.request - WARNING - Method Not Allowed: /ec/
 2023-04-18 13:16:17,586 - django.request - WARNING - Method Not Allowed: /ph/
 2023-04-18 13:16:17,834 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-19 08:39:57,308 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-19 08:39:58,058 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20451490e+00 4.85369207e+02 1.05095109e+02 3.09628792e-01
+ 1.69089953e+02 2.78448513e+01 1.08475200e+02            nan
+ 2.56614986e+01 1.13145079e+01 5.57492538e+01]
+2023-04-19 08:40:24,154 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-19 08:40:25,010 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 31.21194839477539, best pos: [8.91809681e+00 4.42347593e+02 8.60798586e+01 4.25212271e-01
+ 2.40208696e+02 2.57603358e+01 1.17884513e+02 1.00000000e+00
+ 2.52824870e+01 1.16047768e+01 5.65194749e+01]
+2023-04-19 08:40:59,498 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-19 08:41:00,232 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 31.107351303100586, best pos: [8.89396631e+00 4.42115153e+02 1.17836521e+02 4.03968359e-01
+ 1.28947603e+02 1.68148258e+01 1.02266368e+02 1.00000000e+00
+ 2.85848011e+01 1.22219974e+01 5.03654537e+01]
+2023-04-19 08:41:14,488 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-19 08:41:15,355 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15623894e+00 4.80068300e+02 9.53985301e+01 2.91715127e-01
+ 2.20820483e+02 2.68182074e+01 8.95384984e+01            nan
+ 2.50366074e+01 1.15287782e+01 5.91201080e+01]
+2023-04-19 08:41:15,785 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-19 08:41:16,572 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24076740e+00 4.69120368e+02 1.05321411e+02 2.99069742e-01
+ 2.33206385e+02 9.18510690e+00 1.03471605e+02            nan
+ 2.60107566e+01 1.16405071e+01 5.32343748e+01]
+2023-04-19 08:41:21,129 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-04-19 08:41:21,983 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24489254e+00 4.72346323e+02 9.38093806e+01 1.07925694e-01
+ 2.29983413e+02 2.27658833e+01 9.50684447e+01            nan
+ 2.41672507e+01 1.21531553e+01 5.42257491e+01]
+2023-04-19 08:43:23,362 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-19 08:43:30,669 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-25 09:05:54,644 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-25 09:06:26,181 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-25 09:10:26,052 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-25 09:51:39,417 - django.request - WARNING - Not Found: /favicon.ico
+2023-04-25 10:04:58,396 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-25 10:06:16,001 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-25 10:08:33,854 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-25 10:08:43,443 - django.request - WARNING - Method Not Allowed: /ec/
+2023-04-25 10:09:31,461 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-04-25 10:09:42,773 - django.request - WARNING - Method Not Allowed: /ec/

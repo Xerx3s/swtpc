@@ -44,25 +44,25 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
 
     if load:
         if pred_type == "ph":
-            pipe = load_pipeline("floc_analyzer/data/pipe_ph.dump")
+            pipe = load_pipeline("floc_analyzer/data/pipelines/pipe_ph.dump")
         elif pred_type == "ec":
-            pipe = load_pipeline("floc_analyzer/data/pipe_ec.dump")
+            pipe = load_pipeline("floc_analyzer/data/pipelines/pipe_ec.dump")
         elif pred_type == "tur":
-            pipe = load_pipeline("floc_analyzer/data/pipe_tur.dump")
+            pipe = load_pipeline("floc_analyzer/data/pipelines/pipe_tur.dump")
         print("pipe loaded.")
     else:
         pipe = createpipeline()
         pipe.fit(X_train.values, y_train)
         if pred_type == "ph":
-            save_pipeline(pipe, "floc_analyzer/data/pipe_ph.dump")
+            save_pipeline(pipe, "floc_analyzer/data/pipelines/pipe_ph.dump")
         elif pred_type == "ec":
-            save_pipeline(pipe, "floc_analyzer/data/pipe_ec.dump")
+            save_pipeline(pipe, "floc_analyzer/data/pipelines/pipe_ec.dump")
         elif pred_type == "tur":
-            save_pipeline(pipe, "floc_analyzer/data/pipe_tur.dump")
+            save_pipeline(pipe, "floc_analyzer/data/pipelines/pipe_tur.dump")
         print("new pipe trained and saved.")
     
     if printass:
-        actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)
+        actualvpredicted, scores, evaluation = assess_pipeline(pred_type, pipe, X_train, X_test, y_train, y_test)
         print(
             "\nPrediction Test (%s) with test dataset\n" %(pred_type),
             "actual vs. predicted output:\n",

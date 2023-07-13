@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from floc_analyzer.scripts.modules.connectdb import connectdb
-from floc_analyzer.scripts.modules.mlalgorithms import createpipeXGB as createpipeline
+from floc_analyzer.scripts.modules.mlalgorithms import createpipeKN as createpipeline
 from floc_analyzer.scripts.modules.mlalgorithms import assess_pipeline, save_pipeline, load_pipeline
 from floc_analyzer.scripts.modules.pso import minimize
 import floc_analyzer.scripts.modules.config as config
@@ -73,9 +73,7 @@ def trainorloadpipe(pred_type: str, sw: str, floc: str, load: bool, printass: bo
             "\nUsed input features: ", (scores["used_features"]),
             '\nEvaluation report:',
             "\nRMSE: %.2f" %(evaluation["rmse"]),
-            "\nMAE: %.2f" %(evaluation["mae"]),
-            "\nMAPE: %.2f" %(evaluation["mape"]),
-            '\nAccuracy: %.2f'%((100-evaluation["mape"])))
+            "\nMAE: %.2f" %(evaluation["mae"]))
 
     #return pipe, X_train, X_test, y_train, y_test
     return pipe, bounds

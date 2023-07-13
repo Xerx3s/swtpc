@@ -112,8 +112,11 @@
     
     function handleClick() {
         predict_tur()
-        predict_ph()
-        show_results = predict_ec()
+            .then(() => predict_ph())
+            .then(() => predict_ec())
+        //predict_ph()
+        //show_results = predict_ec()
+        show_results = true
         }
 </script>
 

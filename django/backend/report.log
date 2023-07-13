@@ -5039,3 +5039,25 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/dist-packages/joblib/numpy_pickle.py", line 552, in dump
     with open(filename, 'wb') as f:
 FileNotFoundError: [Errno 2] No such file or directory: 'floc_analyzer/data/pipelines/pipe_tur.dump'
+2023-05-01 16:22:39,962 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-05-01 16:22:40,711 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22284407e+00 4.65606057e+02 1.05129906e+02 2.48560472e-01
+ 2.50014005e+02 3.36968151e+01 9.49638875e+01            nan
+ 2.48418300e+01 1.24080603e+01 5.34205906e+01]
+2023-05-01 16:22:41,965 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-05-01 16:22:42,799 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.16606150e+00 4.73338207e+02 9.84092114e+01 4.03641946e-01
+ 1.93213274e+02 2.07221591e+01 1.09487967e+02            nan
+ 2.59846312e+01 1.11051300e+01 5.25178465e+01]
+2023-07-04 08:08:31,108 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 08:09:25,301 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 08:43:27,573 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 08:53:03,491 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 08:53:52,206 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 08:54:13,034 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 08:54:57,346 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 09:02:07,668 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 09:05:23,681 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-04 09:29:15,651 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-05 16:27:03,322 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-05 16:30:28,751 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
+2023-07-05 16:38:16,237 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/mlalgorithms.py changed, reloading.
+2023-07-05 16:38:26,508 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.

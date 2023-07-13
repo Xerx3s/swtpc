@@ -7,6 +7,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import Lasso
+from sklearn.neural_network import MLPRegressor
+from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import mean_squared_error as MSE
 from sklearn.metrics import mean_absolute_error as MAE
@@ -41,6 +44,33 @@ def createpipeXGB():
     estimator=xgb.XGBRegressor()
     #estimator=xgb.XGBRegressor(eta=0.1, gamma=0, max_depth=10, min_child_weight=1, subsample=0.6,
     #                            colsample_bytree=0.7, tree_method="exact", num_parallel_tree=1)
+    pipe = make_pipeline(imputer, scaler, selector, estimator)
+    return pipe
+
+def createpipeLASSO():
+    imputer=SimpleImputer(missing_values=np.nan, strategy="mean")
+    scaler=StandardScaler()
+    selector=VarianceThreshold(threshold=(0.8*(1-0.8)))
+    #estimator=DecisionTreeRegressor(max_depth=10, splitter="random", max_leaf_nodes=None, min_samples_leaf=1)
+    estimator=Lasso()
+    pipe = make_pipeline(imputer, scaler, selector, estimator)
+    return pipe
+
+def createpipeMLP():
+    imputer=SimpleImputer(missing_values=np.nan, strategy="mean")
+    scaler=StandardScaler()
+    selector=VarianceThreshold(threshold=(0.8*(1-0.8)))
+    #estimator=DecisionTreeRegressor(max_depth=10, splitter="random", max_leaf_nodes=None, min_samples_leaf=1)
+    estimator=MLPRegressor()
+    pipe = make_pipeline(imputer, scaler, selector, estimator)
+    return pipe
+
+def createpipeKN():
+    imputer=SimpleImputer(missing_values=np.nan, strategy="mean")
+    scaler=StandardScaler()
+    selector=VarianceThreshold(threshold=(0.8*(1-0.8)))
+    #estimator=DecisionTreeRegressor(max_depth=10, splitter="random", max_leaf_nodes=None, min_samples_leaf=1)
+    estimator=KNeighborsRegressor()
     pipe = make_pipeline(imputer, scaler, selector, estimator)
     return pipe
 

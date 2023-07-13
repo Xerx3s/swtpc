@@ -25,7 +25,7 @@
         "turbidity": ["NTU", 5],
         "ec": ["µS/cm", null],
         "ph": ["", 6.5, 8.5],
-        "tds": ["mg/l", 300],
+        "tds": ["mg/l", 600],
         "nitrate": ["mg/l", 50],
         "arsenic": ["mg/l", 0.01],
         "iron": ["mg/l", 0.3],
@@ -93,18 +93,14 @@
         //methods
         let methods_list: String[] = []
 
-        if (data.tds > limits.tds[1]) {
-            if (data.turbidity > 5) {
+        if (data.turbidity > (10 * limits.turbidity[1])) {
                 methods.flocculation = true
                 methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
             }
+        if (data.tds > limits.tds[1]) {
             methods.ro = true
             methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a>`)
         } else {
-            if (data.turbidity > (10 * limits.turbidity[1]) || data.iron > limits.iron[1]) {
-                methods.flocculation = true
-                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
-            }
             if (data.turbidity > limits.turbidity[1] || data.nitrate > limits.nitrate[1] || data.arsenic > limits.arsenic[1]) {
                 methods.bsf = true
                 if (data.arsenic < limits.arsenic[1]) {
@@ -118,7 +114,7 @@
                 methods.aaa = true
                 methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a>`)
             }
-            if (data.tvc > 1000 || !methods.bsf && (data.tvc > limits.tvc[1] || data.coliforms > limits.coliforms[1] || data.ecoli > limits.ecoli[1])) {
+            if (data.tvc > limits.tvc[1] || data.coliforms > limits.coliforms[1] || data.ecoli > limits.ecoli[1]) {
                 methods.sodis = true
                 methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a>`)
             }
@@ -157,7 +153,7 @@
             <br />
             <Textfield type="number" input$step="0.1" bind:value={data.iron} label="Iron" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
-            <Textfield type="number" input$step="0.1" bind:value={data.fluoride} label="Flouride" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
+            <Textfield type="number" input$step="0.1" bind:value={data.fluoride} label="Fluoride" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
         </Content>
     </Paper>
@@ -166,9 +162,9 @@
         <Content style="display:flex; flex-direction:column">
             <Textfield type="number" bind:value={data.tvc} label="Total Viable Count" suffix="cfu/ml"  style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
-            <!--<Textfield type="number" bind:value={data.coliforms} label="Coliform Bacteria" suffix="1/100ml"  style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />-->
-            <!--<Textfield type="number" bind:value={data.ecoli} label="E.Coli" suffix="1/100ml"  style="flex-grow:1; margin-bottom:0.5em"/>-->
+            <Textfield type="number" bind:value={data.coliforms} label="Coliform Bacteria" suffix="1/100ml"  style="flex-grow:1; margin-bottom:0.5em"/>
+            <br />
+            <Textfield type="number" bind:value={data.ecoli} label="E.Coli" suffix="1/100ml"  style="flex-grow:1; margin-bottom:0.5em"/>
         </Content>
     </Paper>
 </div>

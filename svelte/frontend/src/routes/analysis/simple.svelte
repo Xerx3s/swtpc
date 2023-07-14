@@ -149,12 +149,12 @@
                         <Checkbox bind:checked={data.organic_material} />
                     </Meta>
                 </Item>
-                <Item>
+                <!--<Item>
                     <Label>Metallic</Label>
                     <Meta>
                         <Checkbox bind:checked={data.heavy_metals} />
                     </Meta>
-                </Item>
+                </Item>-->
                 <Item>
                     <Label>Salty</Label>
                     <Meta>

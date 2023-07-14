@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from bsf_concept.scripts.modules.connectdb import connectdb
-from bsf_concept.scripts.modules.mlalgorithms import createpipeXGB as createpipeline
+from bsf_concept.scripts.modules.mlalgorithms import createpipeMLP as createpipeline
 from bsf_concept.scripts.modules.mlalgorithms import assess_pipeline, save_pipeline, load_pipeline
 from bsf_concept.scripts.modules.pso import minimize
 import bsf_concept.scripts.modules.config as config
@@ -51,18 +51,17 @@ def trainorloadpipe(load: bool, printass: bool):
     
     if printass:
         actualvpredicted, scores, evaluation = assess_pipeline(pipe, X_train, X_test, y_train, y_test)
-        print("\nPrediction Test with test dataset")
-        print("actual vs. predicted output:")
-        print(actualvpredicted)
-        print('\nnumber of rows: %d' %(scores["rows"]))
-        print("Trainings-Score: %.4f" %(scores["train_score"]))
-        print("Test-Score: %.4f" %(scores["test_score"]))
-        print("Used input features: ", (scores["used_features"]))
-        print('\nEvaluation report:')
-        print ("RMSE: %.2f" %(evaluation["rmse"]))
-        print ("MAE: %.2f" %(evaluation["mae"]))
-        print ("MAPE: %.2f" %(evaluation["mape"]))
-        print('Accuracy: %.2f'%((100-evaluation["mape"])))
+        print(
+            "\nPrediction Test with test dataset\n",
+            "actual vs. predicted output:\n",
+            actualvpredicted,
+            '\nnumber of rows: %d' %(scores["rows"]),
+            "\nTrainings-Score: %.4f" %(scores["train_score"]),
+            "\nTest-Score: %.4f" %(scores["test_score"]),
+            "\nUsed input features: ", (scores["used_features"]),
+            '\nEvaluation report:',
+            "\nRMSE: %.2f" %(evaluation["rmse"]),
+            "\nMAE: %.2f" %(evaluation["mae"]))
 
     #return pipe, X_train, X_test, y_train, y_test
     return pipe, bounds

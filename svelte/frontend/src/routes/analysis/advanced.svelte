@@ -151,8 +151,8 @@
             <br />
             <Textfield type="number" input$step="0.01" bind:value={data.arsenic} label="Arsenic" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
-            <Textfield type="number" input$step="0.1" bind:value={data.iron} label="Iron" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
-            <br />
+            <!--<Textfield type="number" input$step="0.1" bind:value={data.iron} label="Iron" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
+            <br />-->
             <Textfield type="number" input$step="0.1" bind:value={data.fluoride} label="Fluoride" suffix="mg/l"  style="flex-grow:1; margin-bottom:0.5em"/>
             <br />
         </Content>

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from db_connection.models import flocculation_data, bsf_data
+from db_connection.models import flocculation_data, bsf_data, aaa_data
 from django.contrib.auth.models import User, Group
 
 
@@ -62,3 +62,12 @@ class bsfdataSerializer(serializers.HyperlinkedModelSerializer):
             "final_ecoli",
             "initial_turbidity",
             "final_turbidity"]
+        
+class aaadataSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = aaa_data
+        fields = [
+            "url",
+            "concentration",
+            "time",
+            "coverage"]

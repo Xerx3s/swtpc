@@ -5094,3 +5094,59 @@ NameError: name 'pred_type' is not defined
 2023-07-13 09:33:24,264 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
 2023-07-13 09:34:16,115 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
 2023-07-13 09:35:12,192 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-07-15 11:40:41,648 - django.request - WARNING - Not Found: /favicon.ico
+2023-07-15 11:45:14,766 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/models.py changed, reloading.
+2023-07-15 12:18:58,835 - django.utils.autoreload - INFO - /opt/django/backend/backend/urls.py changed, reloading.
+2023-07-15 12:19:10,649 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 12:19:36,007 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 14, in post
+    coverage = aaa_doser.interpolate(time=t, concentration=c)
+TypeError: aaa_doser.interpolate() missing 1 required positional argument: 'self'
+2023-07-15 12:20:21,942 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/views.py changed, reloading.
+2023-07-15 12:20:41,452 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 12:22:01,592 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/serializers.py changed, reloading.
+2023-07-15 12:22:11,931 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 12:22:17,877 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 15, in post
+    coverage = doser.interpolate(time=t, concentration=c)
+  File "/opt/django/backend/aaa_doser/scripts/main.py", line 22, in interpolate
+    return itp([[time,concentration]])
+  File "/usr/local/lib/python3.10/dist-packages/scipy/interpolate/_rgi.py", line 320, in __call__
+    raise ValueError("One of the requested xi is out of bounds "
+ValueError: One of the requested xi is out of bounds in dimension 1
+2023-07-15 12:22:47,093 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/scripts/main.py changed, reloading.
+2023-07-15 12:23:02,194 - django.request - WARNING - Method Not Allowed: /aaa/

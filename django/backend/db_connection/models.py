@@ -41,3 +41,8 @@ class bsf_data(models.Model):
     final_ecoli = models.FloatField(blank=False, default='')
     initial_turbidity = models.IntegerField(blank=False, default='')
     final_turbidity = models.IntegerField(blank=False, default='')
+
+class aaa_data(models.Model):
+    c = models.FloatField(blank=False, default="")
+    t = models.FloatField(blank=False, default="")
+    q = models.FloatField(blank=False, default="")

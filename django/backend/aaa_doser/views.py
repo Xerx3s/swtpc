@@ -14,8 +14,8 @@ class predictAAAView(APIView):
         doser = aaa_doser()
         coverage = doser.interpolate(time=t, concentration=c)
         data = {
-            "time": t,
             "concentration": c,
+            "time": t,
             "coverage": coverage}
         
         return Response(data=data)

@@ -50,7 +50,7 @@
             id: "aaa",
             link: "aaa",
             simple: false,
-            pred: false,
+            pred: true,
             opt: false,
             name: "Activated Alumina Adsorption",
             image: "card-media-aaa",

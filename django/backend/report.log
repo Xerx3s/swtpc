@@ -5150,3 +5150,180 @@ Traceback (most recent call last):
 ValueError: One of the requested xi is out of bounds in dimension 1
 2023-07-15 12:22:47,093 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/scripts/main.py changed, reloading.
 2023-07-15 12:23:02,194 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 13:15:36,819 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 15, in post
+    int(request.data.get('starting_hour')),
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-07-15 13:15:47,301 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 15, in post
+    int(request.data.get('starting_hour')),
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-07-15 13:16:07,627 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 15, in post
+    coverage = doser.interpolate(time=t, concentration=c)
+  File "/opt/django/backend/aaa_doser/scripts/main.py", line 22, in interpolate
+    return itp([[time,concentration]])[0]
+  File "/usr/local/lib/python3.10/dist-packages/scipy/interpolate/_rgi.py", line 320, in __call__
+    raise ValueError("One of the requested xi is out of bounds "
+ValueError: One of the requested xi is out of bounds in dimension 1
+2023-07-15 13:19:10,854 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/scripts/main.py changed, reloading.
+2023-07-15 13:19:30,792 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 15, in post
+    coverage = doser.interpolate(time=t, concentration=c)
+  File "/opt/django/backend/aaa_doser/scripts/main.py", line 22, in interpolate
+    return itp([[concentration,time]])[0]
+  File "/usr/local/lib/python3.10/dist-packages/scipy/interpolate/_rgi.py", line 320, in __call__
+    raise ValueError("One of the requested xi is out of bounds "
+ValueError: One of the requested xi is out of bounds in dimension 1
+2023-07-15 13:24:06,477 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/models.py changed, reloading.
+2023-07-15 13:24:29,549 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/serializers.py changed, reloading.
+2023-07-15 13:25:10,329 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 13:25:39,446 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/models.py changed, reloading.
+2023-07-15 13:25:51,555 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 13:25:55,344 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-15 13:26:01,678 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/models.py changed, reloading.
+2023-07-15 13:26:22,959 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/views.py changed, reloading.
+2023-07-15 13:26:57,928 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 15, in post
+    coverage = doser.interpolate(time=t, concentration=c)
+  File "/opt/django/backend/aaa_doser/scripts/main.py", line 22, in interpolate
+    return itp([[concentration,time]])[0]
+  File "/usr/local/lib/python3.10/dist-packages/scipy/interpolate/_rgi.py", line 320, in __call__
+    raise ValueError("One of the requested xi is out of bounds "
+ValueError: One of the requested xi is out of bounds in dimension 1
+2023-07-15 14:51:56,176 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 15, in post
+    coverage = doser.interpolate(time=t, concentration=c)
+  File "/opt/django/backend/aaa_doser/scripts/main.py", line 22, in interpolate
+    return itp([[concentration,time]])[0]
+  File "/usr/local/lib/python3.10/dist-packages/scipy/interpolate/_rgi.py", line 320, in __call__
+    raise ValueError("One of the requested xi is out of bounds "
+ValueError: One of the requested xi is out of bounds in dimension 1
+2023-07-15 14:52:02,230 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 15, in post
+    coverage = doser.interpolate(time=t, concentration=c)
+  File "/opt/django/backend/aaa_doser/scripts/main.py", line 22, in interpolate
+    return itp([[concentration,time]])[0]
+  File "/usr/local/lib/python3.10/dist-packages/scipy/interpolate/_rgi.py", line 320, in __call__
+    raise ValueError("One of the requested xi is out of bounds "
+ValueError: One of the requested xi is out of bounds in dimension 1
+2023-07-15 14:55:19,068 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/scripts/main.py changed, reloading.

@@ -18,5 +18,8 @@ class aaa_doser():
         interp = LinearNDInterpolator(list(zip(t, c)), q)
         self.Q = interp(self.Time, self.C)
     def interpolate(self, time: float, concentration: float):
-        itp = RegularGridInterpolator(points=[self.C.T[0],self.Time[0]], values=self.Q, method='nearest') 
-        return itp([[time,concentration]])[0]
+        try:
+            itp = RegularGridInterpolator(points=[self.C.T[0],self.Time[0]], values=self.Q, method='nearest')
+            return itp([[concentration,time]])[0]
+        except ValueError:
+            return "ERROR"

@@ -5327,3 +5327,159 @@ Traceback (most recent call last):
     raise ValueError("One of the requested xi is out of bounds "
 ValueError: One of the requested xi is out of bounds in dimension 1
 2023-07-15 14:55:19,068 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/scripts/main.py changed, reloading.
+2023-07-26 14:55:52,787 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/views.py changed, reloading.
+2023-07-26 14:56:04,348 - django.request - WARNING - Not Found: /favicon.ico
+2023-07-26 14:56:08,452 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 510, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 518, in render_form_for_serializer
+    serializer.data,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `concentration_chloride` is not valid for model `predictAAAData`.
+2023-07-26 14:57:26,832 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/models.py changed, reloading.
+2023-07-26 14:57:38,207 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 510, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 518, in render_form_for_serializer
+    serializer.data,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `concentration_sulphate` is not valid for model `predictAAAData`.
+2023-07-26 14:57:50,653 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/serializers.py changed, reloading.
+2023-07-26 14:58:00,027 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/dist-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 695, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 510, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/renderers.py", line 518, in render_form_for_serializer
+    serializer.data,
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `concentratiln_bicarbonate` is not valid for model `predictAAAData`.
+2023-07-26 14:58:07,454 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/serializers.py changed, reloading.
+2023-07-26 14:58:17,943 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-26 14:58:35,687 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-26 14:59:06,348 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-26 14:59:17,873 - django.request - WARNING - Method Not Allowed: /aaa/
+2023-07-26 15:00:19,880 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 14, in post
+    cCl = float(request.data.get('concentration_chloride'))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2023-07-26 15:01:12,161 - django.request - ERROR - Internal Server Error: /aaa/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/aaa_doser/views.py", line 14, in post
+    cCl = float(request.data.get('concentration_chloride'))
+TypeError: float() argument must be a string or a real number, not 'NoneType'

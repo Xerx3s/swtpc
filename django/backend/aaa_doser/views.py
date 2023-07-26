@@ -11,11 +11,21 @@ class predictAAAView(APIView):
     def post(self, request, *args, **kwargs):
         t = float(request.data.get('contact_time'))
         c = float(request.data.get('concentration'))
+        cCl = float(request.data.get('concentration_chloride'))
+        cSO4 = float(request.data.get('concentration_sulfate'))
+        cHCO3 = float(request.data.get('concentration_bicarbonate'))
+        cHPO4 = float(request.data.get('concentration_hydrogen_phosphate'))
+        cAs = float(request.data.get('concentration_arsenic'))
         doser = aaa_doser()
-        coverage = doser.interpolate(time=t, concentration=c)
+        coverage = doser.interpolate(t, c, cCl, cSO4, cHCO3, cHPO4, cAs)
         data = {
             "concentration": c,
             "time": t,
+            "cCl": cCl,
+            "cSO4": cSO4,
+            "cHCO3": cHCO3,
+            "cHPO4": cHPO4,
+            "cAs": cAs,
             "coverage": coverage}
         
         return Response(data=data)

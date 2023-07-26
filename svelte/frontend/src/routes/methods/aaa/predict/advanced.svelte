@@ -16,7 +16,12 @@
 
     let data = {
         "contact_time": 60.0,
-        "concentration": 10.0
+        "concentration": 10.0,
+        "concentration_chloride": 0.0,
+        "concentration_sulfate": 0.0,
+        "concentration_bicarbonate": 0.0,
+        "concentration_hydrogen_phosphate": 0.0,
+        "concentration_arsenic": 0.0,
     }
 
     let process_param = {
@@ -82,6 +87,34 @@
             <Wrapper>
                 <Textfield type="number" bind:value={process_param.volume} label="Process Volume" suffix="l" style="flex-grow:1; margin-bottom:0.5em"/>
                 <Tooltip>Enter the process volume</Tooltip>
+            </Wrapper>
+        </Content>
+    </Paper>
+    <Paper style="margin:1em; flex-grow:1; min-width:20em">
+        <Title>Competing Ions</Title>
+        <Content style="display:flex; flex-direction:column; margin:1em">
+            <Wrapper>
+                <Textfield type="number" bind:value={data.concentration_chloride} label="Chloride concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the initial chloride concentration</Tooltip>
+            </Wrapper>
+            <br />
+            <Wrapper>
+                <Textfield type="number" bind:value={data.concentration_sulfate} label="Sulfate concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the initial sulfate concentration</Tooltip>
+            </Wrapper>
+            <br />
+            <Wrapper>
+                <Textfield type="number" bind:value={data.concentration_bicarbonate} label="Bicarbonate concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the initial bicarbonate concentration</Tooltip>
+            </Wrapper>
+            <br />
+            <Wrapper>
+                <Textfield type="number" bind:value={data.concentration_hydrogen_phosphate} label="Hydrogen Phosphate concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the initial hydrogen phosphate concentration</Tooltip>
+            </Wrapper>
+            <Wrapper>
+                <Textfield type="number" bind:value={data.concentration_arsenic} label="Arsenic concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Tooltip>Enter the initial arsenic concentration</Tooltip>
             </Wrapper>
         </Content>
     </Paper>

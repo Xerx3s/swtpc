@@ -148,12 +148,12 @@
         for (const [key, value] of Object.entries(res2)) {
             let name = description[key]
             if (!(isNaN(value))) {
-                if (key == "initial_pH" || key == "floc_saline_Molarity") {
-                let rounded = value.toFixed(1)
-                res3.push({ 
-                    id: key,
-                    name: name,
-                    opt: rounded })
+                if (key == "mean_grain_diameter") {
+                    let rounded = value.toFixed(1)
+                    res3.push({ 
+                        id: key,
+                        name: name,
+                        opt: rounded })
                 } else {
                     let rounded = value.toFixed(0)
                     res3.push({ 

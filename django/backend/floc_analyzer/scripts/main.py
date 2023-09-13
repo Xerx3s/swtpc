@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from floc_analyzer.scripts.modules.connectdb import connectdb
-from floc_analyzer.scripts.modules.mlalgorithms import createpipeKN as createpipeline
+from floc_analyzer.scripts.modules.mlalgorithms import createpipeXGB as createpipeline
 from floc_analyzer.scripts.modules.mlalgorithms import assess_pipeline, save_pipeline, load_pipeline
 from floc_analyzer.scripts.modules.pso import minimize
 import floc_analyzer.scripts.modules.config as config

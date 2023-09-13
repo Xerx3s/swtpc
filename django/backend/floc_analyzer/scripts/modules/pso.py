@@ -57,8 +57,8 @@ def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
                 bounds["initial_pH"][0],
                 bounds["initial_EC"][0],
                 bounds["initial_turbidity"][0],
-                bounds["floc_saline_Molarity"][0],
                 bounds["floc_dose"][0],
+                bounds["floc_saline_Molarity"][0],
                 bounds["floc_cactus_share"][0],
                 bounds["stirring_speed_coagulation_phase"][0],
                 bounds["duration_coagulation_phase"][0],
@@ -70,8 +70,8 @@ def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
                 bounds["initial_pH"][1],
                 bounds["initial_EC"][1],
                 bounds["initial_turbidity"][1],
-                bounds["floc_saline_Molarity"][1],
                 bounds["floc_dose"][1],
+                bounds["floc_saline_Molarity"][1],
                 bounds["floc_cactus_share"][1],
                 bounds["stirring_speed_coagulation_phase"][1],
                 bounds["duration_coagulation_phase"][1],
@@ -80,6 +80,7 @@ def minimize(pipe: Pipeline, pred_type: str, bounds: dict):
                 bounds["duration_sedimentation_phase"][1]
             ]),
         )
+        print(bounds_tuple)
         optimizer = GlobalBestPSO(n_particles=particles, dimensions=11, options=options, bounds=bounds_tuple)
     
     output, best_param = optimizer.optimize(objective_function, iters=iterations)

@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from bsf_concept.scripts.modules.connectdb import connectdb
-from bsf_concept.scripts.modules.mlalgorithms import createpipeMLP as createpipeline
+from bsf_concept.scripts.modules.mlalgorithms import createpipeXGB as createpipeline
 from bsf_concept.scripts.modules.mlalgorithms import assess_pipeline, save_pipeline, load_pipeline
 from bsf_concept.scripts.modules.pso import minimize
 import bsf_concept.scripts.modules.config as config

@@ -6643,3 +6643,44 @@ ValueError: operands could not be broadcast together with shapes (50,11,50) (50,
 2023-09-13 13:58:21,521 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
 2023-09-13 14:01:20,170 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/main.py changed, reloading.
 2023-09-13 14:02:12,611 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/main.py changed, reloading.
+2023-09-13 14:55:38,136 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 14:55:38,996 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 3.331700563430786, best pos: [8.60664717e+00 4.00311278e+02 9.56278727e+01 2.51555791e+02
+ 2.48069197e-01 6.46549703e+00 1.21342570e+02            nan
+ 2.58151074e+01 1.43441983e+01 5.72589127e+01]
+2023-09-13 14:55:41,312 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 14:55:42,098 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 2.8316597938537598, best pos: [8.25336509e+00 4.00193543e+02 9.70231245e+01 2.32195090e+02
+ 2.22097420e-01 1.20662427e+01 9.57406638e+01            nan
+ 2.38938598e+01 1.45089293e+01 5.83426521e+01]
+2023-09-13 14:56:00,684 - django.request - WARNING - Method Not Allowed: /opt_tur/
+2023-09-13 14:56:01,950 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 14:56:02,864 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 2.143173933029175, best pos: [8.41818987e+00 3.54809028e+02 5.10726969e+01 2.41933209e+02
+ 2.64693203e-01 2.93731264e+00 1.08156133e+02 1.45347584e+00
+ 2.89494392e+01 1.34034149e+01 3.82102496e+01]
+2023-09-13 14:56:59,826 - django.request - WARNING - Method Not Allowed: /bsf/
+2023-09-13 14:58:37,163 - django.request - WARNING - Not Found: /Opt_bsf/
+2023-09-13 14:58:44,737 - django.request - WARNING - Method Not Allowed: /opt_bsf/
+2023-09-13 14:58:54,327 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 14:58:55,028 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.2591917514801025, best pos: [26.70645575 23.77070528         nan 39.25073886 10.08675944 13.86541989
+ 31.80897618]
+2023-09-13 14:59:30,912 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 14:59:31,646 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.0500777959823608, best pos: [23.26299097 21.12035849         nan  1.81244579 12.55151301 16.14264501
+ 10.35868074]
+2023-09-13 15:03:18,039 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 15:03:18,786 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.0500777959823608, best pos: [23.43443424 23.76606961         nan  1.54703618 15.19507135 16.82795048
+ 10.22141615]
+2023-09-13 15:03:21,344 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 15:03:22,081 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.255767822265625, best pos: [25.97130338 23.52902742         nan 60.77810872 10.81517472 16.3754409
+ 33.3000804 ]
+2023-09-13 15:03:39,539 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 15:03:40,249 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.647879600524902, best pos: [8.15634275e+00 5.28326018e+02 1.12406517e+02 1.53356937e+02
+ 4.77958977e-01 3.37127287e+01 1.01203707e+02            nan
+ 2.89634057e+01 1.47953724e+01 4.72281058e+01]
+2023-09-13 15:03:43,421 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 15:03:44,190 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4.298679351806641, best pos: [8.22272860e+00 5.04697045e+02 1.01701991e+02 1.53325906e+02
+ 4.98700014e-01 1.23036146e+01 1.07853327e+02            nan
+ 2.49773331e+01 1.39748751e+01 5.27294642e+01]
+2023-09-13 15:06:56,931 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/pso.py changed, reloading.
+2023-09-13 15:07:12,121 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2023-09-13 15:07:13,148 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.15549889e+00 4.68565981e+02 9.44579002e+01 4.06027049e-01
+ 2.34547515e+02 3.48574279e+01 1.09012897e+02            nan
+ 2.40449142e+01 1.23782035e+01 5.27253781e+01]

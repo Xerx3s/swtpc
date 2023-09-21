@@ -82,7 +82,8 @@ def assess_pipeline(pipe: Pipeline, X_train, X_test, y_train, y_test):
     df_pred_test.rename(columns={0: "prediction"}, errors= "raise", inplace=True)
     actualvpredicted = pd.concat([y_test.round(decimals=2).reset_index(), df_pred_test.round(decimals=2)], axis=1)
     actualvpredicted.set_index("index", inplace=True)
-    actualvpredicted.to_csv(r"flocculation_analysis\single_target\data\actualvpredicted_fEC.txt", sep=";", decimal=",")
+    save_path = "bsf_concept/data/actualvpredicted/actualvpredicted_bsf.txt"
+    actualvpredicted.to_csv(save_path, sep=";", decimal=",")
 
     # scores
     rows = len(actualvpredicted.index)

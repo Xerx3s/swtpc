@@ -169,7 +169,7 @@
         <Content>
             <List checkList>
                 <Item>
-                    <Label>Strong Algae Formation</Label>
+                    <Label>Blue Baby Syndrom</Label>
                     <Meta>
                         <Checkbox bind:checked={data.nitrate} />
                     </Meta>

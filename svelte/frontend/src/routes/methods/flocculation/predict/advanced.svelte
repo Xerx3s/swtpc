@@ -272,11 +272,10 @@
                         </Row>
                         </Head>
                         <Body>
-                        <!--    <Row>
+                            <Row>
                                 <Cell>Final pH</Cell>
                                 <Cell numeric>{pred_fpH}</Cell>
                             </Row>
-                        -->
                             <Row>
                                 <Cell>Final EC (in µS/cm)</Cell>
                                 <Cell numeric>{pred_fEC}</Cell>

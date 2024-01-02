@@ -6973,8 +6973,3 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainabl
 2024-01-02 20:51:10,047 - django.request - WARNING - Not Found: /static/rest_framework/css/prettify.css
 2024-01-02 20:51:10,053 - django.request - WARNING - Not Found: /static/rest_framework/css/default.css
 2024-01-02 20:51:19,413 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
-2024-01-02 20:57:30,135 - django.request - WARNING - Not Found: /favicon.ico
-2024-01-02 21:32:37,025 - django.request - WARNING - Method Not Allowed: /ec/
-2024-01-02 21:55:24,907 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
-2024-01-02 22:01:01,805 - django.security.csrf - WARNING - Forbidden (Origin checking failed - https://api.sustainable-water.de does not match any trusted origins.): /api-auth/login/
-2024-01-02 22:05:22,624 - django.security.csrf - WARNING - Forbidden (Origin checking failed - https://api.sustainable-water.de does not match any trusted origins.): /admin/login/

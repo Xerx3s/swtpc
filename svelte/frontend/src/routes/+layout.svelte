@@ -53,7 +53,7 @@
         </Button>
       </Item>
       <Item>
-        <Button href="http://192.168.178.69:3000/" target="_blank" rel="noreferrer">
+        <Button href="https://wiki.sustainable-water.de/" target="_blank" rel="noreferrer">
           <Label>Knowledge Base</Label>
         </Button>
       </Item>

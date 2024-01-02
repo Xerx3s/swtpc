@@ -6823,3 +6823,158 @@ TypeError: not all arguments converted during string formatting
 2023-09-21 09:50:57,384 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
 2023-09-21 09:50:58,118 - pyswarms.single.global_best - INFO - Optimization finished | best cost: -1.0214468240737915, best pos: [26.01320915 24.50844874         nan 19.18053945 10.34999003 14.48733238
  33.10672623]
+2023-12-27 11:35:56,030 - django.request - WARNING - Not Found: /favicon.ico
+2023-12-27 11:36:13,547 - django.request - WARNING - Method Not Allowed: /tur/
+2023-12-27 11:36:25,302 - django.request - WARNING - Method Not Allowed: /tur/
+2023-12-27 11:36:42,703 - django.request - WARNING - Method Not Allowed: /ec/
+2023-12-27 11:46:56,961 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2023-12-27 11:49:22,778 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:40:14,138 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-02 19:40:27,176 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-02 19:49:28,282 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:49:43,000 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:50:29,813 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:50:50,192 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:51:38,297 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:54:16,293 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:54:16,399 - django.request - WARNING - Bad Request: /
+2024-01-02 19:54:16,573 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:54:16,653 - django.request - WARNING - Bad Request: /favicon.ico
+2024-01-02 19:54:34,221 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:54:43,861 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:54:43,977 - django.request - WARNING - Bad Request: /
+2024-01-02 19:54:44,051 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:54:44,131 - django.request - WARNING - Bad Request: /favicon.ico
+2024-01-02 19:54:46,167 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:54:46,246 - django.request - WARNING - Bad Request: /
+2024-01-02 19:54:46,316 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:54:46,404 - django.request - WARNING - Bad Request: /favicon.ico
+2024-01-02 19:54:56,942 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:55:06,252 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:55:06,392 - django.request - WARNING - Bad Request: /
+2024-01-02 19:55:06,462 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.local'. You may need to add 'api.sustainable-water.local' to ALLOWED_HOSTS.
+2024-01-02 19:55:06,542 - django.request - WARNING - Bad Request: /favicon.ico
+2024-01-02 19:55:27,622 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:55:37,761 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-02 19:55:58,413 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.de'. You may need to add 'api.sustainable-water.de' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.de'. You may need to add 'api.sustainable-water.de' to ALLOWED_HOSTS.
+2024-01-02 19:55:58,502 - django.request - WARNING - Bad Request: /
+2024-01-02 19:55:58,678 - django.security.DisallowedHost - ERROR - Invalid HTTP_HOST header: 'api.sustainable-water.de'. You may need to add 'api.sustainable-water.de' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/dist-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainable-water.de'. You may need to add 'api.sustainable-water.de' to ALLOWED_HOSTS.
+2024-01-02 19:55:58,755 - django.request - WARNING - Bad Request: /favicon.ico
+2024-01-02 19:56:14,708 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 19:56:23,945 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-02 20:44:38,922 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-02 20:50:39,584 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 20:50:53,588 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap.min.css
+2024-01-02 20:50:53,595 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2024-01-02 20:50:53,600 - django.request - WARNING - Not Found: /static/rest_framework/css/prettify.css
+2024-01-02 20:50:53,607 - django.request - WARNING - Not Found: /static/rest_framework/css/default.css
+2024-01-02 20:51:10,035 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap.min.css
+2024-01-02 20:51:10,040 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2024-01-02 20:51:10,047 - django.request - WARNING - Not Found: /static/rest_framework/css/prettify.css
+2024-01-02 20:51:10,053 - django.request - WARNING - Not Found: /static/rest_framework/css/default.css
+2024-01-02 20:51:19,413 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 20:57:30,135 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-02 21:32:37,025 - django.request - WARNING - Method Not Allowed: /ec/
+2024-01-02 21:55:24,907 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-02 22:01:01,805 - django.security.csrf - WARNING - Forbidden (Origin checking failed - https://api.sustainable-water.de does not match any trusted origins.): /api-auth/login/
+2024-01-02 22:05:22,624 - django.security.csrf - WARNING - Forbidden (Origin checking failed - https://api.sustainable-water.de does not match any trusted origins.): /admin/login/

@@ -65,28 +65,28 @@
         let problems_list: String[] = []
 
         if (data.turbidity > limits.turbidity[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/turbidity" target="_blank" rel="noreferrer">Turbidity</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/turbidity" target="_blank" rel="noreferrer">Turbidity</a>`)
         }
         //if (data.ph < limits.ph[1] || data.ph > limits.ph[2]) {
-        //    problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/ph" target="_blank" rel="noreferrer">pH</a>`)
+        //    problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/ph" target="_blank" rel="noreferrer">pH</a>`)
         //}
         if (data.nitrate > limits.nitrate[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/nitrate" target="_blank" rel="noreferrer">Nitrate</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/nitrate" target="_blank" rel="noreferrer">Nitrate</a>`)
         }
         if (data.tds > limits.tds[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/salinity" target="_blank" rel="noreferrer">Salinity</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/salinity" target="_blank" rel="noreferrer">Salinity</a>`)
         }
         if (data.arsenic > limits.arsenic[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/arsenic" target="_blank" rel="noreferrer">Arsenic</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/arsenic" target="_blank" rel="noreferrer">Arsenic</a>`)
         }
         if (data.iron > limits.iron[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/iron" target="_blank" rel="noreferrer">Iron</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/iron" target="_blank" rel="noreferrer">Iron</a>`)
         }
         if (data.fluoride > limits.fluoride[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/fluoride" target="_blank" rel="noreferrer">Fluoride</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/fluoride" target="_blank" rel="noreferrer">Fluoride</a>`)
         }
         if (data.tvc > limits.tvc[1] || data.coliforms > limits.coliforms[1] || data.ecoli > limits.ecoli[1]) {
-            problems_list.push(`<a href="http://192.168.178.69:3000/en/contaminants/coliform-bacteria" target="_blank" rel="noreferrer">Pathogens</a>`)
+            problems_list.push(`<a href="https://wiki.sustainable-water.de/en/contaminants/coliform-bacteria" target="_blank" rel="noreferrer">Pathogens</a>`)
         }
         let problems_string = problems_list.join(", ")
 
@@ -95,28 +95,28 @@
 
         if (data.turbidity > (10 * limits.turbidity[1])) {
                 methods.flocculation = true
-                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
+                methods_list.push(`<a href="https://wiki.sustainable-water.de/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a>`)
             }
         if (data.tds > limits.tds[1]) {
             methods.ro = true
-            methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a>`)
+            methods_list.push(`<a href="https://wiki.sustainable-water.de/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a>`)
         } else {
             if (data.turbidity > limits.turbidity[1] || data.nitrate > limits.nitrate[1] || data.arsenic > limits.arsenic[1]) {
                 methods.bsf = true
                 if (data.arsenic < limits.arsenic[1]) {
-                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
+                    methods_list.push(`<a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>`)
                 }
                 else{
-                    methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
+                    methods_list.push(`<a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>`)
                 }
             }
             if (data.fluoride > limits.fluoride[1]) {
                 methods.aaa = true
-                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a>`)
+                methods_list.push(`<a href="https://wiki.sustainable-water.de/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a>`)
             }
             if (data.tvc > limits.tvc[1] || data.coliforms > limits.coliforms[1] || data.ecoli > limits.ecoli[1]) {
                 methods.sodis = true
-                methods_list.push(`<a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a>`)
+                methods_list.push(`<a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a>`)
             }
         }
         let methods_string = methods_list.join(", ")
@@ -191,13 +191,13 @@
                         {#if methods.flocculation}
                             <Row>
                                 <Cell numeric>1</Cell>
-                                <Cell><a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></Cell>
                             </Row>
                         {/if}
                         {#if methods.ro}
                             <Row>
                                 <Cell numeric>2</Cell>
-                                <Cell><a href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a></Cell>
                             </Row>
                         {/if}
                         {#if methods.bsf}
@@ -205,9 +205,9 @@
                                 <Cell numeric>2</Cell>
                                 <Cell>
                                     {#if data.arsenic}
-                                        <a href="http://192.168.178.69:3000/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>
+                                        <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>
                                     {:else}
-                                        <a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>
+                                        <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>
                                     {/if}
                                 </Cell>
                             </Row>
@@ -215,13 +215,13 @@
                         {#if methods.aaa}
                             <Row>
                                 <Cell numeric>3</Cell>
-                                <Cell><a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></Cell>
                             </Row>
                         {/if}
                         {#if methods.sodis}
                             <Row>
                                 <Cell numeric>4</Cell>
-                                <Cell><a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></Cell>
                             </Row>
                         {/if}
                     </Body>

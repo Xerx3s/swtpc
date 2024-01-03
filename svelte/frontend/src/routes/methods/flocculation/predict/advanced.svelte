@@ -261,7 +261,7 @@
                 {#if pred_ftur > 5}
                     <p>
                         Since the residual turbidity is still above the WHO guideline value of 5 NTU, it is recommended to integrate another treatment stage for turbidity reduction.
-                        For example, <a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">biosand filtration</a> can be useful for this.
+                        For example, <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">biosand filtration</a> can be useful for this.
                     </p>
                 {/if}
                     <DataTable table$aria-label="Results" style="max-width: 100%;">

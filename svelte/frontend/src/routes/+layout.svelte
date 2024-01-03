@@ -53,7 +53,7 @@
         </Button>
       </Item>
       <Item>
-        <Button href="http://192.168.178.69:3000/" target="_blank" rel="noreferrer">
+        <Button href="https://wiki.sustainable-water.de" target="_blank" rel="noreferrer">
           <Label>Knowledge Base</Label>
         </Button>
       </Item>
@@ -98,7 +98,7 @@
   <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="/analysis">
     <Label>Analysis</Label>
   </Button>
-  <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="http://192.168.178.69:3000/" target="_blank" rel="noreferrer">
+  <Button variant="unelevated" style="flex-grow:1; margin: 1em;" href="https://wiki.sustainable-water.de" target="_blank" rel="noreferrer">
     <Label>Knowledge Base</Label>
   </Button>
 </footer>

@@ -13,7 +13,7 @@
 <div>
     <h5>Activated Alumina Adsorption Dosage Recommendation</h5>
     <p>
-        For more information on the treatment method, see the <a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">knowledge base entry</a>.
+        For more information on the treatment method, see the <a href="https://wiki.sustainable-water.de/en/methods/aaa" target="_blank" rel="noreferrer">knowledge base entry</a>.
     </p>
     <p>
         Please input the fluoride concentration present in your water and select your desired contact time.<br />

@@ -94,7 +94,7 @@
             </Content>
             <Actions>
             <ActionButtons>
-                <Button href="http://192.168.178.69:3000/en/methods/{method.link}" target="_blank" rel="noreferrer">
+                <Button href="https://wiki.sustainable-water.de/en/methods/{method.link}" target="_blank" rel="noreferrer">
                     <Label>Description</Label>
                 </Button>
                 {#if advanced}

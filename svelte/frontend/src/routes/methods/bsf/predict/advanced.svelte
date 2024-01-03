@@ -136,7 +136,7 @@
                         Pathogens should have been reduced to a total viable count of {pred_tvc} cfu/100ml.
                         {#if pred_tvc > 99}
                             This is still a high value considering that the WHO guidelines set a value of 0 cfu/100ml.
-                            If problems that can be attributed to pathogens continue to occur, another disinfection step such as <a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a> or <a href="http://192.168.178.69:3000/en/methods/chlorination" target="_blank" rel="noreferrer">chlorination</a> should be integrated.
+                            If problems that can be attributed to pathogens continue to occur, another disinfection step such as <a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a> or <a href="https://wiki.sustainable-water.de/en/methods/chlorination" target="_blank" rel="noreferrer">chlorination</a> should be integrated.
                         {/if}
                     </p>
                     <DataTable table$aria-label="Results" style="max-width: 100%;">

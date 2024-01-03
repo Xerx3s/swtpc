@@ -6973,3 +6973,11 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.sustainabl
 2024-01-02 20:51:10,047 - django.request - WARNING - Not Found: /static/rest_framework/css/prettify.css
 2024-01-02 20:51:10,053 - django.request - WARNING - Not Found: /static/rest_framework/css/default.css
 2024-01-02 20:51:19,413 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-03 10:09:15,544 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-03 10:12:02,794 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-03 10:25:24,578 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-03 10:30:10,653 - django.utils.autoreload - INFO - /opt/django/backend/backend/settings.py changed, reloading.
+2024-01-03 11:18:39,120 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-03 12:12:42,987 - django.utils.autoreload - INFO - /opt/django/backend/aaa_doser/scripts/modules/connectdb.py changed, reloading.
+2024-01-03 12:13:13,101 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/connectdb.py changed, reloading.
+2024-01-03 12:13:26,360 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/connectdb.py changed, reloading.

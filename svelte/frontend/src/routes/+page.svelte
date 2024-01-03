@@ -31,10 +31,10 @@
         <Title>Currently supported treatment methods</Title>
         <Content>
             <ul>
-                <li><a href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></li>
             </ul>
         </Content>
     </Paper>
@@ -42,10 +42,10 @@
         <Title>Additional treatment methods</Title>
         <Content>
             <ul>
-                <li><a href="http://192.168.178.69:3000/en/methods/boiling" target="_blank" rel="noreferrer">Boiling</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/ceramic-pot-filtration" target="_blank" rel="noreferrer">Ceramic Pot Filtration</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/chlorination" target="_blank" rel="noreferrer">Chlorination</a></li>
-                <li><a href="http://192.168.178.69:3000/en/methods/membrane-filtration" target="_blank" rel="noreferrer">Membrane Filtration</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/boiling" target="_blank" rel="noreferrer">Boiling</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/ceramic-pot-filtration" target="_blank" rel="noreferrer">Ceramic Pot Filtration</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/chlorination" target="_blank" rel="noreferrer">Chlorination</a></li>
+                <li><a href="https://wiki.sustainable-water.de/en/methods/membrane-filtration" target="_blank" rel="noreferrer">Membrane Filtration</a></li>
             </ul>
         </Content>
     </Paper>

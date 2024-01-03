@@ -180,7 +180,7 @@
 <div>
     <h5>Biosand Filtration Optimization</h5>
     <p>
-        For more information on the treatment method, see the <a href="http://192.168.178.69:3000/en/methods/biosand-filtration" target="_blank" rel="noreferrer">knowledge base entry</a>.
+        For more information on the treatment method, see the <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">knowledge base entry</a>.
     </p>
     <p>
         Define the possible areas where the necessary parameters are located by dragging the sliders.

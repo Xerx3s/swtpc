@@ -37,7 +37,7 @@
     let show_results = false
 
     async function aaa_dosing() {
-        let url = "http://localhost:3001/aaa/"
+        let url = "https://api.sustainable-water.de/aaa/"
 
         let res = await fetch(url, {
             mode: "cors",

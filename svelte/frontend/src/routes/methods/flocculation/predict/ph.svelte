@@ -9,7 +9,7 @@
     let pred_fpH = 0
 
     async function doPost() {
-        let url = "http://localhost:3001/ph/"
+        let url = "https://api.sustainable-water.de/ph/"
 
         let res = await fetch(url, {
             mode: "cors",

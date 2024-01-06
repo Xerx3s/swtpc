@@ -13,7 +13,7 @@
     let flocculants = get_flocculants()
     
     async function get_flocculants() {
-        let url = "http://localhost:3001/floc/"
+        let url = "https://api.sustainable-water.de/floc/"
 
         let res = await fetch(url, {
             mode: "cors",

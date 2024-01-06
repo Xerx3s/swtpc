@@ -26,7 +26,7 @@
     let show_results = false
 
     async function predict_bsf() {
-        let url = "http://localhost:3001/bsf/"
+        let url = "https://api.sustainable-water.de/bsf/"
 
         let res = await fetch(url, {
             mode: "cors",

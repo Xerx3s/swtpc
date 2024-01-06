@@ -9,7 +9,7 @@
     let pred_fEC = 0
 
     async function doPost() {
-        let url = "http://localhost:3001/ec/"
+        let url = "https://api.sustainable-water.de/ec/"
 
         let res = await fetch(url, {
             mode: "cors",

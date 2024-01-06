@@ -48,7 +48,7 @@
     let graph_data = sodis_forecast()
 
     async function sodis_forecast() {
-        let url = "http://localhost:3001/sodis/"
+        let url = "https://api.sustainable-water.de/sodis/"
 
         let res = await fetch(url, {
             mode: "cors",

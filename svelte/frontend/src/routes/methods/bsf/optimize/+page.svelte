@@ -26,7 +26,7 @@
     }
 
     async function get_bounds() {
-        let url = "http://localhost:3001/bsf_bounds/"
+        let url = "https://api.sustainable-water.de/bsf_bounds/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -134,7 +134,7 @@
             })
         })
         
-        let url = "http://localhost:3001/opt_bsf/"
+        let url = "https://api.sustainable-water.de/opt_bsf/"
         let res = await fetch(url, {
             mode: "cors",
             method: "POST",

@@ -23,7 +23,7 @@
     For a more accurate result, use the switch in the Top Navigation Bar.
     If you set it to "Advanced View", you will get access to more sophisticated ways to perform the analysis.
     However, this also requires more precise input parameters. <br /> <br />
-    A <a href="http://192.168.178.69:3000" target="_blank" rel="noreferrer">knowledge base</a> is available for more background information on the individual technologies.
+    A <a href="https://wiki.sustainable-water.de/" target="_blank" rel="noreferrer">knowledge base</a> is available for more background information on the individual technologies.
 </p>
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">

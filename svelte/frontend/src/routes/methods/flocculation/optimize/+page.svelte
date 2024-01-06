@@ -31,7 +31,7 @@
         }
 
     async function get_bounds() {
-        let url = "http://localhost:3001/floc_bounds/"
+        let url = "https://api.sustainable-water.de/floc_bounds/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -188,7 +188,7 @@
             })
         })
         
-        let url = "http://localhost:3001/opt_tur/"
+        let url = "https://api.sustainable-water.de/opt_tur/"
 
         let res = await fetch(url, {
             mode: "cors",

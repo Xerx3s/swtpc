@@ -34,7 +34,7 @@
     let show_results = false
 
     async function get_flocculants() {
-        let url = "http://localhost:3001/floc/"
+        let url = "https://api.sustainable-water.de/floc/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -61,7 +61,7 @@
             data.floc_cactus_share = 0
         }
 
-        let url = "http://localhost:3001/tur/"
+        let url = "https://api.sustainable-water.de/tur/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -77,7 +77,7 @@
     }
 
     async function predict_ph() {
-        let url = "http://localhost:3001/ph/"
+        let url = "https://api.sustainable-water.de/ph/"
 
         let res = await fetch(url, {
             mode: "cors",
@@ -93,7 +93,7 @@
         }
 
     async function predict_ec() {
-        let url = "http://localhost:3001/ec/"
+        let url = "https://api.sustainable-water.de/ec/"
 
         let res = await fetch(url, {
             mode: "cors",

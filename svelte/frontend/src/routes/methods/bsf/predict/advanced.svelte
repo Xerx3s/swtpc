@@ -49,6 +49,7 @@
         }
 </script>
 
+<!--
 <div style="color:red;">
     <b>Development tools:</b>
     <FormField>
@@ -60,6 +61,7 @@
       <span slot="label">print assessment</span>
     </FormField>
 </div>
+-->
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     <Paper style="margin:1em; flex-grow:1; min-width:20em">

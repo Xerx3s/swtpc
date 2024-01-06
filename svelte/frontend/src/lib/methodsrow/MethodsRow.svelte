@@ -23,7 +23,7 @@
       </Button>
     {/if}
     {#if methods.aaa}
-      <Button variant="outlined" color="secondary" style="flex-grow:1" href="http://192.168.178.69:3000/en/methods/aaa" target="_blank" rel="noreferrer">
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/aaa/predict">
         <Label>AAA</Label>
       </Button>
     {/if}
@@ -33,7 +33,7 @@
       </Button>
     {/if}
     {#if methods.ro}
-      <Button variant="outlined" color="secondary" style="flex-grow:1" href="http://192.168.178.69:3000/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">
+      <Button variant="outlined" color="secondary" style="flex-grow:1" href="https://wiki.sustainable-water.de/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">
         <Label>RO</Label>
       </Button>
     {/if}

@@ -144,7 +144,7 @@
         <Content>
             <List checkList>
                 <Item>
-                    <Label>Earthy or Musty</Label>
+                    <Label style="white-space:normal;">Earthy or Musty</Label>
                     <Meta>
                         <Checkbox bind:checked={data.organic_material} />
                     </Meta>
@@ -156,7 +156,7 @@
                     </Meta>
                 </Item>-->
                 <Item>
-                    <Label>Salty</Label>
+                    <Label style="white-space:normal;">Salty</Label>
                     <Meta>
                         <Checkbox bind:checked={data.salts} />
                     </Meta>
@@ -169,25 +169,25 @@
         <Content>
             <List checkList>
                 <Item>
-                    <Label>Blue Baby Syndrom</Label>
+                    <Label style="white-space:normal;">Blue Baby Syndrom</Label>
                     <Meta>
                         <Checkbox bind:checked={data.nitrate} />
                     </Meta>
                 </Item>
                 <Item>
-                    <Label>Cases of Diarrhea or Stomach Pain</Label>
+                    <Label style="white-space:normal;">Cases of Diarrhea or Stomach Pain</Label>
                     <Meta>
                         <Checkbox bind:checked={data.coliforms} />
                     </Meta>
                 </Item>
                 <Item>
-                    <Label>Excessive Hornification of Skin</Label>
+                    <Label style="white-space:normal;">Excessive Hornification of Skin</Label>
                     <Meta>
                         <Checkbox bind:checked={data.arsenic} />
                     </Meta>
                 </Item>
                 <Item>
-                    <Label>Discoloration of Teeth and/or frequent bone fractures</Label>
+                    <Label style="white-space:normal;">Discoloration of Teeth and/or frequent bone fractures</Label>
                     <Meta>
                         <Checkbox bind:checked={data.fluoride} />
                     </Meta>

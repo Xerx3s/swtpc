@@ -16,7 +16,9 @@
         For more information on the treatment method, see the <a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">knowledge base entry</a>.
     </p>
     <p>
-        Select your location. To do so, please click on the map or enter the city and country below. <br />
+        Select your location. To do so, please click on the map or enter the city and country below. <br/>
+        If the correct city is not displayed on the map, click the search button again.
+        The map will then automatically switch to the next city of the same name. <br />
         Please also select the time at which the disinfection will be started. <br />
         {#if advanced}
             Optionally, select the desired logarithmic disinfection.

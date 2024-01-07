@@ -77,13 +77,13 @@
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
     {#each methods as method}
-        <Card style="margin:1em; flex-grow:1; justify-content:flex-end; max-width:45%">
+        <Card style="margin:1em; flex:1; flex-basis: 45%; justify-content:flex-end">
             <Media class={method.image} aspectRatio="16x9">
             <MediaContent>
                 <div
                 style="color: black; position: absolute; bottom: 16px; left: 16px;"
                 >
-                <h2 style="margin: 0; color: black; text-shadow: 0 0 3px white, 0 0 5px grey">
+                <h2 style="margin: 0; font-weight: bold; color: black; text-shadow: 0 0 5px white, 0 0 10px grey; font-size:2em">
                     {method.name}
                 </h2>
                 </div>

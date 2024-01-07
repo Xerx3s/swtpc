@@ -14,7 +14,7 @@
   <Group variant="unelevated" style="display: flex; justify-content: stretch;">
     {#if methods.flocculation}
       <Button variant="outlined" color="secondary" style="flex-grow:1" href="/methods/flocculation/predict">
-        <Label>Flocculation</Label>
+        <Label>Flocc</Label>
       </Button>
     {/if}
     {#if methods.bsf}

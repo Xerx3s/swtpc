@@ -89,7 +89,7 @@
 </script>
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
-    <Paper style="margin:1em; flex-grow:1; min-width:40em">
+    <Paper style="margin:1em; flex-grow:1">
         <Content style="display:flex; flex-direction:column; margin:0em">
             <Map bind:this={map_component}/>
         </Content>

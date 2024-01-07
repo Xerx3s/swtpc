@@ -7162,3 +7162,395 @@ Traceback (most recent call last):
   File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
     message += "Not enough Suntime left.\n" %logdis
 TypeError: not all arguments converted during string formatting
+2024-01-06 16:20:58,885 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:21:12,782 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:21:18,895 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:21:27,220 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:21:56,533 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:21:59,842 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:23:41,017 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:23:43,399 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:24:31,677 - django.request - WARNING - Method Not Allowed: /sodis/
+2024-01-06 16:24:31,849 - django.request - WARNING - Not Found: /static/rest_framework/js/prettify-min.js
+2024-01-06 16:24:59,706 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:25:58,763 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:48:25,748 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:48:44,169 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 16:51:57,300 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 17:03:54,864 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:03:55,611 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18578295e+00 4.76012328e+02 1.05497146e+02 2.78453147e-01
+ 2.37865135e+02 1.88303455e+01 1.00072480e+02            nan
+ 2.65291312e+01 1.01806621e+01 5.99782909e+01]
+2024-01-06 17:03:56,943 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:03:57,663 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.23738656e+00 4.71592309e+02 9.91125912e+01 3.58471015e-01
+ 1.44608369e+02 2.14488355e+01 9.39236454e+01            nan
+ 2.74377251e+01 1.18926269e+01 4.93053020e+01]
+2024-01-06 17:05:39,445 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:05:39,816 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:05:40,513 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24002648e+00 4.79259538e+02 9.47076549e+01 1.09126567e-01
+ 2.43770066e+02 2.93987083e+01 1.05649584e+02            nan
+ 2.56378098e+01 1.12593238e+01 5.73752597e+01]
+2024-01-06 17:05:40,701 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17979494e+00 4.75768174e+02 9.11919944e+01 4.46254698e-01
+ 1.41618086e+02 2.44474989e+01 1.05683483e+02            nan
+ 2.38003111e+01 1.21725428e+01 5.51074317e+01]
+2024-01-06 17:05:50,480 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:05:50,622 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:05:51,430 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.20206566e+00 4.80788149e+02 1.11676923e+02 3.27471456e-01
+ 2.17574848e+02 3.40508840e+01 1.05727619e+02            nan
+ 2.56559419e+01 1.02292027e+01 5.60043338e+01]
+2024-01-06 17:05:51,600 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.17732986e+00 4.69273197e+02 9.67905268e+01 2.59400418e-01
+ 2.44003130e+02 3.69763668e+01 1.04201376e+02            nan
+ 2.64762798e+01 1.14012315e+01 5.75458441e+01]
+2024-01-06 17:06:22,855 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:06:23,437 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 17:06:23,668 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.754457473754883, best pos: [8.16767442e+00 4.74081076e+02 1.00058316e+02 1.97146145e-01
+ 1.58618069e+02 2.60412366e+01 1.00163796e+02            nan
+ 2.65874128e+01 1.23135545e+01 4.23299643e+01]
+2024-01-06 17:06:24,274 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.18383086e+00 4.79198759e+02 9.92979646e+01 4.08608045e-01
+ 2.36336978e+02 2.98800010e+01 1.12529956e+02            nan
+ 2.56429739e+01 1.22918926e+01 5.46325708e+01]
+2024-01-06 19:03:12,058 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 19:03:12,709 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.21047680e+00 4.76617347e+02 9.48716141e+01 2.82932465e-01
+ 1.69811737e+02 2.07768497e+01 1.07667425e+02            nan
+ 2.31153203e+01 1.19298207e+01 5.46960495e+01]
+2024-01-06 19:03:59,186 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-06 22:57:36,264 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-06 22:57:37,370 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.23364531e+00 4.65540639e+02 9.20753889e+01 3.57259176e-01
+ 2.60089842e+02 1.93355148e+01 1.01529329e+02            nan
+ 2.48553987e+01 1.08609684e+01 5.59524253e+01]

@@ -75,7 +75,7 @@
             </Wrapper>
             <br />
             <Wrapper>
-                <Textfield type="number" bind:value={data.concentration} label="Initial Concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
+                <Textfield type="number" bind:value={data.concentration} label="Initial Fluoride Concentration" suffix="mg/l" style="flex-grow:1; margin-bottom:0.5em"/>
                 <Tooltip>Enter the initial fluoride concentration</Tooltip>
             </Wrapper>
             <br />

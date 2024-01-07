@@ -8,6 +8,16 @@
     let map;
     let city_counter;
 
+    var greenIcon = L.icon({
+        iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+        shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+        iconSize: [38, 95],
+        shadowSize: [50, 64],
+        iconAnchor: [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor: [-3, -76],
+    })
+
     coords_store.subscribe(value => {
         coords = value;
     })
@@ -20,6 +30,8 @@
         }).addTo(map);
         
         map.on('click', (event) => onClick(event))
+
+        return map
     }
 
     function addmarker(lat, lng) {
@@ -27,7 +39,7 @@
             map.removeLayer(marker); // remove
         }
         
-        marker = new L.marker([lat, lng]).addTo(map)
+        marker = new L.marker([lat, lng], {icon: greenIcon}).addTo(map)
     }
 
     function onClick(event) {

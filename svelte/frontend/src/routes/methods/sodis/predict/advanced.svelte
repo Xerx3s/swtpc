@@ -13,6 +13,7 @@
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
     import Tooltip, { Wrapper } from '@smui/tooltip';
+    import { afterUpdate, tick } from 'svelte';
     
     let map_component;
 
@@ -46,6 +47,19 @@
     let show_results = false
     let final_logdis = 0.0
     let graph_data = sodis_forecast()
+    let not_found = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     async function sodis_forecast() {
         let url = "https://api.sustainable-water.de/sodis/"
@@ -119,32 +133,6 @@
 
         return graph_data
     }
-
-    let options: {
-        title: {
-            display: true,
-            text: 'Chart.js Line Chart'
-        },
-        scales: {
-            xAxes: [
-                {
-                    position: "bottom",
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Month'
-                    }
-                }
-            ],
-            yAxes: [
-                {
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Month'
-                    }
-                }
-            ],
-        },
-    }
         
     async function owm_sunriseset() {
         let key = "a9c05d43e3817e2b68f4f0f305504cf7"
@@ -162,6 +150,13 @@
 
     async function setNewLocation() {
         let coords = await map_component.newlocation(location.city, location.country)
+
+        if ((coords.lat === 0) && (coords.lng === 0)) {
+            not_found = true
+        } else {
+            not_found = false
+        }
+
         data.latitude = coords.lat
         data.longitude = coords.lng
         owm_sunriseset()
@@ -182,9 +177,14 @@
     </Paper>
 </div>
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
-    <Paper style="margin:1em; flex-grow:1; min-width:20em">
+    <Paper style="margin:1em; flex-grow:1">
         <Title>Location</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
+            {#if not_found}
+                <br />
+                    City could not be found.
+                <br />
+            {/if}
             <div style="display:flex; flex-direction:row">
                 <Wrapper>
                     <Textfield type="text" bind:value={location.city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
@@ -206,7 +206,7 @@
             <br />
         </Content>
     </Paper>
-    <Paper style="margin:1em; flex-grow:1; min-width:20em">
+    <Paper style="margin:1em; flex-grow:1">
         <Title>Initial Values</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
             <Wrapper>
@@ -238,8 +238,8 @@
 </Group>
 
 {#if show_results}
-    <div style="display:flex; flex-direction:column; justify-content:center; align-items:stretch">
-        <Paper style="margin:1em; flex-grow:1; min-width:20em">
+    <div style="display:flex; flex-direction:column; justify-content:center; align-items:stretch" id="results">
+        <Paper style="margin:1em; flex-grow:1">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
                 {#await graph_data}
@@ -267,24 +267,128 @@
                 {/await}
             </Content>
         </Paper>
-        <Paper style="margin:1em; flex-grow:1; min-width:20em">
+        <Paper style="margin:1em; flex-grow:1">
             <Title>Graph</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
                 {#await graph_data}
                     <LinearProgress indeterminate />
                 {:then graph_data}
-                    <Line data={graph_data[0]} options={options} width={100} height={25} />
-                    (y-axis: log dis; x-axis: hh:mm) 
-                    <Line data={graph_data[1]} options={options} width={100} height={25} />
-                    (y-axis: W/m²; x-axis: hh:mm)
-                    <Line data={graph_data[2]} options={options} width={100} height={25} />
-                    (y-axis: °C; x-axis: hh:mm)
+                    <Line style="min-height:2em; max-height:20em" data={graph_data[0]} options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Disinfection'
+                            },
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                position: "bottom",
+                                title: {
+                                    display: true,
+                                    text: 'Time (in hh:mm)'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Disinfection (in log-steps)'
+                                }
+                            },
+                        },
+                    }}/>
+                    <Line style="min-height:2em; max-height:20em" data={graph_data[1]} options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Radiation'
+                            },
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                position: "bottom",
+                                title: {
+                                    display: true,
+                                    text: 'Time (in hh:mm)'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Radiation (in W/m²)'
+                                }
+                            },
+                        },
+                    }}/>
+                    <Line style="min-height:2em; max-height:20em" data={graph_data[2]} options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Ambient Temperature'
+                            },
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                position: "bottom",
+                                title: {
+                                    display: true,
+                                    text: 'Time (in hh:mm)'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Temperature (in °C)'
+                                }
+                            },
+                        },
+                    }}/>
                     <!--
-                    <Line data={graph_data[3]} options={options} width={100} height={25} />
+                    <Line data={graph_data[3]} options={options}/>
                     (y-axis: °C; x-axis: hh:mm)
                     -->
-                    <Line data={graph_data[4]} options={options} width={100} height={25} />
-                    (y-axis: %; x-axis: hh:mm)
+                    <Line style="min-height:2em; max-height:20em" data={graph_data[4]} options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Cloud Coverage'
+                            },
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                position: "bottom",
+                                title: {
+                                    display: true,
+                                    text: 'Time (in hh:mm)'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Coverage (in %)'
+                                }
+                            },
+                        },
+                    }}/>
                 {/await}
             </Content>
         </Paper>

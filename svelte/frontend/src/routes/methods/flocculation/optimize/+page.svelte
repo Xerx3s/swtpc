@@ -8,10 +8,23 @@
     import Slider from '@smui/slider';
     import LinearProgress from '@smui/linear-progress';
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
+    import { afterUpdate, tick } from 'svelte';
 
     let param_sets = get_bounds()
     let result = optimize()
     let show_result = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     let description = {
         initial_pH: "Initial pH-Value",
@@ -282,7 +295,7 @@
 </Group>
 
 {#if show_result}
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch" id="results">
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Results</Title>
             {#await result}
@@ -304,7 +317,7 @@
                         <Body>
                             {#each result as r}
                                 <Row>
-                                    <Cell>{r.name}</Cell>
+                                    <Cell style="white-space:normal;">{r.name}</Cell>
                                     <Cell numeric>{r.opt}</Cell>
                                 </Row>
                             {/each}

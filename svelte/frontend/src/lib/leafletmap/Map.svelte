@@ -1,6 +1,6 @@
 <script>
-    import L from 'leaflet'
     import 'leaflet/dist/leaflet.css'
+    import L from 'leaflet'
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
 
     let marker;
@@ -70,6 +70,10 @@
         const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&city=${city}&country=${country}`;
         const response = await fetch(url);
         const loc = await response.json();
+
+        if (loc.length === 0) {
+            return {"lat": 0, "lng": 0}
+        }
 
         if (city == coords.city && (city_counter < loc.length-1)) {
             city_counter += 1

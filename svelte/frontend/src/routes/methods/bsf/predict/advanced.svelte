@@ -8,6 +8,7 @@
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
     import Checkbox from '@smui/checkbox';
     import FormField from '@smui/form-field';
+    import { afterUpdate, tick } from 'svelte';
 
     let data = {
         "diameter": 40,
@@ -24,6 +25,18 @@
     let pred_ftur = 0.0
     let pred_tvc = 0.0
     let show_results = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     async function predict_bsf() {
         let url = "https://api.sustainable-water.de/bsf/"
@@ -126,7 +139,7 @@
 </Group>
 
 {#if show_results}
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch" id="results">
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
@@ -150,11 +163,11 @@
                         </Head>
                         <Body>
                             <Row>
-                                <Cell>Final turbidity (in NTU)</Cell>
+                                <Cell style="white-space:normal;">Final turbidity (in NTU)</Cell>
                                 <Cell numeric>{pred_ftur}</Cell>
                             </Row>
                             <Row>
-                                <Cell>Final total viable count (in cfu/100ml)</Cell>
+                                <Cell style="white-space:normal;">Final total viable count (in cfu/100ml)</Cell>
                                 <Cell numeric>{pred_tvc}</Cell>
                             </Row>
                         </Body>

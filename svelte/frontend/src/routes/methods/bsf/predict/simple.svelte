@@ -8,8 +8,21 @@
 	import { selected_methods } from "/opt/svelte/frontend/src/stores/stores";
     import List, {Item, Meta, Label } from "@smui/list"
     import Checkbox from "@smui/checkbox"
+    import { afterUpdate, tick } from 'svelte';
 
     let show_results = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     let param = {
         "turbidity": 0,
@@ -91,7 +104,7 @@
     <Button variant="unelevated" style="width: 50%; margin: auto;" on:click={handleclick}>Analyze</Button>
 </Group>
 {#if show_results}
-    <div style="display:flex; margin-bottom:1em">
+    <div style="display:flex; margin-bottom:1em" id="results">
         <Paper style="flex-grow:1;">
             <Title>Results</Title>
             <Content>

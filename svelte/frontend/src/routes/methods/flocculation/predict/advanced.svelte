@@ -8,6 +8,7 @@
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
     import Checkbox from '@smui/checkbox';
     import FormField from '@smui/form-field';
+    import { afterUpdate, tick } from 'svelte';
 
     let data = {
         "surface_water": "model suspension",
@@ -32,6 +33,18 @@
     let pred_fEC = 0.0
     let flocculants = get_flocculants()
     let show_results = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     async function get_flocculants() {
         let url = "https://api.sustainable-water.de/floc/"
@@ -250,14 +263,14 @@
 </Group>
 
 {#if show_results}
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch" id="results">
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">
                 {#await show_results}
                     <LinearProgress indeterminate />
                 {:then show_results}
-                Based on the values entered above, a final pH of {pred_fpH} and an EC of {pred_fEC} µS/cm should result.
+                Based on the values entered above, an EC of {pred_fEC} µS/cm should result.
                 The residual turbidity is approximately {pred_ftur} NTU.
                 <br />
                 {#if pred_ftur > 5}
@@ -274,16 +287,18 @@
                         </Row>
                         </Head>
                         <Body>
+                            <!--
                             <Row>
                                 <Cell>Final pH</Cell>
                                 <Cell numeric>{pred_fpH}</Cell>
                             </Row>
+                            -->
                             <Row>
-                                <Cell>Final EC (in µS/cm)</Cell>
+                                <Cell style="white-space:normal;">Final EC (in µS/cm)</Cell>
                                 <Cell numeric>{pred_fEC}</Cell>
                             </Row>
                             <Row>
-                                <Cell>Final turbidity (in NTU)</Cell>
+                                <Cell style="white-space:normal;">Final turbidity (in NTU)</Cell>
                                 <Cell numeric>{pred_ftur}</Cell>
                             </Row>
                         </Body>

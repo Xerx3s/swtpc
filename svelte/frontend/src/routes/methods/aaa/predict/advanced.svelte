@@ -5,13 +5,13 @@
     import Select, { Option } from "@smui/select"
     import LinearProgress from '@smui/linear-progress';
     import Dialog, { Actions } from '@smui/dialog';
-    import { onMount } from 'svelte';
+    import { onMount, afterUpdate, tick } from 'svelte';
     import { Line } from 'svelte-chartjs';
     import 'chart.js/auto';
-    import Map from '$lib/leafletmap/Map.svelte';
+    //import Map from '$lib/leafletmap/Map.svelte';
     import Slider from "@smui/slider";
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
-    import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
+    //import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
     import Tooltip, { Wrapper } from '@smui/tooltip';
 
     let data = {
@@ -35,6 +35,18 @@
     let f_limit = 1.5
     let coverage = 0.0
     let show_results = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     async function aaa_dosing() {
         let url = "https://api.sustainable-water.de/aaa/"
@@ -125,14 +137,14 @@
 </Group>
 
 {#if show_results}
-    <div style="display:flex; flex-direction:column; justify-content:center; align-items:stretch">
-        <Paper style="margin:1em; flex-grow:1; min-width:20em">
+    <div style="display:flex;" id="results">
+        <Paper style="flex-grow:1;">
             <Title>Prediction</Title>
-            <Content style="display:flex; flex-direction:column; margin:1em">
+            <Content>
                 {#await coverage}
                     <LinearProgress indeterminate />
                 {:then coverage}
-                    <DataTable table$aria-label="Results" style="max-width: 100%;">
+                    <DataTable table$aria-label="Results" style="width: 100%;">
                         <Head>
                         <Row>
                             <Cell>Description</Cell>
@@ -141,23 +153,23 @@
                         </Head>
                         <Body>
                             <Row>
-                                <Cell>Concentration (in mg/l)</Cell>
+                                <Cell style="white-space:normal;">Concentration (in mg/l)</Cell>
                                 <Cell numeric>{data.concentration}</Cell>
                             </Row>
                             <Row>
-                                <Cell>Contact Time (in min)</Cell>
+                                <Cell style="white-space:normal;">Contact Time (in min)</Cell>
                                 <Cell numeric>{data.contact_time}</Cell>
                             </Row>
                             <Row>
-                                <Cell>Coverage (in mg/g)</Cell>
+                                <Cell style="white-space:normal;">Coverage (in mg/g)</Cell>
                                 <Cell numeric>{coverage}</Cell>
                             </Row>
                             <Row>
-                                <Cell>Used activated alumina per process (in g/{process_param.volume}l)</Cell>
+                                <Cell style="white-space:normal;">Used activated alumina per process (in g/{process_param.volume}l)</Cell>
                                 <Cell numeric>{process_param.aaa_mass_v.toFixed(0)}</Cell>
                             </Row>
                             <Row>
-                                <Cell>Daily used activated alumina (in g/d)</Cell>
+                                <Cell style="white-space:normal;">Daily used activated alumina (in g/d)</Cell>
                                 <Cell numeric>{process_param.aaa_mass_d.toFixed(0)}</Cell>
                             </Row>
                         </Body>

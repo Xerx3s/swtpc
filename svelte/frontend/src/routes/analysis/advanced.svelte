@@ -6,6 +6,7 @@
     import Checkbox from "@smui/checkbox"
     import Textfield from "@smui/textfield"
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
+    import { afterUpdate, tick } from 'svelte';
 
     let data = {
         "turbidity": 4,
@@ -44,6 +45,18 @@
     }
 
     let results = ""
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     function set_selected_methods() {
         selected_methods.set(methods)
@@ -172,7 +185,7 @@
     <Button variant="unelevated" style="width: 50%; margin: auto;" on:click={selectmethods}>Analyze</Button>
 </Group>
 {#if results != ""}
-    <div style="display:flex; margin-bottom:1em">
+    <div style="display:flex; margin-bottom:1em" id="results">
         <Paper style="flex-grow:1;">
             <Title>Results</Title>
             <Content>
@@ -184,20 +197,23 @@
                     <Head>
                         <Row>
                             <Cell numeric>Order</Cell>
-                            <Cell>Treatment Method</Cell>
+                            <Cell style="white-space:normal;">Treatment Method</Cell>
+                            <Cell style="white-space:normal;">Further Information</Cell>
                         </Row>
                     </Head>
                     <Body>
                         {#if methods.flocculation}
                             <Row>
                                 <Cell numeric>1</Cell>
-                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/flocculation" target="_blank" rel="noreferrer">Flocculation</a></Cell>
+                                <Cell><a href="/methods/flocculation/predict">Flocculation</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/flocculation" target="_blank" rel="noreferrer">Wiki</a></Cell>
                             </Row>
                         {/if}
                         {#if methods.ro}
                             <Row>
                                 <Cell numeric>2</Cell>
-                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Reverse Osmosis</a></Cell>
+                                <Cell style="white-space:normal;">Reverse Osmosis</Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/reverse-osmosis" target="_blank" rel="noreferrer">Wiki</a></Cell>
                             </Row>
                         {/if}
                         {#if methods.bsf}
@@ -205,9 +221,16 @@
                                 <Cell numeric>2</Cell>
                                 <Cell>
                                     {#if data.arsenic}
-                                        <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">modified Biosand Filtration</a>
+                                        <a href="/methods/bsf/predict" style="white-space:normal;">modified Biosand Filtration</a>
                                     {:else}
-                                        <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Biosand Filtration</a>
+                                        <a href="/methods/bsf/predict" style="white-space:normal;">Biosand Filtration</a>
+                                    {/if}
+                                </Cell>
+                                <Cell>
+                                    {#if data.arsenic}
+                                        <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration#arsenic-removal" target="_blank" rel="noreferrer">Wiki</a>
+                                    {:else}
+                                        <a href="https://wiki.sustainable-water.de/en/methods/biosand-filtration" target="_blank" rel="noreferrer">Wiki</a>
                                     {/if}
                                 </Cell>
                             </Row>
@@ -215,13 +238,15 @@
                         {#if methods.aaa}
                             <Row>
                                 <Cell numeric>3</Cell>
-                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/aaa" target="_blank" rel="noreferrer">Activated Alumina Adsorption</a></Cell>
+                                <Cell><a href="/methods/aaa/predict" style="white-space:normal;">Activated Alumina Adsorption</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/aaa" target="_blank" rel="noreferrer">Wiki</a></Cell>
                             </Row>
                         {/if}
                         {#if methods.sodis}
                             <Row>
                                 <Cell numeric>4</Cell>
-                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">SODIS</a></Cell>
+                                <Cell><a href="/methods/sodis/predict">SODIS</a></Cell>
+                                <Cell><a href="https://wiki.sustainable-water.de/en/methods/sodis" target="_blank" rel="noreferrer">Wiki</a></Cell>
                             </Row>
                         {/if}
                     </Body>

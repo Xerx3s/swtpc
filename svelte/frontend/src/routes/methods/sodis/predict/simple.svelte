@@ -10,6 +10,7 @@
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
     import { coords_store } from "/opt/svelte/frontend/src/stores/stores";
     import Tooltip, { Wrapper } from '@smui/tooltip';
+    import { afterUpdate, tick } from 'svelte';
 
     let map_component;
 
@@ -17,6 +18,19 @@
     let message = ""
     let show_results = false
     let final_logdis = 0.0
+    let not_found = false
+
+    function autoScroll() {
+        const el = document.getElementById("results");
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    afterUpdate(() => {
+        autoScroll()
+    });
 
     let location = {
         "city": "Darmstadt",
@@ -78,6 +92,13 @@
 
     async function setNewLocation() {
         let coords = await map_component.newlocation(location.city, location.country)
+
+        if ((coords.lat === 0) && (coords.lng === 0)) {
+            not_found = true
+        } else {
+            not_found = false
+        }
+
         data.latitude = coords.lat
         data.longitude = coords.lng
         owm_sunriseset()
@@ -99,6 +120,11 @@
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
         <Title>Location</Title>
         <Content style="display:flex; flex-direction:column; margin:1em">
+            {#if not_found}
+                <br />
+                    City could not be found.
+                <br />
+            {/if}
             <div style="display:flex; flex-direction:row">
                 <Wrapper>
                     <Textfield type="text" bind:value={location.city} label="City" style="flex-grow:1; margin-bottom:0.5em"/>
@@ -117,7 +143,6 @@
                 <Textfield type="text" bind:value={location.country} label="Country" style="flex-grow:1; margin-bottom:0.5em"/>
                 <Tooltip>Enter the country name of your location</Tooltip>
             </Wrapper>
-            <br />
         </Content>
     </Paper>
     <Paper style="margin:1em; flex-grow:1; min-width:20em">
@@ -140,7 +165,7 @@
 </Group>
 
 {#if show_results}
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch" id="results">
         <Paper style="margin:1em; flex-grow:1; min-width:20em">
             <Title>Prediction</Title>
             <Content style="display:flex; flex-direction:column; margin:1em">

@@ -9845,3 +9845,81 @@ Traceback (most recent call last):
   File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
     message += "Not enough Suntime left.\n" %logdis
 TypeError: not all arguments converted during string formatting
+2024-01-27 16:04:46,584 - django.request - WARNING - Not Found: /static/rest_framework/css/default.css
+2024-01-27 16:04:46,606 - django.request - WARNING - Not Found: /static/rest_framework/js/jquery-3.5.1.min.js
+2024-01-27 16:04:50,084 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2024-01-27 16:04:52,954 - django.request - WARNING - Not Found: /static/rest_framework/css/prettify.css
+2024-01-27 16:04:53,036 - django.request - WARNING - Not Found: /static/rest_framework/js/ajax-form.js
+2024-01-27 16:04:53,036 - django.request - WARNING - Not Found: /static/rest_framework/js/bootstrap.min.js
+2024-01-27 16:04:53,042 - django.request - WARNING - Not Found: /static/rest_framework/js/csrf.js
+2024-01-27 16:04:53,062 - django.request - WARNING - Not Found: /static/rest_framework/js/default.js
+2024-01-27 16:04:53,063 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap.min.css
+2024-01-27 16:04:53,066 - django.request - WARNING - Not Found: /static/rest_framework/js/prettify-min.js
+2024-01-27 16:04:53,272 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-27 16:20:21,593 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-27 16:22:30,065 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting
+2024-01-28 10:12:14,066 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap.min.css
+2024-01-28 10:12:14,068 - django.request - WARNING - Not Found: /static/rest_framework/css/default.css
+2024-01-28 10:12:14,082 - django.request - WARNING - Not Found: /static/rest_framework/js/prettify-min.js
+2024-01-28 10:12:14,089 - django.request - WARNING - Not Found: /static/rest_framework/js/default.js
+2024-01-28 10:12:14,145 - django.request - WARNING - Not Found: /static/rest_framework/js/csrf.js
+2024-01-28 10:12:14,145 - django.request - WARNING - Not Found: /static/rest_framework/js/jquery-3.5.1.min.js
+2024-01-28 10:12:14,154 - django.request - WARNING - Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2024-01-28 10:12:14,207 - django.request - WARNING - Not Found: /static/rest_framework/js/ajax-form.js
+2024-01-28 10:12:14,225 - django.request - WARNING - Not Found: /static/rest_framework/css/prettify.css
+2024-01-28 10:12:14,226 - django.request - WARNING - Not Found: /static/rest_framework/js/bootstrap.min.js
+2024-01-28 10:12:14,535 - django.request - WARNING - Not Found: /favicon.ico
+2024-01-28 10:16:15,774 - django.request - WARNING - Method Not Allowed: /tur/
+2024-01-28 10:25:25,005 - django.request - WARNING - Method Not Allowed: /ec/
+2024-01-28 10:34:11,017 - django.request - WARNING - Method Not Allowed: /ph/
+2024-01-28 10:37:02,785 - django.request - WARNING - Method Not Allowed: /bsf/
+2024-01-28 10:44:27,310 - django.request - WARNING - Method Not Allowed: /aaa/
+2024-01-28 10:49:55,809 - django.request - WARNING - Method Not Allowed: /sodis/

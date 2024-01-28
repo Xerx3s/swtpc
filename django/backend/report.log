@@ -9967,3 +9967,36 @@ NameError: name 'env' is not defined
 2024-01-28 13:39:42,852 - django.utils.autoreload - INFO - /opt/django/backend/bsf_concept/scripts/modules/connectdb.py changed, reloading.
 2024-01-28 13:41:43,734 - django.utils.autoreload - INFO - /opt/django/backend/floc_analyzer/scripts/modules/connectdb.py changed, reloading.
 2024-01-28 13:41:55,003 - django.request - WARNING - Method Not Allowed: /tur/
+2024-01-28 15:30:21,347 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-28 15:30:22,219 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.22686673e+00 4.76115584e+02 9.77750190e+01 3.29207091e-01
+ 2.34865885e+02 3.28040553e+01 9.51305381e+01            nan
+ 2.47739737e+01 1.24184185e+01 5.39523434e+01]
+2024-01-28 15:30:23,479 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2024-01-28 15:30:24,112 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 12.682085037231445, best pos: [8.24174235e+00 4.74591829e+02 1.10647563e+02 3.78842543e-01
+ 1.66363438e+02 1.44980220e+01 9.78619988e+01            nan
+ 2.80958263e+01 1.13452943e+01 5.56398210e+01]
+2024-01-28 15:30:48,945 - django.request - ERROR - Internal Server Error: /sodis/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/opt/django/backend/sodis_forecast/views.py", line 19, in post
+    result, message, duration = sodis_forecast(
+  File "/opt/django/backend/sodis_forecast/scripts/main.py", line 24, in sodis_forecast
+    disdata, message, duration = disinfectionuntil(raddata, starttime, wattemp, tarlogdis)
+  File "/opt/django/backend/sodis_forecast/scripts/modules/disinfection.py", line 75, in disinfectionuntil
+    message += "Not enough Suntime left.\n" %logdis
+TypeError: not all arguments converted during string formatting

@@ -86,7 +86,8 @@ def disinfectionuntil(raddata: pd.DataFrame, starttime: pd.Timestamp, wattemp: i
         sun, diss, change = tempchange(wattemp, Tc, radiation, timestep)
         wattemp += change
         #print("Water temperature: %.2f" %wattemp)
-        logdis += SODISkinetics(Tc, radiation, elapsedTS.total_seconds()/60, timestep.total_seconds()/60)
+        # logdis durch 1.75 teilen für korrekte Desinfektionsrate
+        logdis += (SODISkinetics(Tc, radiation, elapsedTS.total_seconds()/60, timestep.total_seconds()/60))/1.75
         nowtime += timestep
         elapsedTS = nowtime - starttime
         #print("Time (min): ", elapsedTS)

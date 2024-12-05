@@ -6,6 +6,8 @@ from pvlib.irradiance import disc
 import datetime
 from pyowm import OWM
 import pytz
+import requests
+import json
 
 class SunRadiationCalculator:
     """
@@ -38,13 +40,33 @@ class SunRadiationCalculator:
             starttime = datetime.datetime.now(tz=self.tz).replace(minute=0, second=0, microsecond=0)
         return starttime
 
-    def owm_sunriseset(self):
-        owm = OWM("a9c05d43e3817e2b68f4f0f305504cf7")
-        mgr = owm.weather_manager()
-        one_call = mgr.one_call(lat=self.latitude, lon=self.longitude)
-
-        return one_call.current.sunrise_time(), one_call.current.sunset_time()
-
+#    def owm_sunriseset(self):
+#        owm = OWM("a9c05d43e3817e2b68f4f0f305504cf7")
+#        mgr = owm.weather_manager()
+#        one_call = mgr.one_call(lat=self.latitude, lon=self.longitude)
+#
+#        return one_call.current.sunrise_time(), one_call.current.sunset_time()
+#
+#
+#    def owm_onecall(self):
+#        """
+#        Uses the openweathermap one call api to receive the weather
+#        information for the next 48 hours. \n
+#        The returned DataFrame is in the format "time": ["temp_air", "total_clouds"].
+#        """
+#        owm = OWM("a9c05d43e3817e2b68f4f0f305504cf7")
+#        mgr = owm.weather_manager()
+#        one_call = mgr.one_call(lat=self.latitude, lon=self.longitude)
+#
+#        df = pd.DataFrame()
+#        for entry in one_call.forecast_hourly:
+#            time = entry.reference_time("date")
+#            local_time = time.astimezone(self.tz)
+#            data = {"time": local_time, "temp_air": entry.temperature("celsius").get("temp"), "total_clouds": entry.clouds}
+#            df_data = pd.DataFrame.from_dict([data])
+#            df = pd.concat([df, df_data])
+#        df.set_index("time", inplace=True)
+#        return df
 
     def owm_onecall(self):
         """
@@ -52,15 +74,15 @@ class SunRadiationCalculator:
         information for the next 48 hours. \n
         The returned DataFrame is in the format "time": ["temp_air", "total_clouds"].
         """
-        owm = OWM("a9c05d43e3817e2b68f4f0f305504cf7")
-        mgr = owm.weather_manager()
-        one_call = mgr.one_call(lat=self.latitude, lon=self.longitude)
+
+        url = f'https://api.openweathermap.org/data/3.0/onecall?lat={self.latitude}&lon={self.longitude}&appid=39fd1dbcf403fd3168825b4ee1a2ffde&units=metric'
+        r = requests.get(url)
+        one_call = r.json()
 
         df = pd.DataFrame()
-        for entry in one_call.forecast_hourly:
-            time = entry.reference_time("date")
-            local_time = time.astimezone(self.tz)
-            data = {"time": local_time, "temp_air": entry.temperature("celsius").get("temp"), "total_clouds": entry.clouds}
+        for entry in one_call["hourly"]:
+            time = datetime.datetime.fromtimestamp(entry["dt"], pytz.timezone(one_call["timezone"]))
+            data = {"time": time, "temp_air": entry["temp"], "total_clouds": entry["clouds"]}
             df_data = pd.DataFrame.from_dict([data])
             df = pd.concat([df, df_data])
         df.set_index("time", inplace=True)
